@@ -19,6 +19,21 @@
     "paths": {
       "globalStyles/*": [
         "./globalStyles/*"
+      ],
+      "pages/*": [
+        "./pages/*"
+      ],
+      "components/*": [
+        "./components/*"
+      ],
+      "constants/*": [
+        "./constants/*"
+      ],
+      "assets/*": [
+        "./assets/*"
+      ],
+      "hooks/*": [
+        "./hooks/*"
       ]
     }
   },
