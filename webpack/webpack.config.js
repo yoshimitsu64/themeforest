@@ -6,6 +6,11 @@ module.exports = {
   resolve: {
     alias: {
       globalStyles: path.resolve(__dirname, '..', './src/globalStyles'),
+      pages: path.resolve(__dirname, '..', './src/pages'),
+      components: path.resolve(__dirname, '..', './src/components'),
+      constants: path.resolve(__dirname, '..', './src/constants'),
+      assets: path.resolve(__dirname, '..', './src/assets'),
+      hooks: path.resolve(__dirname, '..', './src/hooks'),
     },
     extensions: ['.tsx', '.ts', '.js', '.json'],
   },
@@ -20,6 +25,14 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ],
   },
   output: {
@@ -30,6 +43,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '..', './public/index.html'),
+      favicon: path.resolve(__dirname, '..', './public/favicon.png'),
     }),
   ],
 }

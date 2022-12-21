@@ -1,5 +1,12 @@
+import Layout from 'components/layout'
+import Header from 'components/header'
+
 const App = (): JSX.Element => {
-  return <div>Helslo</div>
+  return (
+    <Layout>
+      <Header />
+    </Layout>
+  )
 }
 
 export default App

@@ -26,6 +26,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "prettier": "2.8.1",
     "ts-loader": "^9.4.2",
@@ -35,9 +36,11 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "@fluentui/react-icons": "^2.0.190",
     "@types/styled-components": "^5.1.26",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.5.0",
     "styled-components": "^5.3.6"
   }
 }
