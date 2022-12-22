@@ -12,8 +12,6 @@ export const StyledCompanyExperience = styled.div`
   align-items: center;
   padding-top: ${({ theme }) => theme.sizes[1]}px;
   padding-bottom: ${({ theme }) => theme.sizes[1]}px;
-  padding-left: ${({ theme }) => theme.sizes[7]}px;
-  padding-right: ${({ theme }) => theme.sizes[7]}px;
 `;
 
 export const StyledTitle = styled.div`

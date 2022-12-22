@@ -11,6 +11,7 @@ export const StyledNewSolutions = styled.div`
 
 export const StyledImage = styled.div`
   height: inherit;
+  width: max-content;
   content: url(${Image});
   margin-right: ${({ theme }) => theme.sizes[0]}px;
 `;
