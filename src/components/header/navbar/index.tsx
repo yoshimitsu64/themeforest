@@ -1,16 +1,16 @@
-import { routes } from 'constants/routes'
-import { StyledNavbar, StyledLink } from './styled'
+import { routes } from 'constants/routes';
+import { StyledNavbar, StyledLink } from './styled';
 
 const Navbar = (): JSX.Element => {
   return (
     <StyledNavbar>
-      {routes.map((route) => (
-        <StyledLink to="/" key={route}>
-          {route}
+      {routes.map(({ title, id, path }) => (
+        <StyledLink to={path} key={id}>
+          {title}
         </StyledLink>
       ))}
     </StyledNavbar>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

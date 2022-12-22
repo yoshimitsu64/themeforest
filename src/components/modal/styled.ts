@@ -10,4 +10,5 @@ export const StyledModalContainer = styled.div`
   top: 0;
   background-color: ${({ theme }) => theme.colors.black}E8;
   cursor: pointer;
+  z-index: 99999;
 `;

@@ -11,14 +11,16 @@ export const theme = {
     helperBlue1: '#194060',
     helperBlue2: '#607D94',
     helperBlue3: '#C9DCEC',
+    white: '#FFFFFF',
   },
   padding: [5, 10, 15, 20, 25, 30],
   sizes: [
     50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750,
-    800,
+    800, 820,
   ],
   borders: {
-    borderRadius: [5, 10, 15, 20, 25],
+    borderRadius: [5, 10, 15, 20, 25, 30],
+    border: ['1px solid white'],
   },
   fonts: [6, 10, 14, 18, 22, 26, 30, 34, 38],
   buttons: {
@@ -27,5 +29,88 @@ export const theme = {
       backgroundColor: '#185CFF',
     },
   },
-  typography: {},
+  typography: {
+    headLine: {
+      extraBold: [
+        {
+          fontWeight: 800,
+          size: 46,
+        },
+        {
+          fontWeight: 800,
+          size: 38,
+        },
+        {
+          fontWeight: 800,
+          size: 30,
+        },
+      ],
+      bold: [
+        {
+          fontWeight: 700,
+          size: 22,
+        },
+        {
+          fontWeight: 700,
+          size: 20,
+        },
+        {
+          fontWeight: 700,
+          size: 16,
+        },
+      ],
+      semiBold: [
+        {
+          fontWeight: 600,
+          size: 14,
+        },
+      ],
+      medium: [
+        {
+          fontWeight: 500,
+          size: 14,
+        },
+      ],
+    },
+    paragraph: {
+      regular: [
+        {
+          fontWeight: 400,
+          size: 20,
+          lineHeight: 33,
+        },
+        {
+          fontWeight: 400,
+          size: 16,
+          lineHeight: 28,
+        },
+        {
+          fontWeight: 400,
+          size: 14,
+          lineHeight: 24,
+        },
+      ],
+      bold: [
+        {
+          fontWeight: 700,
+          size: 16,
+          lineHeight: 28,
+        },
+      ],
+      semiBold: [
+        {
+          fontWeight: 600,
+          size: 14,
+          lineHeight: 24,
+        },
+      ],
+    },
+  },
+  shadows: {
+    shadowCard3: {
+      background: '#FFFFFF',
+      boxShadow: '0px 4px 12px #0c44cc1a',
+      borderRadius: 6,
+    },
+  },
 };

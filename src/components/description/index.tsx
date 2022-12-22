@@ -1,7 +1,7 @@
 import { StyledDescription } from './styled';
 
 interface IProps {
-  children: JSX.Element;
+  children: JSX.Element[];
 }
 
 const Description = ({ children }: IProps): JSX.Element => {
