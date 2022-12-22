@@ -6,7 +6,7 @@ interface IProps {
 }
 
 export const StyledTitle = styled.div<IProps>`
-  width: ${({ theme }) => theme.sizes[11]}px;
+  width: ${({ theme }) => theme.sizes[10]}px;
   font-size: ${({ theme, variant, size }) =>
     theme.typography.headLine[variant][size].size}px;
   font-weight: ${({ theme, variant, size }) =>

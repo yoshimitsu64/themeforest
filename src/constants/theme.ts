@@ -13,7 +13,7 @@ export const theme = {
     helperBlue3: '#C9DCEC',
     white: '#FFFFFF',
   },
-  padding: [5, 10, 15, 20, 25, 30],
+  padding: [5, 10, 15, 20, 25, 30, 35],
   sizes: [
     50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750,
     800, 820,
@@ -69,6 +69,7 @@ export const theme = {
         {
           fontWeight: 500,
           size: 14,
+          lineHeight: 24,
         },
       ],
     },
