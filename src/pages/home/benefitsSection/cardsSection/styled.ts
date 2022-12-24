@@ -4,9 +4,11 @@ export const StyledCardsContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-
   & > * {
     margin-bottom: ${({ theme }) => theme.padding[3]}px;
+  }
+
+  & .card:nth-child(-n + 2) {
     margin-right: ${({ theme }) => theme.padding[3]}px;
   }
 

@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const StyledDescription = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  width: ${({ theme }) => theme.sizes[10]}px;
   align-self: center;
+  width: 540px;
+  margin-right: ${({ theme }) => theme.padding[5]}px;
 `;
 
 export const StyledTitle = styled.div`

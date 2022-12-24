@@ -4,7 +4,7 @@ export const StyledButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: ${({ theme }) => theme.sizes[3]}px;
+  min-width: ${({ theme }) => theme.sizes[3]}px;
   padding-left: ${({ theme }) => theme.padding[2]}px;
   padding-right: ${({ theme }) => theme.padding[2]}px;
   height: ${({ theme }) => theme.sizes[0]}px;

@@ -5,7 +5,7 @@ import {
   KeyFilled,
 } from '@fluentui/react-icons';
 
-import Card from 'components/card';
+import Card from 'components/ui/cards/card';
 
 import {
   StyledCardImage,
