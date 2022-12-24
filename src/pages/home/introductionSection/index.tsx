@@ -1,7 +1,7 @@
 import Description from 'components/description';
 import Title from 'components/description/title';
 import Subtitle from 'components/description/subtitle';
-import CircleButton from 'components/ui/circleButton';
+import CircleButton from 'components/ui/buttons/circleButton';
 import { StyledIntroductionSection, StyledImage } from './styled';
 
 const IntroductionSection = (): JSX.Element => {

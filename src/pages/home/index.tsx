@@ -1,9 +1,21 @@
-import NewSolutionsSection from 'pages/home/newSolutionsSection';
-import CompanyOverviewSection from 'pages/home/сompanyOverviewSection';
-import BenefitsSection from 'pages/home/benefitsSection';
-import IntroductionSection from 'pages/home/introductionSection';
-import FeaturesSection from 'pages/home/featuresSection';
-import TestimonialsSection from 'pages/home/testimonialsSection';
+import { lazy } from 'react';
+
+const NewSolutionsSection = lazy(
+  () => import('pages/home/newSolutionsSection')
+);
+const CompanyOverviewSection = lazy(
+  () => import('pages/home/сompanyOverviewSection')
+);
+const IntroductionSection = lazy(
+  () => import('pages/home/introductionSection')
+);
+const TestimonialsSection = lazy(
+  () => import('pages/home/testimonialsSection')
+);
+const BenefitsSection = lazy(() => import('pages/home/benefitsSection'));
+const FeaturesSection = lazy(() => import('pages/home/featuresSection'));
+const PricingSection = lazy(() => import('pages/home/pricingSection'));
+const BlogSection = lazy(() => import('pages/home/blogSection'));
 
 const Home = (): JSX.Element => {
   return (
@@ -14,6 +26,8 @@ const Home = (): JSX.Element => {
       <CompanyOverviewSection />
       <BenefitsSection />
       <TestimonialsSection />
+      <PricingSection />
+      <BlogSection />
     </>
   );
 };

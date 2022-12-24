@@ -12,8 +12,9 @@ export const theme = {
     helperBlue2: '#607D94',
     helperBlue3: '#C9DCEC',
     white: '#FFFFFF',
+    lightTertiary: '#467DFF',
   },
-  padding: [5, 10, 15, 20, 25, 30, 35],
+  padding: [5, 10, 15, 20, 25, 30, 35, 40],
   sizes: [
     50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750,
     800, 820,
@@ -27,6 +28,7 @@ export const theme = {
     primary: {
       color: '#FFFFFF',
       backgroundColor: '#185CFF',
+      hover: '#467DFF',
     },
   },
   typography: {

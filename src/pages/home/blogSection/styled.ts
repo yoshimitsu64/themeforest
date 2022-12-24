@@ -1,25 +1,34 @@
 import styled from 'styled-components';
 
-export const StyledTestimonialsSection = styled.section`
+export const StyledBlogSection = styled.section`
   display: flex;
   flex-direction: column;
-  height: 100%;
   margin-top: ${({ theme }) => theme.sizes[1] + 20}px;
-  padding-left: 405px;
-  padding-right: 405px;
+  margin-left: 405px;
+  margin-right: 405px;
+  margin-bottom: ${({ theme }) => theme.sizes[1]}px;
+`;
+export const StyledBlogsSectionHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: ${({ theme }) => theme.sizes[0]}px;
 `;
 
-export const StyledTestimonialsSectionTitle = styled.div`
+export const StyledBlogSectionTitle = styled.div`
   font-size: ${({ theme }) => theme.typography.headLine.extraBold[1].size}px;
   font-weight: ${({ theme }) =>
     theme.typography.headLine.extraBold[1].fontWeight};
 `;
 
-export const StyledTestimonialsSectionHeader = styled.div`
+export const StyledBlogCardsContainer = styled.div`
   display: flex;
-  justify-content: space-between;
-  margin-bottom: ${({ theme }) => theme.sizes[0]}px;
+  width: 100%;
+
+  & .blogCard:not(:last-child) {
+    margin-right: ${({ theme }) => theme.padding[5]}px;
+  }
 `;
+
 export const StyledArrowsContainer = styled.div`
   display: flex;
 
@@ -36,12 +45,4 @@ export const StyledArrow = styled.button`
   background-color: ${({ theme }) => theme.colors.tertiary};
   border-radius: ${({ theme }) => theme.borders.borderRadius[3]}px;
   border: none;
-`;
-
-export const StyledReviewCardsContainer = styled.div`
-  display: flex;
-
-  & div:not(div:last-child) {
-    margin-right: ${({ theme }) => theme.padding[5]}px;
-  }
 `;

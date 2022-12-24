@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/yoshimitsu64/themeforest.git",
-  "homepage": "/",
+  "homepage": "/home",
   "author": "Ilya Averkov",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "webpack serve --config webpack/webpack.config.js --open"
+    "start": "webpack serve --config webpack/webpack.config.js --open",
+    "lint": "eslint \"**/*.{ts,tsx}\" --fix"
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",
@@ -42,6 +43,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.5.0",
+    "react-social-icons": "^5.15.0",
     "styled-components": "^5.3.6"
   }
 }

@@ -2,7 +2,7 @@ import { ArrowRightFilled, ArrowLeftFilled } from '@fluentui/react-icons';
 
 import { person } from 'constants/testCard';
 
-import ReviewCard from 'components/ui/reviewCard';
+import ReviewCard from 'components/ui/cards/reviewCard';
 
 import {
   StyledTestimonialsSection,

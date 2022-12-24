@@ -1,3 +1,5 @@
+import { logos } from 'constants/companiesLogos';
+
 import {
   StyledBenefit,
   StyledBenefits,
@@ -10,7 +12,6 @@ import {
   StyledLogo,
   StyledLogosContainer,
 } from './styled';
-import { logos } from 'constants/companiesLogos';
 
 const CompanyOverviewSection = (): JSX.Element => {
   return (

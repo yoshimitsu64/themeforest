@@ -1,4 +1,4 @@
-import Image from './002_img_person_1.png';
+import Image from 'assets/images/002_img_person_1.png';
 
 export const person = {
   imageURL: Image,
