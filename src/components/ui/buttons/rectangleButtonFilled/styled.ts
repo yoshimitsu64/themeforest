@@ -16,7 +16,6 @@ export const StyledButton = styled.button<IProps>`
   color: ${({ theme }) => theme.buttons.primary.color};
   font-size: ${({ theme }) => theme.fonts[3]}px;
   border-radius: ${({ theme }) => theme.borders.borderRadius[1]}px;
-  transition: all ease-in-out 0.5s;
   cursor: pointer;
   font-weight: bold;
   border: none;

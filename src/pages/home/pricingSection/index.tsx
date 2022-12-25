@@ -22,7 +22,7 @@ const PricingSection = (): JSX.Element => {
             <CheckmarkFilled /> <span>Community support</span>
           </StyledPossibility>
         </PricingCard>
-        <PricingCard title={'Lite'} price={'$99'}>
+        <PricingCard title={'Lite'} price={'$40'}>
           <StyledPossibility>
             <CheckmarkFilled /> <span>For small teams – 15 users</span>
           </StyledPossibility>
@@ -33,7 +33,7 @@ const PricingSection = (): JSX.Element => {
             <CheckmarkFilled /> <span>Individual data – 60GB</span>
           </StyledPossibility>
         </PricingCard>
-        <PricingCard title={'Basic'} price={'$40'}>
+        <PricingCard title={'Basic'} price={'$99'}>
           <StyledPossibility>
             <CheckmarkFilled /> <span>For big teams – 30 users</span>
           </StyledPossibility>

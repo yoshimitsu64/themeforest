@@ -10,8 +10,7 @@ export const StyledPricingSection = styled.section`
 
 export const StyledPricingSectionTitle = styled.div`
   font-size: ${({ theme }) => theme.typography.headLine.extraBold[1].size}px;
-  font-weight: ${({ theme }) =>
-    theme.typography.headLine.extraBold[1].fontWeight};
+  font-weight: ${({ theme }) => theme.typography.headLine.extraBold[1].fontWeight};
   margin-bottom: ${({ theme }) => theme.sizes[0]}px;
 `;
 
@@ -30,5 +29,9 @@ export const StyledPossibility = styled.div`
 
   & span {
     margin-left: ${({ theme }) => theme.padding[1]}px;
+  }
+
+  & svg {
+    color: ${({ theme }) => theme.colors.primary};
   }
 `;
