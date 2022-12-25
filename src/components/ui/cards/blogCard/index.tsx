@@ -11,7 +11,7 @@ import {
 } from './styled';
 
 interface IProps {
-  imageURL?: string;
+  imageURL: string;
   date: string;
   name: string;
   text: string;
@@ -20,7 +20,7 @@ interface IProps {
 const BlogCard = ({ imageURL, date, name, text }: IProps): JSX.Element => {
   return (
     <StyledBlogCard className={'blogCard'}>
-      <StyledBlogImage />
+      <StyledBlogImage imageURL={imageURL} />
       <StyledBlogDate>{date}</StyledBlogDate>
       <StyledBlogName>{name}</StyledBlogName>
       <StyledBlogText>{text}</StyledBlogText>

@@ -9,6 +9,31 @@ export const StyledPricingCard = styled.div`
   padding-bottom: ${({ theme }) => theme.padding[7]}px;
   background-color: ${({ theme }) => theme.colors.white};
   box-shadow: ${({ theme }) => theme.shadows.shadowCard3.boxShadow};
+  border-radius: ${({ theme }) => theme.borders.borderRadius[1]}px;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.primary};
+  }
+
+  &:hover .possibilities svg {
+    color: ${({ theme }) => theme.colors.white};
+  }
+
+  &:hover .possibilities span {
+    color: ${({ theme }) => theme.colors.white};
+  }
+
+  &:hover button {
+    background-color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.primary};
+  }
+
+  &:hover .buttons button:last-child {
+    background-color: ${({ theme }) => theme.colors.primary};
+    border-color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.white};
+  }
 `;
 
 export const StyledPriceContainer = styled.div`

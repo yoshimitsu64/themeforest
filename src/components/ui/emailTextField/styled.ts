@@ -14,4 +14,5 @@ export const StyledInput = styled.input`
   border-radius: inherit;
   background-color: inherit;
   caret-color: ${({ theme }) => theme.colors.primary};
+  outline: none;
 `;

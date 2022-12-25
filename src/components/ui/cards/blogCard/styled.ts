@@ -1,13 +1,16 @@
 import styled from 'styled-components';
-import Image from 'assets/images/img_8.png';
+
+interface IImage {
+  imageURL: string;
+}
 
 export const StyledBlogCard = styled.div`
   display: flex;
   flex-direction: column;
 `;
 
-export const StyledBlogImage = styled.div`
-  content: url(${Image});
+export const StyledBlogImage = styled.div<IImage>`
+  content: url(${({ imageURL }) => imageURL});
   border-radius: ${({ theme }) => theme.borders.borderRadius[0]}px;
   margin-bottom: ${({ theme }) => theme.padding[3]}px;
 `;

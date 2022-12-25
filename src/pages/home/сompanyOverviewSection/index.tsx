@@ -40,8 +40,8 @@ const CompanyOverviewSection = (): JSX.Element => {
         </StyledSubtitle>
       </StyledDescription>
       <StyledLogosContainer>
-        {logos.map((logo) => (
-          <StyledLogo logo={logo} />
+        {logos.map((logo, index) => (
+          <StyledLogo logo={logo} key={index} />
         ))}
       </StyledLogosContainer>
     </StyledCompanyExperience>

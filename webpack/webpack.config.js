@@ -11,6 +11,7 @@ module.exports = {
       constants: path.resolve(__dirname, '..', './src/constants'),
       assets: path.resolve(__dirname, '..', './src/assets'),
       hooks: path.resolve(__dirname, '..', './src/hooks'),
+      appTypes: path.resolve(__dirname, '..', './src/appTypes'),
     },
     extensions: ['.tsx', '.ts', '.js', '.json'],
   },
@@ -40,6 +41,7 @@ module.exports = {
     filename: 'bundle.js',
   },
   mode: 'development',
+  devtool: 'source-map',
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '..', './public/index.html'),
