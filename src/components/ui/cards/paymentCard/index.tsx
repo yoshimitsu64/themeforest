@@ -1,4 +1,5 @@
 import { memo } from 'react';
+import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
 
 import {
   StyledPaymentCard,
@@ -17,11 +18,14 @@ const PaymentCard = ({ price, children, subscribeVariant }: IProps): JSX.Element
   const subscribe = subscribeVariant === 'Mo' ? 'Month subscribe' : 'Year subscribe';
 
   return (
-    <StyledPaymentCard>
-      <StyledPaymentCardTitle>{subscribe}</StyledPaymentCardTitle>
-      <StyledPaymentCardPrice>{price}</StyledPaymentCardPrice>
-      <StyledPaymentCardPossibilities>{children}</StyledPaymentCardPossibilities>
-    </StyledPaymentCard>
+    <PayPalScriptProvider options={{ 'client-id': process.env.REACT_APP_PAYPAL_KEY! }}>
+      <StyledPaymentCard>
+        <StyledPaymentCardTitle>{subscribe}</StyledPaymentCardTitle>
+        <StyledPaymentCardPrice>{price}</StyledPaymentCardPrice>
+        <StyledPaymentCardPossibilities>{children}</StyledPaymentCardPossibilities>
+        <PayPalButtons />
+      </StyledPaymentCard>
+    </PayPalScriptProvider>
   );
 };
 

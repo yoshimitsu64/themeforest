@@ -7,6 +7,7 @@ import {
 
 export const StyledPaymentCard = styled.div`
   width: ${({ theme }) => theme.sizes[9]}px;
+  max-height: ${({ theme }) => theme.sizes[10]}px;
   padding-left: ${({ theme }) => theme.padding[3]}px;
   padding-right: ${({ theme }) => theme.padding[3]}px;
   padding-right: ${({ theme }) => theme.padding[3]}px;
@@ -18,6 +19,21 @@ export const StyledPaymentCard = styled.div`
   flex-direction: column;
   align-items: center;
   cursor: default;
+  overflow: auto;
+
+  &::-webkit-scrollbar-track {
+    background-color: ${({ theme }) => theme.colors.grey};
+  }
+
+  &::-webkit-scrollbar {
+    width: ${({ theme }) => theme.padding[1]}px;
+    background-color: ${({ theme }) => theme.colors.helperBlue3};
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: ${({ theme }) => theme.padding[1]}px;
+    background-color: ${({ theme }) => theme.colors.primary};
+  }
 `;
 
 export const StyledPaymentCardTitle = StyledPricingCardTitle.withComponent('div');
@@ -26,4 +42,5 @@ export const StyledPaymentCardPrice = StyledPrice.withComponent('div');
 
 export const StyledPaymentCardPossibilities = styled(StyledPossibilities)`
   margin-top: 0;
+  margin-bottom: ${({ theme }) => theme.padding[3]}px;
 `;
