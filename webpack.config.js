@@ -42,7 +42,7 @@ module.exports = {
     path: path.resolve(__dirname, './build'),
     filename: 'bundle.js',
   },
-  mode: 'development',
+  mode: 'production',
   devtool: 'source-map',
   plugins: [
     new HtmlWebpackPlugin({
