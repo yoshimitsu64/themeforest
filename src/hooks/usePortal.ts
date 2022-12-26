@@ -1,16 +1,15 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 
 export function usePortal(): HTMLDivElement {
-  const [root] = useState<HTMLDivElement>(document.createElement('div'))
+  const [root] = useState<HTMLDivElement>(() => document.createElement('div'));
 
   useEffect(() => {
-    document.body.append(root)
-    root.id = 'events-modal'
+    document.body.append(root);
 
     return () => {
-      document.body.removeChild(root)
-    }
-  }, [])
+      document.body.removeChild(root);
+    };
+  }, []);
 
-  return root
+  return root;
 }

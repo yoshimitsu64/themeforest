@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const StyledTestimonialsSection = styled.section`
   display: flex;
+  position: relative;
   flex-direction: column;
   height: 100%;
   margin-top: ${({ theme }) => theme.sizes[1] + 20}px;
@@ -11,8 +12,7 @@ export const StyledTestimonialsSection = styled.section`
 
 export const StyledTestimonialsSectionTitle = styled.div`
   font-size: ${({ theme }) => theme.typography.headLine.extraBold[1].size}px;
-  font-weight: ${({ theme }) =>
-    theme.typography.headLine.extraBold[1].fontWeight};
+  font-weight: ${({ theme }) => theme.typography.headLine.extraBold[1].fontWeight};
 `;
 
 export const StyledTestimonialsSectionHeader = styled.div`
@@ -28,20 +28,8 @@ export const StyledArrowsContainer = styled.div`
   }
 `;
 
-export const StyledArrow = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: ${({ theme }) => theme.sizes[1]}px;
-  background-color: ${({ theme }) => theme.colors.tertiary};
-  border-radius: ${({ theme }) => theme.borders.borderRadius[3]}px;
-  border: none;
-`;
-
 export const StyledReviewCardsContainer = styled.div`
   display: flex;
-
-  & div:not(div:last-child) {
-    margin-right: ${({ theme }) => theme.padding[5]}px;
-  }
+  max-width: 1110px;
+  overflow: hidden;
 `;

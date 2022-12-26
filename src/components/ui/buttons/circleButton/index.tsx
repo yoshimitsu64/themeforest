@@ -1,17 +1,14 @@
-import {
-  StyledCircleButton,
-  StyledInternalCircle,
-  StyledWhiteBackground,
-} from './styled';
+import { StyledCircleButton, StyledInternalCircle, StyledWhiteBackground } from './styled';
 
 interface IProps {
   children: string;
+  onClick?: () => void;
 }
 
-const CircleButton = ({ children }: IProps): JSX.Element => {
+const CircleButton = ({ children, onClick }: IProps): JSX.Element => {
   return (
     <StyledWhiteBackground>
-      <StyledCircleButton>
+      <StyledCircleButton onClick={onClick}>
         <StyledInternalCircle>{children}</StyledInternalCircle>
       </StyledCircleButton>
     </StyledWhiteBackground>
