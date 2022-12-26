@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import { ArrowRightFilled } from '@fluentui/react-icons';
 
 import {
@@ -32,4 +34,4 @@ const BlogCard = ({ imageURL, date, name, text }: IProps): JSX.Element => {
   );
 };
 
-export default BlogCard;
+export default memo(BlogCard);

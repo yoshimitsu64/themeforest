@@ -12,6 +12,7 @@ module.exports = {
       constants: path.resolve(__dirname, '..', './src/constants'),
       assets: path.resolve(__dirname, '..', './src/assets'),
       hooks: path.resolve(__dirname, '..', './src/hooks'),
+      helpers: path.resolve(__dirname, '..', './src/helpers'),
       appTypes: path.resolve(__dirname, '..', './src/appTypes'),
     },
     extensions: ['.tsx', '.ts', '.js', '.json'],

@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import {
   StyledReviewCard,
   StyledPersonInfoContainer,
@@ -15,12 +17,7 @@ interface IProps {
   review: string;
 }
 
-const ReviewCard = ({
-  imageURL,
-  review,
-  position,
-  name,
-}: IProps): JSX.Element => {
+const ReviewCard = ({ imageURL, review, position, name }: IProps): JSX.Element => {
   return (
     <StyledReviewCard>
       <StyledReviewCardHeader>
@@ -35,4 +32,4 @@ const ReviewCard = ({
   );
 };
 
-export default ReviewCard;
+export default memo(ReviewCard);

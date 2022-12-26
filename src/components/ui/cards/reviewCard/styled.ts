@@ -11,6 +11,7 @@ export const StyledReviewCard = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
   padding: ${({ theme }) => theme.padding[6]}px;
   box-shadow: ${({ theme }) => theme.shadows.shadowCard3.boxShadow};
+  scroll-margin: inherit;
 `;
 
 export const StyledReviewCardHeader = styled.div`
@@ -42,16 +43,13 @@ export const StyledPersonName = styled.div`
 export const StyledPersonPosition = styled.div`
   font-size: ${({ theme }) => theme.typography.headLine.medium[0].size}px;
   font-weight: ${({ theme }) => theme.typography.headLine.medium[0].fontWeight};
-  line-height: ${({ theme }) =>
-    theme.typography.headLine.medium[0].lineHeight}px;
+  line-height: ${({ theme }) => theme.typography.headLine.medium[0].lineHeight}px;
 `;
 
 export const StyledReview = styled.div`
   margin-top: ${({ theme }) => theme.padding[4]}px;
   color: ${({ theme }) => theme.colors.grey};
   font-size: ${({ theme }) => theme.typography.paragraph.regular[1].size}px;
-  font-weight: ${({ theme }) =>
-    theme.typography.paragraph.regular[1].fontWeight};
-  line-height: ${({ theme }) =>
-    theme.typography.paragraph.regular[1].lineHeight}px;
+  font-weight: ${({ theme }) => theme.typography.paragraph.regular[1].fontWeight};
+  line-height: ${({ theme }) => theme.typography.paragraph.regular[1].lineHeight}px;
 `;

@@ -37,6 +37,9 @@
       ],
       "appTypes/*": [
         "./appTypes/*"
+      ],
+      "helpers/*": [
+        "./helpers/*"
       ]
     }
   },

@@ -1,53 +1,88 @@
-import { ArrowRightFilled, ArrowLeftFilled } from '@fluentui/react-icons';
-
 import { person } from 'constants/testCard';
 
 import ReviewCard from 'components/ui/cards/reviewCard';
+import CarouselButton from 'components/ui/buttons/carouselButton';
 
 import {
   StyledTestimonialsSection,
   StyledTestimonialsSectionHeader,
   StyledTestimonialsSectionTitle,
   StyledArrowsContainer,
-  StyledArrow,
   StyledReviewCardsContainer,
 } from './styled';
+import Carousel from 'components/carousel';
+import { useRef } from 'react';
+import { moveCarouselItems } from 'helpers/carouselHelpers';
 
 const TestimonialsSection = (): JSX.Element => {
+  const ref = useRef<HTMLDivElement>(null);
+
   return (
-    <StyledTestimonialsSection className={'asdasd'}>
+    <StyledTestimonialsSection>
       <StyledTestimonialsSectionHeader>
-        <StyledTestimonialsSectionTitle>
-          Testimonials
-        </StyledTestimonialsSectionTitle>
+        <StyledTestimonialsSectionTitle>Testimonials</StyledTestimonialsSectionTitle>
         <StyledArrowsContainer>
-          <StyledArrow>
-            <ArrowRightFilled />
-          </StyledArrow>
-          <StyledArrow>
-            <ArrowLeftFilled />
-          </StyledArrow>
+          <CarouselButton variant={'next'} onClick={moveCarouselItems('next', ref)} />
+          <CarouselButton variant={'previous'} onClick={moveCarouselItems('previous', ref)} />
         </StyledArrowsContainer>
       </StyledTestimonialsSectionHeader>
-      <StyledReviewCardsContainer>
-        <ReviewCard
-          imageURL={person.imageURL}
-          name={person.name}
-          position={person.position}
-          review={person.review}
-        />
-        <ReviewCard
-          imageURL={person.imageURL}
-          name={person.name}
-          position={person.position}
-          review={person.review}
-        />
-        <ReviewCard
-          imageURL={person.imageURL}
-          name={person.name}
-          position={person.position}
-          review={person.review}
-        />
+      <StyledReviewCardsContainer className={'testimonials'}>
+        <Carousel ref={ref}>
+          <ReviewCard
+            imageURL={person.imageURL}
+            name={person.name}
+            position={person.position}
+            review={person.review}
+          />
+          <ReviewCard
+            imageURL={person.imageURL}
+            name={person.name}
+            position={person.position}
+            review={person.review}
+          />
+          <ReviewCard
+            imageURL={person.imageURL}
+            name={person.name}
+            position={person.position}
+            review={person.review}
+          />
+          <ReviewCard
+            imageURL={person.imageURL}
+            name={person.name}
+            position={person.position}
+            review={person.review}
+          />
+          <ReviewCard
+            imageURL={person.imageURL}
+            name={person.name}
+            position={person.position}
+            review={person.review}
+          />
+          <ReviewCard
+            imageURL={person.imageURL}
+            name={person.name}
+            position={person.position}
+            review={person.review}
+          />
+          <ReviewCard
+            imageURL={person.imageURL}
+            name={person.name}
+            position={person.position}
+            review={person.review}
+          />
+          <ReviewCard
+            imageURL={person.imageURL}
+            name={person.name}
+            position={person.position}
+            review={person.review}
+          />
+          <ReviewCard
+            imageURL={person.imageURL}
+            name={person.name}
+            position={person.position}
+            review={person.review}
+          />
+        </Carousel>
       </StyledReviewCardsContainer>
     </StyledTestimonialsSection>
   );

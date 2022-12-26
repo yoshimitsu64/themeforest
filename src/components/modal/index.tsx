@@ -1,3 +1,4 @@
+import { memo, forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 
 import { usePortal } from 'hooks/usePortal';
@@ -5,7 +6,6 @@ import { usePortal } from 'hooks/usePortal';
 import { ForwardRef } from 'appTypes/index';
 
 import { StyledModalContainer } from './styled';
-import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react';
 
 interface IProps {
   children: JSX.Element;
@@ -22,6 +22,7 @@ const Modal = forwardRef<ForwardRef, IProps>(({ children }, forwardedRef) => {
     closeModal: (param: boolean) => {
       setIsOpened(param);
     },
+    isOpened,
   }));
 
   const closeModal = (e: MouseEvent) => {
@@ -46,4 +47,4 @@ const Modal = forwardRef<ForwardRef, IProps>(({ children }, forwardedRef) => {
   );
 });
 
-export default Modal;
+export default memo(Modal);

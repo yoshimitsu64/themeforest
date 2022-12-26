@@ -32,7 +32,7 @@ export const StyledPaymentCard = styled.div`
 
   &::-webkit-scrollbar-thumb {
     border-radius: ${({ theme }) => theme.padding[1]}px;
-    background-color: ${({ theme }) => theme.colors.primary};
+    background-color: ${({ theme }) => theme.colors.black};
   }
 `;
 

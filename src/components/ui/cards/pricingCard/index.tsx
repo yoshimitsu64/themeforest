@@ -1,4 +1,4 @@
-import { ChangeEvent, useMemo, useRef, useState } from 'react';
+import { ChangeEvent, useMemo, useRef, useState, memo } from 'react';
 
 import { ForwardRef } from 'appTypes/index';
 
@@ -52,13 +52,15 @@ const PricingCard = ({ title, price, children }: IProps): JSX.Element => {
       </StyledPriceContainer>
       <RectangleButtonFilled width={'100%'} text={'Chose plan'} onClick={handleClose} />
       <StyledPossibilities className="possibilities">{children}</StyledPossibilities>
-      <Modal ref={ref}>
-        <PaymentCard price={price} subscribeVariant={subscribeVariant}>
-          <StyledPossibilities>{child}</StyledPossibilities>
-        </PaymentCard>
-      </Modal>
+      {!ref.current?.isOpened && (
+        <Modal ref={ref}>
+          <PaymentCard price={price} subscribeVariant={subscribeVariant}>
+            <StyledPossibilities>{child}</StyledPossibilities>
+          </PaymentCard>
+        </Modal>
+      )}
     </StyledPricingCard>
   );
 };
 
-export default PricingCard;
+export default memo(PricingCard);
