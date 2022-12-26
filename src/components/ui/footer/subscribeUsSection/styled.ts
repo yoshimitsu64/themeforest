@@ -25,18 +25,15 @@ export const StyledDescription = styled.div`
 
 export const StyledTitle = styled.div`
   color: ${({ theme }) => theme.colors.white};
-  margin-right: ${({ theme }) => theme.padding[4]}px;
+  margin-right: ${({ theme }) => theme.space[4]}px;
   font-size: ${({ theme }) => theme.typography.headLine.extraBold[1].size}px;
-  font-weight: ${({ theme }) =>
-    theme.typography.headLine.extraBold[1].fontWeight};
-  margin-bottom: ${({ theme }) => theme.padding[4]}px;
+  font-weight: ${({ theme }) => theme.typography.headLine.extraBold[1].fontWeight};
+  margin-bottom: ${({ theme }) => theme.space[4]}px;
 `;
 
 export const StyledSubtitle = styled.div`
   color: ${({ theme }) => theme.colors.white};
   font-size: ${({ theme }) => theme.typography.paragraph.regular[0].size}px;
-  font-weight: ${({ theme }) =>
-    theme.typography.paragraph.regular[0].fontWeight};
-  line-height: ${({ theme }) =>
-    theme.typography.paragraph.regular[0].lineHeight}px;
+  font-weight: ${({ theme }) => theme.typography.paragraph.regular[0].fontWeight};
+  line-height: ${({ theme }) => theme.typography.paragraph.regular[0].lineHeight}px;
 `;

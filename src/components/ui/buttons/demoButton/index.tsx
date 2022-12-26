@@ -4,7 +4,7 @@ import { PlayCircle24Regular } from '@fluentui/react-icons';
 
 import { ForwardRef } from 'appTypes/index';
 
-import Modal from 'components/modal';
+import Modal from 'components/business/modal';
 
 import { StyledButton } from './styled';
 

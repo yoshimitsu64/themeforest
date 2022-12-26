@@ -8,11 +8,11 @@ import {
 export const StyledPaymentCard = styled.div`
   width: ${({ theme }) => theme.sizes[9]}px;
   max-height: ${({ theme }) => theme.sizes[10]}px;
-  padding-left: ${({ theme }) => theme.padding[3]}px;
-  padding-right: ${({ theme }) => theme.padding[3]}px;
-  padding-right: ${({ theme }) => theme.padding[3]}px;
-  padding-top: ${({ theme }) => theme.padding[6]}px;
-  padding-bottom: ${({ theme }) => theme.padding[7]}px;
+  padding-left: ${({ theme }) => theme.space[3]}px;
+  padding-right: ${({ theme }) => theme.space[3]}px;
+  padding-right: ${({ theme }) => theme.space[3]}px;
+  padding-top: ${({ theme }) => theme.space[6]}px;
+  padding-bottom: ${({ theme }) => theme.space[7]}px;
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: ${({ theme }) => theme.borders.borderRadius[1]}px;
   display: flex;
@@ -26,12 +26,12 @@ export const StyledPaymentCard = styled.div`
   }
 
   &::-webkit-scrollbar {
-    width: ${({ theme }) => theme.padding[1]}px;
+    width: ${({ theme }) => theme.space[1]}px;
     background-color: ${({ theme }) => theme.colors.helperBlue3};
   }
 
   &::-webkit-scrollbar-thumb {
-    border-radius: ${({ theme }) => theme.padding[1]}px;
+    border-radius: ${({ theme }) => theme.space[1]}px;
     background-color: ${({ theme }) => theme.colors.black};
   }
 `;
@@ -42,5 +42,5 @@ export const StyledPaymentCardPrice = StyledPrice.withComponent('div');
 
 export const StyledPaymentCardPossibilities = styled(StyledPossibilities)`
   margin-top: 0;
-  margin-bottom: ${({ theme }) => theme.padding[3]}px;
+  margin-bottom: ${({ theme }) => theme.space[3]}px;
 `;

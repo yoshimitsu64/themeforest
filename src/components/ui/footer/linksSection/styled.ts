@@ -20,7 +20,7 @@ export const StyledDescription = styled.div`
 export const StyledLogo = styled.div`
   content: url(${Logo});
   width: ${({ theme }) => theme.sizes[2]}px;
-  margin-bottom: ${({ theme }) => theme.padding[3]}px;
+  margin-bottom: ${({ theme }) => theme.space[3]}px;
 `;
 
 export const StyledFooterLinks = styled.div`
@@ -31,12 +31,10 @@ export const StyledFooterLinks = styled.div`
 
 export const StyledSubtitle = styled.div`
   font-size: ${({ theme }) => theme.typography.paragraph.regular[2].size}px;
-  font-weight: ${({ theme }) =>
-    theme.typography.paragraph.regular[2].fontWeight};
-  line-height: ${({ theme }) =>
-    theme.typography.paragraph.regular[2].lineHeight}px;
+  font-weight: ${({ theme }) => theme.typography.paragraph.regular[2].fontWeight};
+  line-height: ${({ theme }) => theme.typography.paragraph.regular[2].lineHeight}px;
   color: ${({ theme }) => theme.colors.white};
-  margin-bottom: ${({ theme }) => theme.padding[3]}px;
+  margin-bottom: ${({ theme }) => theme.space[3]}px;
 `;
 
 export const StyledSocialNetworksLinks = styled.div`
@@ -53,27 +51,25 @@ export const StyledQuickLinks = styled.div`
   flex-direction: column;
 
   & a:not(:last-child) {
-    margin-bottom: ${({ theme }) => theme.padding[1]}px;
+    margin-bottom: ${({ theme }) => theme.space[1]}px;
   }
 
   & div:not(:last-child) {
-    margin-bottom: ${({ theme }) => theme.padding[1]}px;
+    margin-bottom: ${({ theme }) => theme.space[1]}px;
   }
 `;
 
 export const StyledQuickLinkTitle = styled.div`
   font-size: ${({ theme }) => theme.typography.headLine.bold[2].size}px;
   font-weight: ${({ theme }) => theme.typography.headLine.bold[2].fontWeight};
-  margin-bottom: ${({ theme }) => theme.padding[5]}px;
+  margin-bottom: ${({ theme }) => theme.space[5]}px;
   color: ${({ theme }) => theme.colors.white};
 `;
 
 export const StyledQuickLink = styled(Link)`
   font-size: ${({ theme }) => theme.typography.paragraph.regular[2].size}px;
-  font-weight: ${({ theme }) =>
-    theme.typography.paragraph.regular[2].fontWeight};
-  line-height: ${({ theme }) =>
-    theme.typography.paragraph.regular[2].lineHeight}px;
+  font-weight: ${({ theme }) => theme.typography.paragraph.regular[2].fontWeight};
+  line-height: ${({ theme }) => theme.typography.paragraph.regular[2].lineHeight}px;
   text-decoration: none;
   color: ${({ theme }) => theme.colors.grey};
   max-width: 233px;

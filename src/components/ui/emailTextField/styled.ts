@@ -9,7 +9,7 @@ export const StyledEmailTextField = styled.div`
 
 export const StyledInput = styled.input`
   width: ${({ theme }) => theme.sizes[0] + 20}%;
-  padding-left: ${({ theme }) => theme.padding[3]}px;
+  padding-left: ${({ theme }) => theme.space[3]}px;
   border: none;
   border-radius: inherit;
   background-color: inherit;

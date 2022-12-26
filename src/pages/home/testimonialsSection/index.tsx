@@ -10,7 +10,7 @@ import {
   StyledArrowsContainer,
   StyledReviewCardsContainer,
 } from './styled';
-import Carousel from 'components/carousel';
+import Carousel from 'components/business/carousel';
 import { useRef } from 'react';
 import { moveCarouselItems } from 'helpers/carouselHelpers';
 

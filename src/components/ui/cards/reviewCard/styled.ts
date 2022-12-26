@@ -9,7 +9,7 @@ export const StyledReviewCard = styled.div`
   flex-direction: column;
   min-width: ${({ theme }) => theme.sizes[6]}px;
   background-color: ${({ theme }) => theme.colors.white};
-  padding: ${({ theme }) => theme.padding[6]}px;
+  padding: ${({ theme }) => theme.space[6]}px;
   box-shadow: ${({ theme }) => theme.shadows.shadowCard3.boxShadow};
   scroll-margin: inherit;
 `;
@@ -32,7 +32,7 @@ export const StyledPersonLogo = styled.div<IProps>`
 export const StyledPersonInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: ${({ theme }) => theme.padding[4]}px;
+  margin-left: ${({ theme }) => theme.space[4]}px;
 `;
 
 export const StyledPersonName = styled.div`
@@ -47,7 +47,7 @@ export const StyledPersonPosition = styled.div`
 `;
 
 export const StyledReview = styled.div`
-  margin-top: ${({ theme }) => theme.padding[4]}px;
+  margin-top: ${({ theme }) => theme.space[4]}px;
   color: ${({ theme }) => theme.colors.grey};
   font-size: ${({ theme }) => theme.typography.paragraph.regular[1].size}px;
   font-weight: ${({ theme }) => theme.typography.paragraph.regular[1].fontWeight};

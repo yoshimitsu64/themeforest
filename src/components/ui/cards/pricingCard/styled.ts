@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 export const StyledPricingCard = styled.div`
   min-width: ${({ theme }) => theme.sizes[4]}px;
-  padding-left: ${({ theme }) => theme.padding[3]}px;
-  padding-right: ${({ theme }) => theme.padding[3]}px;
-  padding-right: ${({ theme }) => theme.padding[3]}px;
-  padding-top: ${({ theme }) => theme.padding[6]}px;
-  padding-bottom: ${({ theme }) => theme.padding[7]}px;
+  padding-left: ${({ theme }) => theme.space[3]}px;
+  padding-right: ${({ theme }) => theme.space[3]}px;
+  padding-right: ${({ theme }) => theme.space[3]}px;
+  padding-top: ${({ theme }) => theme.space[6]}px;
+  padding-bottom: ${({ theme }) => theme.space[7]}px;
   background-color: ${({ theme }) => theme.colors.white};
   box-shadow: ${({ theme }) => theme.shadows.shadowCard3.boxShadow};
   border-radius: ${({ theme }) => theme.borders.borderRadius[1]}px;
@@ -39,14 +39,14 @@ export const StyledPricingCard = styled.div`
 export const StyledPriceContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: ${({ theme }) => theme.padding[6]}px;
+  margin-bottom: ${({ theme }) => theme.space[6]}px;
   width: ${({ theme }) => theme.sizes[1]}%;
 `;
 
 export const StyledPricingCardTitle = styled.div`
   font-size: ${({ theme }) => theme.typography.headLine.bold[2].size}px;
   font-weight: ${({ theme }) => theme.typography.headLine.bold[2].fontWeight}px;
-  margin-bottom: ${({ theme }) => theme.padding[3]}px;
+  margin-bottom: ${({ theme }) => theme.space[3]}px;
 `;
 
 export const StyledPriceButtonsContainer = styled.div`
@@ -65,16 +65,16 @@ export const StyledButtonsContainer = styled.div`
   display: flex;
 
   & button:first-child {
-    margin-right: ${({ theme }) => theme.padding[1]}px;
+    margin-right: ${({ theme }) => theme.space[1]}px;
   }
 `;
 
 export const StyledPossibilities = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: ${({ theme }) => theme.padding[5]}px;
+  margin-top: ${({ theme }) => theme.space[5]}px;
 
   & div:not(div:last-child) {
-    margin-bottom: ${({ theme }) => theme.padding[2]}px;
+    margin-bottom: ${({ theme }) => theme.space[2]}px;
   }
 `;

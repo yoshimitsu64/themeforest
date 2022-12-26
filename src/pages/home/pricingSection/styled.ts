@@ -19,7 +19,7 @@ export const StyledPricingCardsContainer = styled.div`
   width: 100%;
 
   & .pricingCard:not(:last-child) {
-    margin-right: ${({ theme }) => theme.padding[5]}px;
+    margin-right: ${({ theme }) => theme.space[5]}px;
   }
 `;
 
@@ -28,7 +28,7 @@ export const StyledPossibility = styled.div`
   align-items: center;
 
   & span {
-    margin-left: ${({ theme }) => theme.padding[1]}px;
+    margin-left: ${({ theme }) => theme.space[1]}px;
   }
 
   & svg {
