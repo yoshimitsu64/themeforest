@@ -1,14 +1,14 @@
 {
   "name": "themeforest",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/yoshimitsu64/themeforest.git",
   "author": "Ilya Averkov",
   "license": "MIT",
   "private": false,
   "scripts": {
     "start": "webpack serve --config webpack/webpack.config.js --open",
-    "lint": "eslint \"**/*.{ts,tsx}\" --fix"
+    "lint": "eslint \"**/*.{ts,tsx}\" --fix",
+    "build" : "yarn run build"
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",
