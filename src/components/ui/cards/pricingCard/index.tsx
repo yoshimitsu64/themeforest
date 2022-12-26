@@ -4,7 +4,7 @@ import { ForwardRef } from 'appTypes/index';
 
 import PricingButton from 'components/ui/buttons/pricingButton';
 import RectangleButtonFilled from 'components/ui/buttons/rectangleButtonFilled';
-import Modal from 'components/modal';
+import Modal from 'components/business/modal';
 import PaymentCard from 'components/ui/cards/paymentCard';
 
 import {

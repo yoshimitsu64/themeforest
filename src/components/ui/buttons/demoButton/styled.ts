@@ -5,8 +5,8 @@ export const StyledButton = styled.button`
   align-items: center;
   justify-content: space-around;
   min-width: ${({ theme }) => theme.sizes[3]}px;
-  padding-left: ${({ theme }) => theme.padding[2]}px;
-  padding-right: ${({ theme }) => theme.padding[2]}px;
+  padding-left: ${({ theme }) => theme.space[2]}px;
+  padding-right: ${({ theme }) => theme.space[2]}px;
   height: ${({ theme }) => theme.sizes[0]}px;
   background-color: ${({ theme }) => theme.buttons.primary.backgroundColor};
   color: ${({ theme }) => theme.buttons.primary.color};

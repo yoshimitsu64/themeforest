@@ -1,13 +1,12 @@
-import { lazy, Suspense } from 'react';
+import { Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
-import { routes } from 'constants/routes';
+import { links } from 'constants/links';
 
-import Layout from 'components/layout';
-import Header from 'components/header';
-import Footer from 'components/footer';
-
-const ContactUsSection = lazy(() => import('components/contactUsSection'));
+import Layout from 'components/ui/layout';
+import Header from 'components/ui/header';
+import Footer from 'components/ui/footer';
+import ContactUsSection from 'pages/home/contactUsSection';
 
 const App = (): JSX.Element => {
   return (
@@ -16,7 +15,7 @@ const App = (): JSX.Element => {
         <Header />
         <Routes>
           <Route path={'/'} element={<Navigate to={'/home'} />} />
-          {routes.map(({ id, path, component }) => (
+          {links.map(({ id, path, component }) => (
             <Route path={path} element={component} key={id} />
           ))}
         </Routes>

@@ -24,7 +24,7 @@ export const StyledArrowsContainer = styled.div`
   display: flex;
 
   & button:first-child {
-    margin-right: ${({ theme }) => theme.padding[4]}px;
+    margin-right: ${({ theme }) => theme.space[4]}px;
   }
 `;
 

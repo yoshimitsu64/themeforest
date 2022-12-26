@@ -1,7 +1,7 @@
 import { SocialIcon } from 'react-social-icons';
 
-import { quickLinks, serviceLinks } from 'constants/routes';
-import { socialNetworks } from 'constants/newtworks';
+import { quickLinks, serviceLinks } from 'constants/links';
+import { socialNetworks } from 'constants/socialNetworks';
 
 import {
   StyledLinksSection,
@@ -22,8 +22,8 @@ const LinksSection = (): JSX.Element => {
       <StyledDescription>
         <StyledLogo />
         <StyledSubtitle>
-          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-          suscipit laboriosam, nisi ut aliquid ex ea commodi.
+          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+          nisi ut aliquid ex ea commodi.
         </StyledSubtitle>
         <StyledSocialNetworksLinks>
           {socialNetworks.map((network) => (
@@ -57,9 +57,7 @@ const LinksSection = (): JSX.Element => {
           <StyledQuickLinkTitle>Contact info</StyledQuickLinkTitle>
           <StyledText>ensome@info.co.us</StyledText>
           <StyledText>+1 601-201-5580</StyledText>
-          <StyledText>
-            1642 Washington Avenue, Jackson, MS, Mississippi, 39201
-          </StyledText>
+          <StyledText>1642 Washington Avenue, Jackson, MS, Mississippi, 39201</StyledText>
         </StyledQuickLinks>
       </StyledFooterLinks>
     </StyledLinksSection>

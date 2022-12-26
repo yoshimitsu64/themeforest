@@ -16,8 +16,7 @@ export const StyledBlogsSectionHeader = styled.div`
 
 export const StyledBlogSectionTitle = styled.div`
   font-size: ${({ theme }) => theme.typography.headLine.extraBold[1].size}px;
-  font-weight: ${({ theme }) =>
-    theme.typography.headLine.extraBold[1].fontWeight};
+  font-weight: ${({ theme }) => theme.typography.headLine.extraBold[1].fontWeight};
 `;
 
 export const StyledBlogCardsContainer = styled.div`
@@ -25,7 +24,7 @@ export const StyledBlogCardsContainer = styled.div`
   width: 100%;
 
   & .blogCard:not(:last-child) {
-    margin-right: ${({ theme }) => theme.padding[5]}px;
+    margin-right: ${({ theme }) => theme.space[5]}px;
   }
 `;
 
@@ -33,7 +32,7 @@ export const StyledArrowsContainer = styled.div`
   display: flex;
 
   & button:first-child {
-    margin-right: ${({ theme }) => theme.padding[4]}px;
+    margin-right: ${({ theme }) => theme.space[4]}px;
   }
 `;
 

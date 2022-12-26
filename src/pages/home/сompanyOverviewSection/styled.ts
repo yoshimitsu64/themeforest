@@ -17,8 +17,7 @@ export const StyledCompanyExperience = styled.div`
 export const StyledTitle = styled.div`
   width: max-content;
   font-size: ${({ theme }) => theme.typography.headLine.extraBold[1].size}px;
-  font-weight: ${({ theme }) =>
-    theme.typography.headLine.extraBold[1].fontWeight};
+  font-weight: ${({ theme }) => theme.typography.headLine.extraBold[1].fontWeight};
   margin-bottom: ${({ theme }) => theme.sizes[0]}px;
 `;
 
@@ -38,7 +37,7 @@ export const StyledBenefit = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-right: ${({ theme }) => theme.padding[2]}px;
+  margin-right: ${({ theme }) => theme.space[2]}px;
 
   &:first-child {
     margin-bottom: ${({ theme }) => theme.sizes[0] - 40}px;
@@ -47,28 +46,23 @@ export const StyledBenefit = styled.div`
 
 export const StyledCount = styled.div`
   font-size: ${({ theme }) => theme.typography.headLine.extraBold[0].size}px;
-  font-weight: ${({ theme }) =>
-    theme.typography.headLine.extraBold[0].fontWeight};
+  font-weight: ${({ theme }) => theme.typography.headLine.extraBold[0].fontWeight};
   color: ${({ theme }) => theme.colors.primary};
 `;
 
 export const StyledText = styled.div`
   width: max-content;
   font-size: ${({ theme }) => theme.typography.paragraph.regular[1].size}px;
-  font-weight: ${({ theme }) =>
-    theme.typography.paragraph.regular[1].fontWeight};
-  line-height: ${({ theme }) =>
-    theme.typography.paragraph.regular[1].lineHeight}px;
+  font-weight: ${({ theme }) => theme.typography.paragraph.regular[1].fontWeight};
+  line-height: ${({ theme }) => theme.typography.paragraph.regular[1].lineHeight}px;
 `;
 
 export const StyledSubtitle = styled.div`
   width: ${({ theme }) => theme.sizes[10]}px;
 
   font-size: ${({ theme }) => theme.typography.paragraph.regular[0].size}px;
-  font-weight: ${({ theme }) =>
-    theme.typography.paragraph.regular[0].fontWeight};
-  line-height: ${({ theme }) =>
-    theme.typography.paragraph.regular[0].lineHeight}px;
+  font-weight: ${({ theme }) => theme.typography.paragraph.regular[0].fontWeight};
+  line-height: ${({ theme }) => theme.typography.paragraph.regular[0].lineHeight}px;
 `;
 
 export const StyledLogosContainer = styled.div`

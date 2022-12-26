@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 
-import Description from 'components/description';
-import Title from 'components/description/title';
-import Subtitle from 'components/description/subtitle';
+import Description from 'components/business/description';
+import Title from 'components/business/description/title';
+import Subtitle from 'components/business/description/subtitle';
 import CircleButton from 'components/ui/buttons/circleButton';
 import { StyledIntroductionSection, StyledImage } from './styled';
 

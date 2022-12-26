@@ -7,7 +7,7 @@ export const StyledCarousel = styled.div`
   scroll-behavior: smooth;
 
   & div:not(div:last-child) {
-    margin-right: ${({ theme }) => theme.padding[5]}px;
+    margin-right: ${({ theme }) => theme.space[5]}px;
   }
 `;
 
@@ -17,6 +17,6 @@ export const StyledArrowsContainer = styled.div`
   top: 0;
   right: 0;
   & button:first-child {
-    margin-right: ${({ theme }) => theme.padding[4]}px;
+    margin-right: ${({ theme }) => theme.space[4]}px;
   }
 `;

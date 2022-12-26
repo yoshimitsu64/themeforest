@@ -5,11 +5,11 @@ export const StyledCardsContainer = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   & > * {
-    margin-bottom: ${({ theme }) => theme.padding[3]}px;
+    margin-bottom: ${({ theme }) => theme.space[3]}px;
   }
 
   & .card:nth-child(-n + 2) {
-    margin-right: ${({ theme }) => theme.padding[3]}px;
+    margin-right: ${({ theme }) => theme.space[3]}px;
   }
 
   & .card:nth-child(1) {
@@ -31,13 +31,11 @@ export const StyledCardImage = styled.div`
 export const StyledCardTitle = styled.div`
   font-size: ${({ theme }) => theme.typography.headLine.bold[1].size}px;
   font-weight: ${({ theme }) => theme.typography.headLine.bold[1].fontWeight};
-  margin-bottom: ${({ theme }) => theme.padding[1]}px;
+  margin-bottom: ${({ theme }) => theme.space[1]}px;
 `;
 
 export const StyledCardSubtitle = styled.div`
   font-size: ${({ theme }) => theme.typography.paragraph.regular[2].size}px;
-  font-weight: ${({ theme }) =>
-    theme.typography.paragraph.regular[2].fontWeight};
-  line-height: ${({ theme }) =>
-    theme.typography.paragraph.regular[2].lineHeight}px;
+  font-weight: ${({ theme }) => theme.typography.paragraph.regular[2].fontWeight};
+  line-height: ${({ theme }) => theme.typography.paragraph.regular[2].lineHeight}px;
 `;
