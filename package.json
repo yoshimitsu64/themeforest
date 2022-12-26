@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/yoshimitsu64/themeforest.git",
-  "homepage": "https://themeforest-steel.vercel.app/",
+  "homepage": ".",
   "author": "Ilya Averkov",
   "license": "MIT",
   "private": false,
