@@ -8,12 +8,10 @@ import { GlobalStyles } from 'globalStyles/styled';
 
 import App from './App';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
-  <HashRouter>
+  <HashRouter basename={'/'}>
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <App />
