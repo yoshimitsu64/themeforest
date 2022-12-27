@@ -5,7 +5,15 @@ export const StyledIntroductionSection = styled.section`
   display: flex;
   flex-direction: column;
   width: ${({ theme }) => theme.sizes[1]}%;
-  justify-content: center;
+  align-items: center;
+  margin-top: ${({ theme }) => theme.space[3]}px;
+`;
+
+export const StyledContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: ${({ theme }) => theme.sizes[0]}%;
+  height: max-content;
 `;
 
 export const StyledImage = styled.div`

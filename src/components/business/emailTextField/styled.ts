@@ -16,6 +16,9 @@ export const StyledEmailTextField = styled.div<InputVariant>`
           'background-color': `${theme.emailTextFields.error.backgroundColor}`,
         };
       }
+      return {
+        'background-color': `${theme.emailTextFields.focused.backgroundColor}`,
+      };
     }}
   }
 
@@ -37,11 +40,11 @@ export const StyledEmailTextField = styled.div<InputVariant>`
 `;
 
 export const StyledInput = styled.input`
-  width: ${({ theme }) => theme.sizes[0] + 20}%;
+  width: ${({ theme }) => theme.sizes[1]}%;
   padding-left: ${({ theme }) => theme.space[3]}px;
-  border: none;
   border-radius: inherit;
+  border: none;
+  outline: none;
   background-color: inherit;
   caret-color: ${({ theme }) => theme.colors.primary};
-  outline: none;
 `;
