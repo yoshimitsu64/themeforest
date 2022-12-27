@@ -112,4 +112,29 @@ export const theme = {
       borderRadius: 6,
     },
   },
+  emailTextFields: {
+    error: {
+      backgroundColor: '#F6E2E2',
+      color: '#C14040',
+      caretColor: '#C14040',
+    },
+    enabled: {
+      backgroundColor: '#C9DCEC',
+      color: '#292D33',
+      caretColor: '#185CFF',
+    },
+    disabled: {
+      backgroundColor: '#ECEFF2',
+      color: '#B4B6BD',
+    },
+    hovered: {
+      backgroundColor: '#ECEFF2',
+      color: '#9497A1',
+    },
+    focused: {
+      backgroundColor: '#ECEFF2',
+      color: '#292D33',
+      caretColor: '#185CFF',
+    },
+  },
 };
