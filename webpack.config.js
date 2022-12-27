@@ -14,19 +14,17 @@ module.exports = {
       hooks: path.resolve(__dirname, './src/hooks'),
       helpers: path.resolve(__dirname, './src/helpers'),
       appTypes: path.resolve(__dirname, './src/appTypes'),
+      config: path.resolve(__dirname, './src/config'),
+      validation: path.resolve(__dirname, './src/validation'),
     },
-    extensions: ['.tsx', '.ts', '.js', '.json'],
+    extensions: ['.tsx', '.ts', '.js', '.json', '.d.ts'],
   },
   module: {
     rules: [
       {
-        test: /\.(ts|js)x?$/,
+        test: /\.tsx?$/,
+        use: 'ts-loader',
         exclude: /node_modules/,
-        use: [
-          {
-            loader: 'babel-loader',
-          },
-        ],
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,

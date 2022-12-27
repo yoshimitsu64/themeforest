@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { InputVariant } from 'appTypes/index';
 
-export const StyledEmailButton = styled.button`
+export const StyledEmailButton = styled.input<InputVariant>`
   display: flex;
   align-items: center;
   justify-content: center;

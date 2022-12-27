@@ -8,7 +8,7 @@
       "ESNext"
     ],
     "jsx": "react-jsx",
-    "noEmit": true,
+    "noEmit": false,
     "isolatedModules": true,
     "strict": true,
     "esModuleInterop": true,
@@ -40,10 +40,20 @@
       ],
       "helpers/*": [
         "./helpers/*"
+      ],
+      "config/*": [
+        "./config/*"
+      ],
+      "validation/*": [
+        "./validation/*"
       ]
     }
   },
   "include": [
-    "src/**/*"
+    "src",
+    "react-app-env.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }

@@ -1,11 +1,6 @@
 import EmailTextField from 'components/ui/emailTextField';
 
-import {
-  StyledContainer,
-  StyledDescription,
-  StyledTitle,
-  StyledSubtitle,
-} from './styled';
+import { StyledContainer, StyledDescription, StyledTitle, StyledSubtitle } from './styled';
 
 const SubscribeUsSection = (): JSX.Element => {
   return (
@@ -13,8 +8,8 @@ const SubscribeUsSection = (): JSX.Element => {
       <StyledDescription>
         <StyledTitle>Subscribe to our newsletter</StyledTitle>
         <StyledSubtitle>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium.
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+          laudantium.
         </StyledSubtitle>
       </StyledDescription>
       <EmailTextField />
