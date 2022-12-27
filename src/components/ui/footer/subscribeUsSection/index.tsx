@@ -1,4 +1,4 @@
-import EmailTextField from 'components/ui/emailTextField';
+import EmailTextField from 'components/business/emailTextField';
 
 import { StyledContainer, StyledDescription, StyledTitle, StyledSubtitle } from './styled';
 

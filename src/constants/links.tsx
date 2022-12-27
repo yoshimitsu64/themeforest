@@ -1,6 +1,7 @@
 import { lazy } from 'react';
 
 const Home = lazy(() => import('pages/home'));
+const Services = lazy(() => import('pages/services'));
 
 export const links = [
   {
@@ -10,9 +11,9 @@ export const links = [
     id: 1,
   },
   {
-    title: 'Solutions',
-    path: '/solutions',
-    component: <Home />,
+    title: 'Services',
+    path: '/services',
+    component: <Services />,
     id: 2,
   },
   {
@@ -81,7 +82,7 @@ export const quickLinks = [
   {
     title: 'Services',
     path: '/services',
-    component: <Home />,
+    component: <Services />,
     id: 7,
   },
   {
