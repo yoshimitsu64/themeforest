@@ -8,9 +8,10 @@ interface IProps {
   onClick?: MouseEventHandler<HTMLInputElement>;
   variant: InputVariant['variant'];
   value: string;
+  color?: InputVariant['color'];
 }
 
-const EmailButton = ({ onClick, value, variant }: IProps): JSX.Element => {
+const EmailButton = ({ onClick, value, variant, color = 'white' }: IProps): JSX.Element => {
   const disabled = variant === 'error' || variant === 'disabled';
 
   return (
@@ -20,6 +21,7 @@ const EmailButton = ({ onClick, value, variant }: IProps): JSX.Element => {
       onClick={onClick}
       variant={variant}
       disabled={disabled}
+      color={color}
     />
   );
 };

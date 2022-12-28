@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser';
 
 import { InputVariant } from 'appTypes/index';
 
-import { emailJsConfig } from 'config/emailJS';
+import { emailSubscribeConfig } from 'config/emailJS';
 
 import { useEmailDebounce } from 'hooks/useEmailDebounce';
 
@@ -28,11 +28,11 @@ const EmailTextField = (): JSX.Element => {
     const isValid = await emailSchemaStatic.isValid({ email: email });
 
     if (isValid) {
-      emailjs.sendForm(
-        emailJsConfig.serviceID,
-        emailJsConfig.templateID,
+      await emailjs.sendForm(
+        emailSubscribeConfig.serviceID,
+        emailSubscribeConfig.templateID,
         formRef.current!,
-        emailJsConfig.publicKey
+        emailSubscribeConfig.publicKey
       );
       setInputVariant('disabled');
     }

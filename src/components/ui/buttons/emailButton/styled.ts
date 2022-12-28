@@ -7,11 +7,11 @@ export const StyledEmailButton = styled.input<InputVariant>`
   justify-content: center;
   min-width: ${({ theme }) => theme.sizes[1] + 20}px;
   height: ${({ theme }) => theme.sizes[0] + 5}px;
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme, color }) => theme.colors[color!]};
   font-size: ${({ theme }) => theme.fonts[3]}px;
+  border-radius: ${({ theme }) => theme.borders.borderRadius[0]}px;
   cursor: pointer;
   border: none;
-  border-radius: inherit;
 
   &:hover {
     background-color: ${({ theme }) => theme.buttons.primary.hover};

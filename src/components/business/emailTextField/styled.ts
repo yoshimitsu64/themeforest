@@ -4,7 +4,7 @@ import { InputVariant } from 'appTypes/index';
 
 export const StyledEmailTextField = styled.div<InputVariant>`
   display: flex;
-  width: ${({ theme }) => theme.sizes[8]}px;
+  max-width: ${({ theme }) => theme.sizes[8]}px;
   background-color: ${({ theme }) => theme.colors.helperBlue3};
   border-radius: ${({ theme }) => theme.borders.borderRadius[0]}px;
   justify-content: space-between;
