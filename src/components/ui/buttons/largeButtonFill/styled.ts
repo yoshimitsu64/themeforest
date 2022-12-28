@@ -4,7 +4,7 @@ export const StyledLargeButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: ${({ theme }) => theme.sizes[3]}px;
+  width: ${({ theme }) => theme.sizes[3]}px;
   height: ${({ theme }) => theme.sizes[0] + 5}px;
   background-color: ${({ theme }) => theme.buttons.primary.backgroundColor};
   color: ${({ theme }) => theme.buttons.primary.color};

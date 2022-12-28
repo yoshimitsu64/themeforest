@@ -1,7 +1,13 @@
+import { useRef } from 'react';
+
 import { person } from 'constants/testCard';
+
+import { moveCarouselItems } from 'helpers';
 
 import ReviewCard from 'components/ui/cards/reviewCard';
 import CarouselButton from 'components/ui/buttons/carouselButton';
+
+import Carousel from 'components/business/carousel';
 
 import {
   StyledTestimonialsSection,
@@ -10,9 +16,6 @@ import {
   StyledArrowsContainer,
   StyledReviewCardsContainer,
 } from './styled';
-import Carousel from 'components/business/carousel';
-import { useRef } from 'react';
-import { moveCarouselItems } from 'helpers/carouselHelpers';
 
 const TestimonialsSection = (): JSX.Element => {
   const ref = useRef<HTMLDivElement>(null);

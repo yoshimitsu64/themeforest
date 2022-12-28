@@ -12,8 +12,8 @@ const ServiceCardsSection = (): JSX.Element => {
             title: serviceCardTestData.title,
             subtitle: serviceCardTestData.subtitle,
           })
-          .map(({ image, title, subtitle }) => (
-            <ServiceCard imageURL={image} title={title}>
+          .map(({ image, title, subtitle }, index) => (
+            <ServiceCard imageURL={image} title={title} key={index}>
               {subtitle}
             </ServiceCard>
           ))}
