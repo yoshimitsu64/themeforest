@@ -4,15 +4,16 @@ import { StyledBreadcrumbs, StyledLink } from './styled';
 
 interface IProps {
   page: string;
+  color?: 'black' | 'white' | 'grey';
 }
 
-function Breadcrumbs({ page }: IProps): JSX.Element {
+function Breadcrumbs({ page, color = 'grey' }: IProps): JSX.Element {
   const location = useLocation();
 
   return (
-    <StyledBreadcrumbs>
+    <StyledBreadcrumbs color={color}>
       <StyledLink to="/home">Home</StyledLink>
-      <StyledLink to={`${location.pathname}`}>{page}</StyledLink>
+      <StyledLink to={location.pathname}>{page}</StyledLink>
     </StyledBreadcrumbs>
   );
 }
