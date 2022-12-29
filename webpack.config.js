@@ -17,6 +17,7 @@ module.exports = {
       appTypes: path.resolve(__dirname, './src/appTypes'),
       config: path.resolve(__dirname, './src/config'),
       validation: path.resolve(__dirname, './src/validation'),
+      animation: path.resolve(__dirname, './src/animation'),
     },
     extensions: ['.tsx', '.ts', '.js', '.json', '.d.ts'],
   },

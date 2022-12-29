@@ -46,6 +46,9 @@
       ],
       "validation/*": [
         "./validation/*"
+      ],
+      "animation/*": [
+        "./animation/*"
       ]
     }
   },

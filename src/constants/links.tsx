@@ -4,6 +4,7 @@ const Home = lazy(() => import('pages/home'));
 const Services = lazy(() => import('pages/services'));
 const Contacts = lazy(() => import('pages/contacts'));
 const OurTeam = lazy(() => import('pages/ourTeam'));
+const IntroductionSection = lazy(() => import('pages/faqs'));
 
 export const links = [
   {
@@ -25,9 +26,9 @@ export const links = [
     id: 3,
   },
   {
-    title: 'Elements',
-    path: '/elements',
-    component: <Home />,
+    title: 'FAQs',
+    path: '/faqs',
+    component: <IntroductionSection />,
     id: 4,
   },
   {

@@ -1,6 +1,7 @@
 import { Suspense, lazy } from 'react';
 
 const IntroductionSection = lazy(() => import('pages/contacts/introductionSection'));
+
 const MapSection = lazy(() => import('./mapSection'));
 
 function Contacts(): JSX.Element {
