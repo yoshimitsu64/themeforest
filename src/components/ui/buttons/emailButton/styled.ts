@@ -16,4 +16,8 @@ export const StyledEmailButton = styled.input<InputVariant>`
   &:hover {
     background-color: ${({ theme }) => theme.buttons.primary.hover};
   }
+
+  &:disabled {
+    ${({ theme }) => theme.buttons.disabled};
+  }
 `;

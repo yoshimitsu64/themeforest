@@ -1,14 +1,18 @@
-import IntroductionSection from 'pages/services/introductionSection';
-import CompanyOverviewSection from 'pages/home/сompanyOverviewSection';
-import ServiceCardsSection from './serviceCardsSection';
+import { Suspense, lazy } from 'react';
+
+const IntroductionSection = lazy(() => import('./introductionSection'));
+const CompanyOverviewSection = lazy(() => import('pages/home/сompanyOverviewSection'));
+const ServiceCardsSection = lazy(() => import('./serviceCardsSection'));
+const ContactUsSection = lazy(() => import('components/ui/sections/contactUsSection'));
 
 const Services = (): JSX.Element => {
   return (
-    <>
+    <Suspense fallback={<h1>Services are loading...</h1>}>
       <IntroductionSection />
       <ServiceCardsSection />
       <CompanyOverviewSection />
-    </>
+      <ContactUsSection />
+    </Suspense>
   );
 };
 
