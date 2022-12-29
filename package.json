@@ -8,7 +8,7 @@
   "scripts": {
     "start": "webpack serve --config webpack.config.js --open",
     "lint": "eslint \"**/*.{ts,tsx}\" --fix",
-    "build": "babel src -d lib"
+    "build": "Set NODE_ENV=production&&webpack --config webpack.config.js"
   },
   "devDependencies": {
     "@babel/core": "^7.20.7",
