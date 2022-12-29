@@ -7,7 +7,8 @@
   "private": false,
   "scripts": {
     "start": "webpack serve --config webpack.config.js --open",
-    "lint": "eslint \"**/*.{ts,tsx}\" --fix"
+    "lint": "eslint \"**/*.{ts,tsx}\" --fix",
+    "build": "babel src -d lib"
   },
   "devDependencies": {
     "@babel/core": "^7.20.7",
@@ -19,6 +20,8 @@
     "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.47.0",
     "@typescript-eslint/parser": "^5.47.0",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
     "babel-loader": "^9.1.0",
     "babel-plugin-styled-components": "^2.0.7",
     "dotenv": "^16.0.3",
