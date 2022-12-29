@@ -1,8 +1,9 @@
 import { lazy } from 'react';
-import Contacts from 'pages/contacts';
 
 const Home = lazy(() => import('pages/home'));
 const Services = lazy(() => import('pages/services'));
+const Contacts = lazy(() => import('pages/contacts'));
+const OurTeam = lazy(() => import('pages/ourTeam'));
 
 export const links = [
   {
@@ -18,9 +19,9 @@ export const links = [
     id: 2,
   },
   {
-    title: 'Pages',
-    path: '/pages',
-    component: <Home />,
+    title: 'Our team',
+    path: '/our-team',
+    component: <OurTeam />,
     id: 3,
   },
   {

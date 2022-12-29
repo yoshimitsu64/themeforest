@@ -61,8 +61,9 @@
     "consistent-return": "off",
     "react/require-default-props": "off",
     "no-unused-expressions": "off",
-    "no-console": "warn",
+    "no-console": "off",
     "react/destructuring-assignment": "off",
+    "react/function-component-definition": "off",
     "react/jsx-filename-extension": [
       1,
       {

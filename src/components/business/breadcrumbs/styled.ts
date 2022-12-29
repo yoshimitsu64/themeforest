@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const StyledBreadcrumbs = styled.div`
+interface IProps {
+  color?: 'black' | 'white' | 'grey';
+}
+
+export const StyledBreadcrumbs = styled.div<IProps>`
   & a:first-child {
     font-size: ${({ theme }) => theme.typography.headLine.medium[0].size}px;
     color: ${({ theme }) => theme.colors.grey};
@@ -13,7 +17,7 @@ export const StyledBreadcrumbs = styled.div`
   }
 
   & a:last-child {
-    color: ${({ theme }) => theme.colors.black};
+    color: ${({ theme, color }) => theme.colors[color!]};
     font-size: ${({ theme }) => theme.typography.headLine.semiBold[0].size}px;
     font-weight: ${({ theme }) => theme.typography.headLine.semiBold[0].fontWeight};
   }
@@ -22,5 +26,5 @@ export const StyledBreadcrumbs = styled.div`
 export const StyledLink = styled(Link)`
   height: inherit;
   text-decoration: none;
-  color: ${({ theme }) => theme.colors.grey};
+  color: ${({ theme, color }) => theme.colors[color!]};
 `;
