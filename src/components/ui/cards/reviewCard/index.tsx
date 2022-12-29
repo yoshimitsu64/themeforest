@@ -17,7 +17,7 @@ interface IProps {
   review: string;
 }
 
-const ReviewCard = ({ imageURL, review, position, name }: IProps): JSX.Element => {
+function ReviewCard({ imageURL, review, position, name }: IProps): JSX.Element {
   return (
     <StyledReviewCard>
       <StyledReviewCardHeader>
@@ -30,6 +30,6 @@ const ReviewCard = ({ imageURL, review, position, name }: IProps): JSX.Element =
       <StyledReview>{review}</StyledReview>
     </StyledReviewCard>
   );
-};
+}
 
 export default memo(ReviewCard);

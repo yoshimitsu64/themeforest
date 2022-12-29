@@ -9,12 +9,12 @@ import {
   StyledPricingCardsContainer,
 } from './styled';
 
-const PricingSection = (): JSX.Element => {
+function PricingSection(): JSX.Element {
   return (
     <StyledPricingSection>
       <StyledPricingSectionTitle>Our pricing</StyledPricingSectionTitle>
       <StyledPricingCardsContainer>
-        <PricingCard title={'Free trial'} price={'$0'}>
+        <PricingCard title="Free trial" price="$0">
           <StyledPossibility>
             <CheckmarkFilled /> <span>For small teams – 5 users</span>
           </StyledPossibility>
@@ -22,7 +22,7 @@ const PricingSection = (): JSX.Element => {
             <CheckmarkFilled /> <span>Community support</span>
           </StyledPossibility>
         </PricingCard>
-        <PricingCard title={'Lite'} price={'$40'}>
+        <PricingCard title="Lite" price="$40">
           <StyledPossibility>
             <CheckmarkFilled /> <span>For small teams – 15 users</span>
           </StyledPossibility>
@@ -33,7 +33,7 @@ const PricingSection = (): JSX.Element => {
             <CheckmarkFilled /> <span>Individual data – 60GB</span>
           </StyledPossibility>
         </PricingCard>
-        <PricingCard title={'Basic'} price={'$99'}>
+        <PricingCard title="Basic" price="$99">
           <StyledPossibility>
             <CheckmarkFilled /> <span>For big teams – 30 users</span>
           </StyledPossibility>
@@ -47,7 +47,7 @@ const PricingSection = (): JSX.Element => {
             <CheckmarkFilled /> <span>Advanced permissions</span>
           </StyledPossibility>
         </PricingCard>
-        <PricingCard title={'For enterprise'} price={'Custom'}>
+        <PricingCard title="For enterprise" price="Custom">
           <StyledPossibility>
             <CheckmarkFilled /> <span>Unlimited team members</span>
           </StyledPossibility>
@@ -73,6 +73,6 @@ const PricingSection = (): JSX.Element => {
       </StyledPricingCardsContainer>
     </StyledPricingSection>
   );
-};
+}
 
 export default PricingSection;

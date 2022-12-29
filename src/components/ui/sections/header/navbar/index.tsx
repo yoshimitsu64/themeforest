@@ -1,7 +1,7 @@
 import { links } from 'constants/links';
 import { StyledNavbar, StyledLink } from './styled';
 
-const Navbar = (): JSX.Element => {
+function Navbar(): JSX.Element {
   return (
     <StyledNavbar>
       {links.map(({ title, id, path }) => (
@@ -11,6 +11,6 @@ const Navbar = (): JSX.Element => {
       ))}
     </StyledNavbar>
   );
-};
+}
 
 export default Navbar;

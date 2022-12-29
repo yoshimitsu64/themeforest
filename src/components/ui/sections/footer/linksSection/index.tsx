@@ -16,7 +16,7 @@ import {
   StyledFooterLinks,
 } from './styled';
 
-const LinksSection = (): JSX.Element => {
+function LinksSection(): JSX.Element {
   return (
     <StyledLinksSection>
       <StyledDescription>
@@ -29,7 +29,7 @@ const LinksSection = (): JSX.Element => {
           {socialNetworks.map((network) => (
             <SocialIcon
               network={network}
-              bgColor={'white'}
+              bgColor="white"
               style={{ width: 24, height: 24 }}
               key={network}
             />
@@ -62,6 +62,6 @@ const LinksSection = (): JSX.Element => {
       </StyledFooterLinks>
     </StyledLinksSection>
   );
-};
+}
 
 export default LinksSection;

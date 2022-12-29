@@ -5,7 +5,7 @@ const CompanyOverviewSection = lazy(() => import('pages/home/сompanyOverviewSec
 const ServiceCardsSection = lazy(() => import('./serviceCardsSection'));
 const ContactUsSection = lazy(() => import('components/ui/sections/contactUsSection'));
 
-const Services = (): JSX.Element => {
+function Services(): JSX.Element {
   return (
     <Suspense fallback={<h1>Services are loading...</h1>}>
       <IntroductionSection />
@@ -14,6 +14,6 @@ const Services = (): JSX.Element => {
       <ContactUsSection />
     </Suspense>
   );
-};
+}
 
 export default Services;

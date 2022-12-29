@@ -6,7 +6,7 @@ interface IProps {
   page: string;
 }
 
-const Breadcrumbs = ({ page }: IProps): JSX.Element => {
+function Breadcrumbs({ page }: IProps): JSX.Element {
   const location = useLocation();
 
   return (
@@ -15,6 +15,6 @@ const Breadcrumbs = ({ page }: IProps): JSX.Element => {
       <StyledLink to={`${location.pathname}`}>{page}</StyledLink>
     </StyledBreadcrumbs>
   );
-};
+}
 
 export default Breadcrumbs;

@@ -3,7 +3,7 @@ import LinksSection from 'components/ui/sections/footer/linksSection';
 import FooterBottom from 'components/ui/sections/footer/footerBottom';
 import { StyledFooter } from './styled';
 
-const Footer = (): JSX.Element => {
+function Footer(): JSX.Element {
   return (
     <StyledFooter>
       <SubscribeUsSection />
@@ -11,6 +11,6 @@ const Footer = (): JSX.Element => {
       <FooterBottom />
     </StyledFooter>
   );
-};
+}
 
 export default Footer;

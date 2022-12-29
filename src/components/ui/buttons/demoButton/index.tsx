@@ -8,7 +8,7 @@ import Modal from 'components/business/modal';
 
 import { StyledButton } from './styled';
 
-const DemoButton = (): JSX.Element => {
+function DemoButton(): JSX.Element {
   const ref = useRef<ForwardRef>(null);
 
   const handleClose = (): void => {
@@ -33,6 +33,6 @@ const DemoButton = (): JSX.Element => {
       )}
     </StyledButton>
   );
-};
+}
 
 export default DemoButton;

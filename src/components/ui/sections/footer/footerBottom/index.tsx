@@ -1,11 +1,6 @@
-import {
-  StyledFooterBottom,
-  StyledText,
-  StyledPrivacyPolicy,
-  StyledContainer,
-} from './styled';
+import { StyledFooterBottom, StyledText, StyledPrivacyPolicy, StyledContainer } from './styled';
 
-const FooterBottom = (): JSX.Element => {
+function FooterBottom(): JSX.Element {
   return (
     <StyledFooterBottom>
       <StyledContainer>
@@ -17,6 +12,6 @@ const FooterBottom = (): JSX.Element => {
       </StyledContainer>
     </StyledFooterBottom>
   );
-};
+}
 
 export default FooterBottom;

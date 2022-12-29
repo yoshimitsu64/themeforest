@@ -7,7 +7,7 @@ import {
   StyledContactDescription,
 } from './styled';
 
-const Contacts = (): JSX.Element => {
+function Contacts(): JSX.Element {
   return (
     <StyledContacts>
       <StyledContactCard>
@@ -30,6 +30,6 @@ const Contacts = (): JSX.Element => {
       </StyledContactCard>
     </StyledContacts>
   );
-};
+}
 
 export default Contacts;

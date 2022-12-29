@@ -1,4 +1,4 @@
-import { ChangeEvent, useMemo, useRef, useState, memo } from 'react';
+import React, { useMemo, useRef, useState, memo } from 'react';
 
 import { ForwardRef } from 'appTypes/index';
 
@@ -23,7 +23,7 @@ interface IProps {
   children: JSX.Element[] | JSX.Element;
 }
 
-const PricingCard = ({ title, price, children }: IProps): JSX.Element => {
+function PricingCard({ title, price, children }: IProps): JSX.Element {
   const ref = useRef<ForwardRef>(null);
 
   const [subscribeVariant, setSubscribeVariant] = useState<string>('Mo');
@@ -34,23 +34,23 @@ const PricingCard = ({ title, price, children }: IProps): JSX.Element => {
     ref.current?.closeModal(true);
   };
 
-  const handleSubscribeClick = (e: ChangeEvent<HTMLInputElement>) => {
-    setSubscribeVariant(e.target.innerHTML);
+  const handleSubscribeClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    setSubscribeVariant((e.target as HTMLElement).innerHTML);
   };
 
   return (
-    <StyledPricingCard className={'pricingCard'}>
+    <StyledPricingCard className="pricingCard">
       <StyledPriceContainer>
         <StyledPricingCardTitle>{title}</StyledPricingCardTitle>
         <StyledPriceButtonsContainer>
           <StyledPrice>{price}</StyledPrice>
-          <StyledButtonsContainer className={'buttons'}>
-            <PricingButton text={'Mo'} onClick={handleSubscribeClick} />
-            <PricingButton text={'Yr'} onClick={handleSubscribeClick} />
+          <StyledButtonsContainer className="buttons">
+            <PricingButton text="Mo" onClick={handleSubscribeClick} />
+            <PricingButton text="Yr" onClick={handleSubscribeClick} />
           </StyledButtonsContainer>
         </StyledPriceButtonsContainer>
       </StyledPriceContainer>
-      <RectangleButtonFilled width={'100%'} text={'Chose plan'} onClick={handleClose} />
+      <RectangleButtonFilled width="100%" text="Chose plan" onClick={handleClose} />
       <StyledPossibilities className="possibilities">{children}</StyledPossibilities>
       {!ref.current?.isOpened && (
         <Modal ref={ref}>
@@ -61,6 +61,6 @@ const PricingCard = ({ title, price, children }: IProps): JSX.Element => {
       )}
     </StyledPricingCard>
   );
-};
+}
 
 export default memo(PricingCard);

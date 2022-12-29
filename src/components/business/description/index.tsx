@@ -4,8 +4,8 @@ interface IProps {
   children: JSX.Element[];
 }
 
-const Description = ({ children }: IProps): JSX.Element => {
+function Description({ children }: IProps): JSX.Element {
   return <StyledDescription>{children}</StyledDescription>;
-};
+}
 
 export default Description;

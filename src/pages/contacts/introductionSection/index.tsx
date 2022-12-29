@@ -10,11 +10,11 @@ import {
   StyledHighlightText,
 } from './styled';
 
-const IntroductionSection = (): JSX.Element => {
+function IntroductionSection(): JSX.Element {
   return (
     <StyledIntroductionSection>
       <StyledContainer>
-        <Breadcrumbs page={'Contacts'} />
+        <Breadcrumbs page="Contacts" />
         <StyledContent>
           <StyledText>
             How can we <StyledHighlightText>help you?</StyledHighlightText>
@@ -25,6 +25,6 @@ const IntroductionSection = (): JSX.Element => {
       </StyledContainer>
     </StyledIntroductionSection>
   );
-};
+}
 
 export default IntroductionSection;

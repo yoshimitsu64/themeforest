@@ -7,12 +7,12 @@ interface IProps {
   onClick?: () => void;
 }
 
-const CarouselButton = ({ variant, onClick }: IProps): JSX.Element => {
+function CarouselButton({ variant, onClick }: IProps): JSX.Element {
   return (
     <StyledCarouselButton onClick={onClick}>
       {variant === 'next' ? <ArrowRightFilled /> : <ArrowLeftFilled />}
     </StyledCarouselButton>
   );
-};
+}
 
 export default CarouselButton;

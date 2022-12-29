@@ -1,8 +1,8 @@
-import { StyledServiceCardsSection, StyledContainer } from './styled';
 import { serviceCardTestData } from 'constants/serviceCardTestData';
 import ServiceCard from 'components/ui/cards/serviceCard';
+import { StyledServiceCardsSection, StyledContainer } from './styled';
 
-const ServiceCardsSection = (): JSX.Element => {
+function ServiceCardsSection(): JSX.Element {
   return (
     <StyledServiceCardsSection>
       <StyledContainer>
@@ -20,6 +20,6 @@ const ServiceCardsSection = (): JSX.Element => {
       </StyledContainer>
     </StyledServiceCardsSection>
   );
-};
+}
 
 export default ServiceCardsSection;

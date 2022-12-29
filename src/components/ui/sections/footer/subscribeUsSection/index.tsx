@@ -2,7 +2,7 @@ import EmailTextField from 'components/business/emailTextField';
 
 import { StyledContainer, StyledDescription, StyledTitle, StyledSubtitle } from './styled';
 
-const SubscribeUsSection = (): JSX.Element => {
+function SubscribeUsSection(): JSX.Element {
   return (
     <StyledContainer>
       <StyledDescription>
@@ -15,6 +15,6 @@ const SubscribeUsSection = (): JSX.Element => {
       <EmailTextField />
     </StyledContainer>
   );
-};
+}
 
 export default SubscribeUsSection;

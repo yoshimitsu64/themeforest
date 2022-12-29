@@ -1,7 +1,7 @@
 import { RefObject } from 'react';
 
 export const moveCarouselItems =
-  (direction: 'next' | 'previous' = 'next', ref: RefObject<HTMLDivElement>) =>
+  (ref: RefObject<HTMLDivElement>, direction: 'next' | 'previous' = 'next') =>
   () => {
     const width = ref.current!.clientWidth;
     ref.current!.scrollLeft =

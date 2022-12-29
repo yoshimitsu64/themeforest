@@ -14,7 +14,7 @@ interface IProps {
   subscribeVariant: string;
 }
 
-const PaymentCard = ({ price, children, subscribeVariant }: IProps): JSX.Element => {
+function PaymentCard({ price, children, subscribeVariant }: IProps): JSX.Element {
   const subscribe = subscribeVariant === 'Mo' ? 'Month subscribe' : 'Year subscribe';
 
   return (
@@ -27,6 +27,6 @@ const PaymentCard = ({ price, children, subscribeVariant }: IProps): JSX.Element
       </StyledPaymentCard>
     </PayPalScriptProvider>
   );
-};
+}
 
 export default memo(PaymentCard);

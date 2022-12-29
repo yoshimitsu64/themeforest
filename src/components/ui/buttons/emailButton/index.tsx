@@ -11,7 +11,7 @@ interface IProps {
   color?: InputVariant['color'];
 }
 
-const EmailButton = ({ onClick, value, variant, color = 'white' }: IProps): JSX.Element => {
+function EmailButton({ onClick, value, variant, color = 'white' }: IProps): JSX.Element {
   const disabled = variant === 'error' || variant === 'disabled';
 
   return (
@@ -24,6 +24,6 @@ const EmailButton = ({ onClick, value, variant, color = 'white' }: IProps): JSX.
       color={color}
     />
   );
-};
+}
 
 export default memo(EmailButton);

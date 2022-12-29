@@ -1,8 +1,10 @@
-import { useDebugValue, useEffect, useState } from 'react';
+import React, { useDebugValue, useEffect, useState } from 'react';
 
 import { emailSchemaStatic } from 'validation/emailValidation';
 
-export const useEmailDebounce = (email: string) => {
+export const useEmailDebounce = (
+  email: string
+): readonly [boolean, React.Dispatch<React.SetStateAction<boolean>>] => {
   const [isEmailValid, setIsEmailValid] = useState<boolean>(true);
 
   useDebugValue(isEmailValid ? 'Email valid' : 'Email not valid');
@@ -10,7 +12,7 @@ export const useEmailDebounce = (email: string) => {
   useEffect(() => {
     if (!email) return;
     const emailTimeout = setTimeout(async () => {
-      const isValid = await emailSchemaStatic.isValid({ email: email });
+      const isValid = await emailSchemaStatic.isValid({ email });
       isValid ? setIsEmailValid(true) : setIsEmailValid(false);
     }, 1000);
 

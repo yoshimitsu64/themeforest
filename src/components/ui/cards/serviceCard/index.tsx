@@ -15,7 +15,7 @@ interface IProps {
   children: string;
 }
 
-const ServiceCard = ({ imageURL, title, children }: IProps): JSX.Element => {
+function ServiceCard({ imageURL, title, children }: IProps): JSX.Element {
   return (
     <StyledServiceCard>
       <StyledServiceCardLogo imageURL={imageURL} />
@@ -27,6 +27,6 @@ const ServiceCard = ({ imageURL, title, children }: IProps): JSX.Element => {
       </StyledReadMoreContainer>
     </StyledServiceCard>
   );
-};
+}
 
 export default ServiceCard;

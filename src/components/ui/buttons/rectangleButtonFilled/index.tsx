@@ -6,16 +6,12 @@ interface IProps {
   onClick?: () => void;
 }
 
-const RectangleButtonFilled = ({
-  text,
-  width,
-  onClick,
-}: IProps): JSX.Element => {
+function RectangleButtonFilled({ text = 'text', width = '100', onClick }: IProps): JSX.Element {
   return (
     <StyledButton width={width} onClick={onClick}>
       {text}
     </StyledButton>
   );
-};
+}
 
 export default RectangleButtonFilled;

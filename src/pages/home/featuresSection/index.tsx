@@ -2,7 +2,7 @@ import Description from 'components/business/description';
 import Title from 'components/business/description/title';
 import Subtitle from 'components/business/description/subtitle';
 
-const FeaturesSection = (): JSX.Element => {
+function FeaturesSection(): JSX.Element {
   return (
     <Description>
       <Title variant="extraBold" size={0}>
@@ -17,6 +17,6 @@ const FeaturesSection = (): JSX.Element => {
       </Subtitle>
     </Description>
   );
-};
+}
 
 export default FeaturesSection;

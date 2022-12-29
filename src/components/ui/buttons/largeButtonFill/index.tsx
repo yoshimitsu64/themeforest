@@ -5,8 +5,8 @@ interface IProps {
   children?: string;
 }
 
-export const LargeButtonFill = ({ onClick, children }: IProps): JSX.Element => {
+export function LargeButtonFill({ onClick, children }: IProps): JSX.Element {
   return <StyledLargeButton onClick={onClick}>{children}</StyledLargeButton>;
-};
+}
 
 export default LargeButtonFill;

@@ -10,7 +10,7 @@ const PricingSection = lazy(() => import('pages/home/pricingSection'));
 const BlogSection = lazy(() => import('pages/home/blogSection'));
 const ContactUsSection = lazy(() => import('components/ui/sections/contactUsSection'));
 
-const Home = (): JSX.Element => {
+function Home(): JSX.Element {
   return (
     <Suspense fallback={<h1>Home page is loading</h1>}>
       <IntroductionSection />
@@ -24,6 +24,6 @@ const Home = (): JSX.Element => {
       <ContactUsSection />
     </Suspense>
   );
-};
+}
 
 export default Home;

@@ -6,7 +6,7 @@ import Subtitle from 'components/business/description/subtitle';
 import CircleButton from 'components/ui/buttons/circleButton';
 import { StyledIntroductionSection, StyledImage } from './styled';
 
-const IntroductionSection = (): JSX.Element => {
+function IntroductionSection(): JSX.Element {
   const navigate = useNavigate();
   const handleClick = (): void => {
     navigate('/solutions');
@@ -30,6 +30,6 @@ const IntroductionSection = (): JSX.Element => {
       </StyledImage>
     </StyledIntroductionSection>
   );
-};
+}
 
 export default IntroductionSection;

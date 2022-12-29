@@ -13,7 +13,7 @@ import {
   StyledLogosContainer,
 } from './styled';
 
-const CompanyOverviewSection = (): JSX.Element => {
+function CompanyOverviewSection(): JSX.Element {
   return (
     <StyledCompanyExperience>
       <StyledTitle>We provide services that guarantee your success</StyledTitle>
@@ -33,10 +33,9 @@ const CompanyOverviewSection = (): JSX.Element => {
           </StyledBenefit>
         </StyledBenefits>
         <StyledSubtitle>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptat
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-          quaeab illo inventore. Donec tincidunt tempor quam, non mollis quam
-          finibus nec.
+          Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque
+          laudantium, totam rem aperiam, eaque ipsa quaeab illo inventore. Donec tincidunt tempor
+          quam, non mollis quam finibus nec.
         </StyledSubtitle>
       </StyledDescription>
       <StyledLogosContainer>
@@ -46,6 +45,6 @@ const CompanyOverviewSection = (): JSX.Element => {
       </StyledLogosContainer>
     </StyledCompanyExperience>
   );
-};
+}
 
 export default CompanyOverviewSection;

@@ -5,7 +5,7 @@ interface IProps {
   onClick?: () => void;
 }
 
-const CircleButton = ({ children, onClick }: IProps): JSX.Element => {
+function CircleButton({ children, onClick }: IProps): JSX.Element {
   return (
     <StyledWhiteBackground>
       <StyledCircleButton onClick={onClick}>
@@ -13,6 +13,6 @@ const CircleButton = ({ children, onClick }: IProps): JSX.Element => {
       </StyledCircleButton>
     </StyledWhiteBackground>
   );
-};
+}
 
 export default CircleButton;

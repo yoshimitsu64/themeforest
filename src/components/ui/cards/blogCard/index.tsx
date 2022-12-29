@@ -19,9 +19,9 @@ interface IProps {
   text: string;
 }
 
-const BlogCard = ({ imageURL, date, name, text }: IProps): JSX.Element => {
+function BlogCard({ imageURL, date, name, text }: IProps): JSX.Element {
   return (
-    <StyledBlogCard className={'blogCard'}>
+    <StyledBlogCard className="blogCard">
       <StyledBlogImage imageURL={imageURL} />
       <StyledBlogDate>{date}</StyledBlogDate>
       <StyledBlogName>{name}</StyledBlogName>
@@ -32,6 +32,6 @@ const BlogCard = ({ imageURL, date, name, text }: IProps): JSX.Element => {
       </StyledReadMoreContainer>
     </StyledBlogCard>
   );
-};
+}
 
 export default memo(BlogCard);

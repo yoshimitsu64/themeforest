@@ -14,7 +14,7 @@ import {
   StyledCardTitle,
 } from './styled';
 
-const CardsSection = (): JSX.Element => {
+function CardsSection(): JSX.Element {
   return (
     <StyledCardsContainer>
       <Card>
@@ -23,8 +23,8 @@ const CardsSection = (): JSX.Element => {
         </StyledCardImage>
         <StyledCardTitle>Machine learning</StyledCardTitle>
         <StyledCardSubtitle>
-          At vero eos et accusamus et iusto odio dignissimos duciu quili blandit
-          praesentium voluptatum ipsa quae ab illo.
+          At vero eos et accusamus et iusto odio dignissimos duciu quili blandit praesentium
+          voluptatum ipsa quae ab illo.
         </StyledCardSubtitle>
       </Card>
       <Card>
@@ -33,8 +33,8 @@ const CardsSection = (): JSX.Element => {
         </StyledCardImage>
         <StyledCardTitle>Access control</StyledCardTitle>
         <StyledCardSubtitle>
-          At vero eos et accusamus et iusto odio dignissimos duciu quili blandit
-          praesentium voluptatum ipsa quae ab illo.
+          At vero eos et accusamus et iusto odio dignissimos duciu quili blandit praesentium
+          voluptatum ipsa quae ab illo.
         </StyledCardSubtitle>
       </Card>
       <Card>
@@ -43,8 +43,8 @@ const CardsSection = (): JSX.Element => {
         </StyledCardImage>
         <StyledCardTitle>Embed analytics</StyledCardTitle>
         <StyledCardSubtitle>
-          At vero eos et accusamus et iusto odio dignissimos duciu quili blandit
-          praesentium voluptatum ipsa quae ab illo.
+          At vero eos et accusamus et iusto odio dignissimos duciu quili blandit praesentium
+          voluptatum ipsa quae ab illo.
         </StyledCardSubtitle>
       </Card>
       <Card>
@@ -53,12 +53,12 @@ const CardsSection = (): JSX.Element => {
         </StyledCardImage>
         <StyledCardTitle>Data analytics</StyledCardTitle>
         <StyledCardSubtitle>
-          At vero eos et accusamus et iusto odio dignissimos duciu quili blandit
-          praesentium voluptatum ipsa quae ab illo.
+          At vero eos et accusamus et iusto odio dignissimos duciu quili blandit praesentium
+          voluptatum ipsa quae ab illo.
         </StyledCardSubtitle>
       </Card>
     </StyledCardsContainer>
   );
-};
+}
 
 export default CardsSection;

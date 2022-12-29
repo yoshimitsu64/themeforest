@@ -6,12 +6,12 @@ interface IProps {
   size: number;
 }
 
-const Title = ({ children, variant, size }: IProps): JSX.Element => {
+function Title({ children, variant, size }: IProps): JSX.Element {
   return (
     <StyledTitle variant={variant} size={size}>
       {children}
     </StyledTitle>
   );
-};
+}
 
 export default Title;

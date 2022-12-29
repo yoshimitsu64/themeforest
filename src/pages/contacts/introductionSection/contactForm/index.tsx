@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FormEvent, useEffect, useMemo, useRef, useState } from 'react';
+import { ChangeEvent, FormEvent, useEffect, useMemo, useRef, useState } from 'react';
 
 import { IInputsState, InputVariant } from 'appTypes/index';
 
@@ -14,7 +14,7 @@ import {
   StyledMessageInput,
 } from './styled';
 
-const ContactForm = (): JSX.Element => {
+function ContactForm(): JSX.Element {
   const initialState = useMemo(() => {
     return {
       user_email: false,
@@ -83,9 +83,9 @@ const ContactForm = (): JSX.Element => {
         error={inputState.user_message}
         onChange={handleChange}
       />
-      <EmailButton variant={inputVariant} value={'Send'} color="primary" />
+      <EmailButton variant={inputVariant} value="Send" color="primary" />
     </StyledContactForm>
   );
-};
+}
 
 export default ContactForm;

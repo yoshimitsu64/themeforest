@@ -14,7 +14,7 @@ import EmailButton from 'components/ui/buttons/emailButton';
 
 import { StyledEmailTextField, StyledInput } from './styled';
 
-const EmailTextField = (): JSX.Element => {
+function EmailTextField(): JSX.Element {
   const formRef = useRef<HTMLFormElement>(null);
 
   const [inputVariant, setInputVariant] = useState<InputVariant['variant']>('ok');
@@ -25,7 +25,7 @@ const EmailTextField = (): JSX.Element => {
   const handleClick = async (e: React.MouseEvent<HTMLInputElement>) => {
     e.preventDefault();
 
-    const isValid = await emailSchemaStatic.isValid({ email: email });
+    const isValid = await emailSchemaStatic.isValid({ email });
 
     if (isValid) {
       await emailjs.sendForm(
@@ -70,10 +70,10 @@ const EmailTextField = (): JSX.Element => {
           value={email}
           disabled={inputVariant === 'disabled'}
         />
-        <EmailButton variant={inputVariant} onClick={handleClick} value={'Send'} />
+        <EmailButton variant={inputVariant} onClick={handleClick} value="Send" />
       </StyledEmailTextField>
     </form>
   );
-};
+}
 
 export default EmailTextField;

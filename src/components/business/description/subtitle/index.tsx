@@ -6,12 +6,12 @@ interface IProps {
   size: number;
 }
 
-const Subtitle = ({ children, variant, size }: IProps): JSX.Element => {
+function Subtitle({ children, variant, size }: IProps): JSX.Element {
   return (
     <StyledSubtitle size={size} variant={variant}>
       {children}
     </StyledSubtitle>
   );
-};
+}
 
 export default Subtitle;

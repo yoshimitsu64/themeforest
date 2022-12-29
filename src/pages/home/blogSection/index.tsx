@@ -13,7 +13,7 @@ import {
   StyledArrowsContainer,
 } from './styled';
 
-const BlogSection = (): JSX.Element => {
+function BlogSection(): JSX.Element {
   return (
     <StyledBlogSection>
       <StyledBlogsSectionHeader>
@@ -36,17 +36,11 @@ const BlogSection = (): JSX.Element => {
             imageURL: Image,
           })
           .map(({ date, name, text, imageURL }, index) => (
-            <BlogCard
-              imageURL={imageURL}
-              date={date}
-              name={name}
-              text={text}
-              key={index}
-            />
+            <BlogCard imageURL={imageURL} date={date} name={name} text={text} key={index} />
           ))}
       </StyledBlogCardsContainer>
     </StyledBlogSection>
   );
-};
+}
 
 export default BlogSection;

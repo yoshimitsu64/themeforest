@@ -3,7 +3,7 @@ import DescriptionSection from 'pages/home/benefitsSection/descriptionSection';
 
 import { StyledBenefits, BenefitsContainer } from './styled';
 
-const BenefitsSection = (): JSX.Element => {
+function BenefitsSection(): JSX.Element {
   return (
     <StyledBenefits>
       <BenefitsContainer>
@@ -12,6 +12,6 @@ const BenefitsSection = (): JSX.Element => {
       </BenefitsContainer>
     </StyledBenefits>
   );
-};
+}
 
 export default BenefitsSection;

@@ -8,11 +8,9 @@ interface IProps {
 
 const Carousel = forwardRef<HTMLDivElement, IProps>(({ children }, forwardedRef) => {
   return (
-    <>
-      <StyledCarousel className={'carousel'} ref={forwardedRef}>
-        {children}
-      </StyledCarousel>
-    </>
+    <StyledCarousel className="carousel" ref={forwardedRef}>
+      {children}
+    </StyledCarousel>
   );
 });
 

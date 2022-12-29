@@ -8,11 +8,11 @@ import {
   StyledDescription,
 } from './styled';
 
-const IntroductionSection = (): JSX.Element => {
+function IntroductionSection(): JSX.Element {
   return (
     <StyledIntroductionSection>
       <StyledContainer>
-        <Breadcrumbs page={'Service'} />
+        <Breadcrumbs page="Service" />
         <StyledPageDescription>
           <StyledTitlePage>Services</StyledTitlePage>
           <StyledDescriptor>Data Analytics Services</StyledDescriptor>
@@ -24,6 +24,6 @@ const IntroductionSection = (): JSX.Element => {
       </StyledContainer>
     </StyledIntroductionSection>
   );
-};
+}
 
 export default IntroductionSection;

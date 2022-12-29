@@ -17,7 +17,7 @@ import {
   StyledReviewCardsContainer,
 } from './styled';
 
-const TestimonialsSection = (): JSX.Element => {
+function TestimonialsSection(): JSX.Element {
   const ref = useRef<HTMLDivElement>(null);
 
   return (
@@ -25,11 +25,11 @@ const TestimonialsSection = (): JSX.Element => {
       <StyledTestimonialsSectionHeader>
         <StyledTestimonialsSectionTitle>Testimonials</StyledTestimonialsSectionTitle>
         <StyledArrowsContainer>
-          <CarouselButton variant={'next'} onClick={moveCarouselItems('next', ref)} />
-          <CarouselButton variant={'previous'} onClick={moveCarouselItems('previous', ref)} />
+          <CarouselButton variant="next" onClick={moveCarouselItems(ref, 'next')} />
+          <CarouselButton variant="previous" onClick={moveCarouselItems(ref, 'previous')} />
         </StyledArrowsContainer>
       </StyledTestimonialsSectionHeader>
-      <StyledReviewCardsContainer className={'testimonials'}>
+      <StyledReviewCardsContainer className="testimonials">
         <Carousel ref={ref}>
           <ReviewCard
             imageURL={person.imageURL}
@@ -89,6 +89,6 @@ const TestimonialsSection = (): JSX.Element => {
       </StyledReviewCardsContainer>
     </StyledTestimonialsSection>
   );
-};
+}
 
 export default TestimonialsSection;

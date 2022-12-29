@@ -8,14 +8,14 @@ import Layout from 'components/ui/layout';
 import Header from 'components/ui/sections/header';
 import Footer from 'components/ui/sections/footer';
 
-const App = (): JSX.Element => {
+function App(): JSX.Element {
   return (
     <Layout>
       <ErrorBoundary>
         <Suspense fallback={<h1>Wait a second</h1>}>
           <Header />
           <Routes>
-            <Route path={'/'} element={<Navigate to={'/home'} />} />
+            <Route path="/" element={<Navigate to="/home" />} />
             {links.map(({ id, path, component }) => (
               <Route path={path} element={component} key={id} />
             ))}
@@ -25,6 +25,6 @@ const App = (): JSX.Element => {
       </ErrorBoundary>
     </Layout>
   );
-};
+}
 
 export default App;

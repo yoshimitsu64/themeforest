@@ -4,7 +4,7 @@ import DemoButton from 'components/ui/buttons/demoButton';
 
 import { StyledHeader, StyledLogo } from './styled';
 
-const Header = (): JSX.Element => {
+function Header(): JSX.Element {
   return (
     <StyledHeader>
       <StyledLogo src={Logo} />
@@ -12,6 +12,6 @@ const Header = (): JSX.Element => {
       <DemoButton />
     </StyledHeader>
   );
-};
+}
 
 export default Header;

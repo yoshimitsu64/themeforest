@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface ILogos {
-  logo: any;
+  logo: string;
 }
 
 export const StyledCompanyExperience = styled.div`

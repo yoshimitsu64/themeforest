@@ -24,10 +24,8 @@ export const StyledText = styled.div`
   width: max-content;
   color: ${({ theme }) => theme.colors.grey};
   font-size: ${({ theme }) => theme.typography.paragraph.regular[2].size}px;
-  font-weight: ${({ theme }) =>
-    theme.typography.paragraph.regular[2].fontWeight};
-  line-height: ${({ theme }) =>
-    theme.typography.paragraph.regular[2].lineHeight}px;
+  font-weight: ${({ theme }) => theme.typography.paragraph.regular[2].fontWeight};
+  line-height: ${({ theme }) => theme.typography.paragraph.regular[2].lineHeight}px;
 `;
 
 export const StyledPrivacyPolicy = styled.div`
