@@ -8,10 +8,11 @@ const BenefitsSection = lazy(() => import('pages/home/benefitsSection'));
 const FeaturesSection = lazy(() => import('pages/home/featuresSection'));
 const PricingSection = lazy(() => import('pages/home/pricingSection'));
 const BlogSection = lazy(() => import('pages/home/blogSection'));
+const ContactUsSection = lazy(() => import('components/ui/sections/contactUsSection'));
 
 const Home = (): JSX.Element => {
   return (
-    <Suspense fallback={<h1>Wait a second</h1>}>
+    <Suspense fallback={<h1>Home page is loading</h1>}>
       <IntroductionSection />
       <FeaturesSection />
       <NewSolutionsSection />
@@ -20,6 +21,7 @@ const Home = (): JSX.Element => {
       <TestimonialsSection />
       <PricingSection />
       <BlogSection />
+      <ContactUsSection />
     </Suspense>
   );
 };

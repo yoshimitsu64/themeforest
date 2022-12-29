@@ -1,5 +1,5 @@
 import Logo from 'assets/images/logo_blue.png';
-import Navbar from 'components/ui/header/navbar';
+import Navbar from 'components/ui/sections/header/navbar';
 import DemoButton from 'components/ui/buttons/demoButton';
 
 import { StyledHeader, StyledLogo } from './styled';

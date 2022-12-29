@@ -5,9 +5,8 @@ import { links } from 'constants/links';
 
 import ErrorBoundary from 'components/business/errorBoundary';
 import Layout from 'components/ui/layout';
-import Header from 'components/ui/header';
-import Footer from 'components/ui/footer';
-import ContactUsSection from 'pages/home/contactUsSection';
+import Header from 'components/ui/sections/header';
+import Footer from 'components/ui/sections/footer';
 
 const App = (): JSX.Element => {
   return (
@@ -21,7 +20,6 @@ const App = (): JSX.Element => {
               <Route path={path} element={component} key={id} />
             ))}
           </Routes>
-          <ContactUsSection />
           <Footer />
         </Suspense>
       </ErrorBoundary>

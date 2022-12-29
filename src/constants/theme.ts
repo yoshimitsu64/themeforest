@@ -26,6 +26,10 @@ export const theme = {
       backgroundColor: '#185CFF',
       hover: '#467DFF',
     },
+    disabled: {
+      backgroundColor: '#9497A1',
+      color: '#FFFFFF',
+    },
   },
   typography: {
     headLine: {
