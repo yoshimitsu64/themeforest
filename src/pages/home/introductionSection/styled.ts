@@ -12,7 +12,7 @@ export const StyledIntroductionSection = styled.section`
 export const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: ${({ theme }) => theme.sizes[0]}%;
+  width: 1110px;
   height: max-content;
 `;
 

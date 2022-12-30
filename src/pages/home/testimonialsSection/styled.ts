@@ -6,8 +6,11 @@ export const StyledTestimonialsSection = styled.section`
   flex-direction: column;
   height: 100%;
   margin-top: ${({ theme }) => theme.sizes[1] + 20}px;
-  padding-left: 405px;
-  padding-right: 405px;
+  padding-bottom: ${({ theme }) => theme.sizes[1]}px;
+
+  & .review-card:not(:last-child) {
+    margin-right: ${({ theme }) => theme.space[3]}px;
+  }
 `;
 
 export const StyledTestimonialsSectionTitle = styled.div`

@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import { StyledTeamMemberCard, StyledFooter, StyledName, StyledSpeciality } from './styled';
 
 interface IProps {
@@ -17,4 +19,4 @@ const TeamMemberCard = ({ name, speciality, imageURL }: IProps): JSX.Element => 
   );
 };
 
-export default TeamMemberCard;
+export default memo(TeamMemberCard);

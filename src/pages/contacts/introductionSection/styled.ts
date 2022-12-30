@@ -3,8 +3,9 @@ import styled from 'styled-components';
 export const StyledIntroductionSection = styled.section`
   display: flex;
   flex-direction: column;
-  width: ${({ theme }) => theme.sizes[1]}%;
+  width: 1110px;
   align-items: center;
+  align-content: space-between;
 `;
 
 export const StyledContainer = styled.div`
