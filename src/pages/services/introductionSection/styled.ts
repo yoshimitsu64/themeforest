@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledPageDescription = styled.div`
   align-self: center;
-  max-width: 50vw;
+  width: 1110px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,6 +24,7 @@ export const StyledDescriptor = styled.div`
 `;
 
 export const StyledDescription = styled.div`
+  max-width: ${({ theme }) => theme.sizes[0] + 20}%;
   color: ${({ theme }) => theme.colors.grey};
   font-size: ${({ theme }) => theme.typography.paragraph.regular[0].size}px;
   font-weight: ${({ theme }) => theme.typography.paragraph.regular[0].fontWeight};

@@ -5,6 +5,8 @@ export const StyledContainer = styled.div`
   position: relative;
   align-items: center;
   height: ${({ theme }) => theme.sizes[5]}px;
+  width: 1110px;
+  justify-content: space-between;
 
   &::after {
     position: absolute;
@@ -20,12 +22,11 @@ export const StyledContainer = styled.div`
 export const StyledDescription = styled.div`
   display: flex;
   flex-direction: column;
-  margin-right: ${({ theme }) => theme.sizes[1] + 20}px;
+  max-width: ${({ theme }) => theme.sizes[0]}%;
 `;
 
 export const StyledTitle = styled.div`
   color: ${({ theme }) => theme.colors.white};
-  margin-right: ${({ theme }) => theme.space[4]}px;
   font-size: ${({ theme }) => theme.typography.headLine.extraBold[1].size}px;
   font-weight: ${({ theme }) => theme.typography.headLine.extraBold[1].fontWeight};
   margin-bottom: ${({ theme }) => theme.space[4]}px;

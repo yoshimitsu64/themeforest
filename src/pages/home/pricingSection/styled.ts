@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const StyledPricingSection = styled.section`
   display: flex;
   flex-direction: column;
-  margin-top: ${({ theme }) => theme.sizes[1] + 20}px;
   padding-left: 405px;
   padding-right: 405px;
 `;

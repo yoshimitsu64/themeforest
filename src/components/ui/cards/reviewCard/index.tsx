@@ -19,7 +19,7 @@ interface IProps {
 
 function ReviewCard({ imageURL, review, position, name }: IProps): JSX.Element {
   return (
-    <StyledReviewCard>
+    <StyledReviewCard className="review-card">
       <StyledReviewCardHeader>
         <StyledPersonLogo imageURL={imageURL} />
         <StyledPersonInfoContainer>

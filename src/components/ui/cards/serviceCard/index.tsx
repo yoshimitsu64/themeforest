@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import { ArrowRightFilled } from '@fluentui/react-icons';
 
 import {
@@ -29,4 +31,4 @@ function ServiceCard({ imageURL, title, children }: IProps): JSX.Element {
   );
 }
 
-export default ServiceCard;
+export default memo(ServiceCard);

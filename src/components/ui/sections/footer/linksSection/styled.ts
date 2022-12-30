@@ -5,9 +5,11 @@ import Logo from 'assets/images/logo/Logo.png';
 
 export const StyledLinksSection = styled.section`
   display: flex;
+  width: 1110px;
   position: relative;
   margin-top: ${({ theme }) => theme.sizes[0]}px;
   margin-bottom: ${({ theme }) => theme.sizes[0]}px;
+  justify-content: center;
 `;
 
 export const StyledDescription = styled.div`

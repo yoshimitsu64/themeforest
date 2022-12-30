@@ -4,7 +4,7 @@ export const StyledFooterBottom = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  width: ${({ theme }) => theme.sizes[1]}%;
+  width: 1110px;
 
   &::before {
     margin-bottom: 30px;
