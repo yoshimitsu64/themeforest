@@ -5,7 +5,7 @@ import { Add20Filled, LineHorizontal120Filled } from '@fluentui/react-icons';
 import { StyledFaqCard, StyledTitle, StyledSubtitle, StyledCardHeader, StyledIcon } from './styled';
 
 const FaqCard = (): JSX.Element => {
-  const [isShown, setIsShown] = useState<boolean>(false);
+  const [isShown, setIsShown] = useState<boolean | null>(null);
 
   const handleClick = () => {
     setIsShown(!isShown);

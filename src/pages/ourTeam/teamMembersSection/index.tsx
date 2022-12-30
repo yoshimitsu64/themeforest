@@ -1,5 +1,5 @@
 import TeamMemberCard from 'components/ui/cards/teamMemberCard';
-import Image from 'assets/images/002_img_person_2.png';
+import Image from 'assets/images/person/personLargeRectangle.png';
 
 import { StyledTeamMembersSection, StyledContainer } from './styled';
 

@@ -1,13 +1,16 @@
-import { useRef } from 'react';
+import { useState } from 'react';
 
-import { person } from 'constants/testCard';
-
-import { moveCarouselItems } from 'helpers';
+import { ArrowLeft48Filled, ArrowRight48Filled } from '@fluentui/react-icons';
 
 import ReviewCard from 'components/ui/cards/reviewCard';
-import CarouselButton from 'components/ui/buttons/carouselButton';
+import Paginate from 'components/business/paginate';
 
-import Carousel from 'components/business/carousel';
+import { testimonialCards } from 'constants/cardsPayload/testimonialCards';
+import { blogCards } from 'constants/cardsPayload/blogCards';
+
+import { usePaginationValidation } from 'hooks/usePaginationValidation';
+
+import { StyledArrow } from 'pages/home/blogSection/styled';
 
 import {
   StyledTestimonialsSection,
@@ -18,74 +21,45 @@ import {
 } from './styled';
 
 function TestimonialsSection(): JSX.Element {
-  const ref = useRef<HTMLDivElement>(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [isAvailableNextPage, isAvailablePrevPage] = usePaginationValidation(
+    currentPage,
+    blogCards
+  );
+
+  const handleNextClick = () => {
+    isAvailableNextPage && setCurrentPage(currentPage + 1);
+  };
+
+  const handlePreviousClick = () => {
+    isAvailablePrevPage && setCurrentPage(currentPage - 1);
+  };
 
   return (
     <StyledTestimonialsSection>
       <StyledTestimonialsSectionHeader>
         <StyledTestimonialsSectionTitle>Testimonials</StyledTestimonialsSectionTitle>
         <StyledArrowsContainer>
-          <CarouselButton variant="next" onClick={moveCarouselItems(ref, 'next')} />
-          <CarouselButton variant="previous" onClick={moveCarouselItems(ref, 'previous')} />
+          <StyledArrow onClick={handleNextClick}>
+            <ArrowRight48Filled style={{ color: isAvailableNextPage ? 'black' : 'grey' }} />
+          </StyledArrow>
+          <StyledArrow onClick={handlePreviousClick}>
+            <ArrowLeft48Filled style={{ color: isAvailablePrevPage ? 'black' : 'grey' }} />
+          </StyledArrow>
         </StyledArrowsContainer>
       </StyledTestimonialsSectionHeader>
       <StyledReviewCardsContainer className="testimonials">
-        <Carousel ref={ref}>
-          <ReviewCard
-            imageURL={person.imageURL}
-            name={person.name}
-            position={person.position}
-            review={person.review}
-          />
-          <ReviewCard
-            imageURL={person.imageURL}
-            name={person.name}
-            position={person.position}
-            review={person.review}
-          />
-          <ReviewCard
-            imageURL={person.imageURL}
-            name={person.name}
-            position={person.position}
-            review={person.review}
-          />
-          <ReviewCard
-            imageURL={person.imageURL}
-            name={person.name}
-            position={person.position}
-            review={person.review}
-          />
-          <ReviewCard
-            imageURL={person.imageURL}
-            name={person.name}
-            position={person.position}
-            review={person.review}
-          />
-          <ReviewCard
-            imageURL={person.imageURL}
-            name={person.name}
-            position={person.position}
-            review={person.review}
-          />
-          <ReviewCard
-            imageURL={person.imageURL}
-            name={person.name}
-            position={person.position}
-            review={person.review}
-          />
-          <ReviewCard
-            imageURL={person.imageURL}
-            name={person.name}
-            position={person.position}
-            review={person.review}
-          />
-          <ReviewCard
-            imageURL={person.imageURL}
-            name={person.name}
-            position={person.position}
-            review={person.review}
-          />
-        </Carousel>
+        <Paginate currentPage={currentPage} itemCount={3}>
+          {testimonialCards.map(({ imageURL, name, position, review }, index) => (
+            <ReviewCard
+              imageURL={imageURL}
+              name={name}
+              position={position}
+              review={review}
+              key={index}
+            />
+          ))}
+        </Paginate>
       </StyledReviewCardsContainer>
     </StyledTestimonialsSection>
   );

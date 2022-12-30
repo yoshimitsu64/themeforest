@@ -1,44 +1,61 @@
-import { ArrowLeftFilled, ArrowRightFilled } from '@fluentui/react-icons';
+import { useState } from 'react';
 
-import Image from 'assets/images/img_8.png';
-import { person } from 'constants/testCard';
+import { ArrowLeft48Filled, ArrowRight48Filled } from '@fluentui/react-icons';
+
+import { blogCards } from 'constants/cardsPayload/blogCards';
+
+import { usePaginationValidation } from 'hooks/usePaginationValidation';
+
 import BlogCard from 'components/ui/cards/blogCard';
+import Paginate from 'components/business/paginate';
 
 import {
   StyledBlogSection,
   StyledBlogsSectionHeader,
   StyledBlogSectionTitle,
-  StyledBlogCardsContainer,
   StyledArrow,
   StyledArrowsContainer,
+  StyledContainer,
+  StyledBlogCardsContainer,
 } from './styled';
 
 function BlogSection(): JSX.Element {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [isAvailableNextPage, isAvailablePrevPage] = usePaginationValidation(
+    currentPage,
+    blogCards
+  );
+
+  const handleNextClick = () => {
+    isAvailableNextPage && setCurrentPage(currentPage + 1);
+  };
+
+  const handlePreviousClick = () => {
+    isAvailablePrevPage && setCurrentPage(currentPage - 1);
+  };
+
   return (
     <StyledBlogSection>
-      <StyledBlogsSectionHeader>
-        <StyledBlogSectionTitle>Our blog</StyledBlogSectionTitle>
-        <StyledArrowsContainer>
-          <StyledArrow>
-            <ArrowRightFilled />
-          </StyledArrow>
-          <StyledArrow>
-            <ArrowLeftFilled />
-          </StyledArrow>
-        </StyledArrowsContainer>
-      </StyledBlogsSectionHeader>
-      <StyledBlogCardsContainer>
-        {new Array(3)
-          .fill({
-            date: '22 June 2022',
-            name: 'ISO 13485 compliance of medical devices',
-            text: person.review,
-            imageURL: Image,
-          })
-          .map(({ date, name, text, imageURL }, index) => (
-            <BlogCard imageURL={imageURL} date={date} name={name} text={text} key={index} />
-          ))}
-      </StyledBlogCardsContainer>
+      <StyledContainer>
+        <StyledBlogsSectionHeader>
+          <StyledBlogSectionTitle>Our blog</StyledBlogSectionTitle>
+          <StyledArrowsContainer>
+            <StyledArrow onClick={handleNextClick}>
+              <ArrowRight48Filled style={{ color: isAvailableNextPage ? 'black' : 'grey' }} />
+            </StyledArrow>
+            <StyledArrow onClick={handlePreviousClick}>
+              <ArrowLeft48Filled style={{ color: isAvailablePrevPage ? 'black' : 'grey' }} />
+            </StyledArrow>
+          </StyledArrowsContainer>
+        </StyledBlogsSectionHeader>
+        <StyledBlogCardsContainer>
+          <Paginate currentPage={currentPage} itemCount={3}>
+            {blogCards.map(({ date, name, text, imageURL }, index) => (
+              <BlogCard imageURL={imageURL} date={date} name={name} text={text} key={index} />
+            ))}
+          </Paginate>
+        </StyledBlogCardsContainer>
+      </StyledContainer>
     </StyledBlogSection>
   );
 }

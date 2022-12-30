@@ -1,4 +1,4 @@
-import Logo from 'assets/images/logo_blue.png';
+import Logo from 'assets/images/logo/logo_blue.png';
 import Navbar from 'components/ui/sections/header/navbar';
 import DemoButton from 'components/ui/buttons/demoButton';
 

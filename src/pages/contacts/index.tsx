@@ -4,13 +4,13 @@ const IntroductionSection = lazy(() => import('pages/contacts/introductionSectio
 
 const MapSection = lazy(() => import('./mapSection'));
 
-function Contacts(): JSX.Element {
+const Contacts = (): JSX.Element => {
   return (
     <Suspense fallback={<h1>Contacts are loading...</h1>}>
       <IntroductionSection />
       <MapSection />
     </Suspense>
   );
-}
+};
 
 export default Contacts;
