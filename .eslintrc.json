@@ -45,7 +45,8 @@
   },
   "ignorePatterns": [
     "/*",
-    "!/src"
+    "!/src",
+    "!src/assets/*"
   ],
   "rules": {
     "react/jsx-uses-react": "off",
@@ -64,6 +65,13 @@
     "no-console": "off",
     "react/destructuring-assignment": "off",
     "react/function-component-definition": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
     "react/jsx-filename-extension": [
       1,
       {

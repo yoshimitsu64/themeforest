@@ -40,7 +40,7 @@ export const StyledEmailTextField = styled.div<InputVariant>`
 `;
 
 export const StyledInput = styled.input`
-  width: ${({ theme }) => theme.sizes[1]}%;
+  max-width: ${({ theme }) => theme.sizes[1] + 20}px;
   padding-left: ${({ theme }) => theme.space[3]}px;
   border-radius: inherit;
   border: none;

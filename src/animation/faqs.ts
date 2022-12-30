@@ -2,7 +2,7 @@ import { keyframes } from 'styled-components';
 
 export const fadeIn = keyframes`
   from {
-    max-height: 0;
+    max-height: 70px;
   }
   to {
     max-height: 200px;
@@ -14,6 +14,6 @@ export const fadeOut = keyframes`
     max-height: 200px;
   }
   to {
-    max-height: 0;
+    max-height: 70px;
   }
 `;

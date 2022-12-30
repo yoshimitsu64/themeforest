@@ -7,6 +7,7 @@ interface IImage {
 export const StyledBlogCard = styled.div`
   display: flex;
   flex-direction: column;
+  max-width: ${({ theme }) => theme.sizes[6]}px;
 `;
 
 export const StyledBlogImage = styled.div<IImage>`

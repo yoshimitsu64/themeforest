@@ -12,7 +12,7 @@ function IntroductionSection(): JSX.Element {
   return (
     <StyledIntroductionSection>
       <StyledContainer>
-        <Breadcrumbs page="Service" />
+        <Breadcrumbs page="Service" color="black" />
         <StyledPageDescription>
           <StyledTitlePage>Services</StyledTitlePage>
           <StyledDescriptor>Data Analytics Services</StyledDescriptor>
