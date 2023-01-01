@@ -14,3 +14,10 @@ export interface IInputsState {
   user_theme: boolean;
   user_message: boolean;
 }
+
+export interface ITeamMemberCard {
+  name: string;
+  speciality: string;
+  imageURL: string;
+  id: number;
+}
