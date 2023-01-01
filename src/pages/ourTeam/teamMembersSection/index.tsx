@@ -4,9 +4,8 @@ import TeamMemberCard from 'components/ui/cards/teamMemberCard';
 
 import { teamMemberCards } from 'constants/cardsPayload/teamMemberCards';
 
-import { usePartialFetch } from 'hooks/usePartialFetch';
+import { usePartialFetch, useLastCardRef } from 'hooks';
 
-import { useLastCardRef } from 'hooks/useLastCardRef';
 import { StyledTeamMembersSection, StyledContainer } from './styled';
 
 const TeamMembersSection = (): JSX.Element => {

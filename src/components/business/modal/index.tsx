@@ -1,7 +1,7 @@
 import { memo, forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 
-import { usePortal } from 'hooks/usePortal';
+import { usePortal } from 'hooks';
 
 import { ForwardRef } from 'appTypes/index';
 
