@@ -8,7 +8,7 @@ import Paginate from 'components/business/paginate';
 import { testimonialCards } from 'constants/cardsPayload/testimonialCards';
 import { blogCards } from 'constants/cardsPayload/blogCards';
 
-import { usePaginationValidation } from 'hooks/usePaginationValidation';
+import { usePaginationValidation } from 'hooks';
 
 import { StyledArrow } from 'pages/home/blogSection/styled';
 

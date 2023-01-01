@@ -6,7 +6,7 @@ import { InputVariant } from 'appTypes/index';
 
 import { emailSubscribeConfig } from 'config/emailJS';
 
-import { useEmailDebounce } from 'hooks/useEmailDebounce';
+import { useEmailDebounce } from 'hooks';
 
 import { emailSchemaActive, emailSchemaStatic } from 'validation/emailValidation';
 

@@ -4,7 +4,7 @@ import { ArrowLeft48Filled, ArrowRight48Filled } from '@fluentui/react-icons';
 
 import { blogCards } from 'constants/cardsPayload/blogCards';
 
-import { usePaginationValidation } from 'hooks/usePaginationValidation';
+import { usePaginationValidation } from 'hooks';
 
 import BlogCard from 'components/ui/cards/blogCard';
 import Paginate from 'components/business/paginate';
