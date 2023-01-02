@@ -14,7 +14,7 @@ function IntroductionSection(): JSX.Element {
   return (
     <StyledIntroductionSection>
       <StyledContainer>
-        <Breadcrumbs page="Contacts" />
+        <Breadcrumbs page="Contacts" url="contacts" />
         <StyledContent>
           <StyledText>
             How can we <StyledHighlightText>help you?</StyledHighlightText>

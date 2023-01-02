@@ -13,7 +13,7 @@ const IntroductionSection = (): JSX.Element => {
   return (
     <StyledIntroductionSection>
       <StyledContainer>
-        <Breadcrumbs page="faqs" color="black" />
+        <Breadcrumbs page="FAQs" url="faqs" color="black" />
         <StyledPageDescription>
           <StyledTitlePage>FAQs</StyledTitlePage>
           <StyledDescriptor>Frequently asked questions</StyledDescriptor>
