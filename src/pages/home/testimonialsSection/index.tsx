@@ -6,7 +6,6 @@ import ReviewCard from 'components/ui/cards/reviewCard';
 import Paginate from 'components/business/paginate';
 
 import { testimonialCards } from 'constants/cardsPayload/testimonialCards';
-import { blogCards } from 'constants/cardsPayload/blogCards';
 
 import { usePaginationValidation } from 'hooks';
 
@@ -20,11 +19,12 @@ import {
   StyledReviewCardsContainer,
 } from './styled';
 
-function TestimonialsSection(): JSX.Element {
+function TestimonialsSection({ count = 3 }: { count?: number }): JSX.Element {
   const [currentPage, setCurrentPage] = useState(1);
   const [isAvailableNextPage, isAvailablePrevPage] = usePaginationValidation(
     currentPage,
-    blogCards
+    testimonialCards,
+    count
   );
 
   const handleNextClick = () => {
@@ -49,7 +49,7 @@ function TestimonialsSection(): JSX.Element {
         </StyledArrowsContainer>
       </StyledTestimonialsSectionHeader>
       <StyledReviewCardsContainer className="testimonials">
-        <Paginate currentPage={currentPage} itemCount={3}>
+        <Paginate currentPage={currentPage} itemCount={count}>
           {testimonialCards.map(({ imageURL, name, position, review }, index) => (
             <ReviewCard
               imageURL={imageURL}

@@ -21,3 +21,11 @@ export interface ITeamMemberCard {
   imageURL: string;
   id: number;
 }
+
+export interface IContactFormFields {
+  [key: string]: string;
+  user_email: string;
+  user_name: string;
+  user_theme: string;
+  user_message: string;
+}

@@ -6,7 +6,11 @@ interface IProps {
 }
 
 export function LargeButtonFill({ onClick, children }: IProps): JSX.Element {
-  return <StyledLargeButton onClick={onClick}>{children}</StyledLargeButton>;
+  return (
+    <StyledLargeButton onClick={onClick} type="submit">
+      {children}
+    </StyledLargeButton>
+  );
 }
 
 export default LargeButtonFill;

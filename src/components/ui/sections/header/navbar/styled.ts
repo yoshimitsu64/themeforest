@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const StyledNavbar = styled.nav`
   display: flex;
   justify-content: space-between;
-  width: ${({ theme }) => theme.sizes[8]}px;
+  width: ${({ theme }) => theme.sizes[0]}%;
   font-size: ${({ theme }) => theme.fonts[3]}px;
 `;
 
