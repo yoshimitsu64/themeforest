@@ -2,13 +2,14 @@ import { useEffect, useState } from 'react';
 
 export const usePaginationValidation = (
   currentPage: number,
-  data: Array<any>
+  data: Array<any>,
+  itemsCount: number
 ): readonly [boolean, boolean] => {
   const [isAvailableNextPage, setIsAvailableNextPage] = useState<boolean>(true);
   const [isAvailablePrevPage, setIsAvailablePrevPage] = useState<boolean>(true);
 
   useEffect(() => {
-    if (currentPage * 3 < data.length) {
+    if (currentPage * itemsCount < data.length) {
       setIsAvailableNextPage(true);
     } else {
       setIsAvailableNextPage(false);

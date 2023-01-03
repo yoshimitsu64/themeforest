@@ -5,7 +5,7 @@ export const StyledLargeButton = styled.button`
   align-items: center;
   justify-content: center;
   width: ${({ theme }) => theme.sizes[3]}px;
-  height: ${({ theme }) => theme.sizes[0] + 5}px;
+  min-height: ${({ theme }) => theme.sizes[0] + 5}px;
   background-color: ${({ theme }) => theme.buttons.primary.backgroundColor};
   color: ${({ theme }) => theme.buttons.primary.color};
   font-size: ${({ theme }) => theme.typography.headLine.bold[2].size}px;

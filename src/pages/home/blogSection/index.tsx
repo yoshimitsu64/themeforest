@@ -23,7 +23,8 @@ function BlogSection(): JSX.Element {
   const [currentPage, setCurrentPage] = useState(1);
   const [isAvailableNextPage, isAvailablePrevPage] = usePaginationValidation(
     currentPage,
-    blogCards
+    blogCards,
+    3
   );
 
   const handleNextClick = () => {
