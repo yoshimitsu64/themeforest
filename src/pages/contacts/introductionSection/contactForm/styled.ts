@@ -34,7 +34,7 @@ export const StyledContactForm = styled.form`
   display: flex;
   flex-direction: column;
   margin-top: ${({ theme }) => theme.space[6]}px;
-  width: ${({ theme }) => theme.sizes[0] - 10}%;
+  width: ${({ theme }) => theme.sizes[0]}%;
 
   & button {
     align-self: flex-end;

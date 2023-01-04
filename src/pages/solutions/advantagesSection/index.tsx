@@ -1,13 +1,12 @@
 import { CheckmarkFilled } from '@fluentui/react-icons';
+import Typography from 'components/business/typography';
 
 import {
   StyledAdvantagesSection,
   StyledImage,
-  StyledTitle,
   StyledDescription,
-  StyledAdvatageContainer,
+  StyledAdvantageContainer,
   StyledAdvantage,
-  StyledText,
 } from './styled';
 
 const AdvantagesSection = (): JSX.Element => {
@@ -15,34 +14,36 @@ const AdvantagesSection = (): JSX.Element => {
     <StyledAdvantagesSection>
       <StyledImage />
       <StyledDescription>
-        <StyledTitle>Why choose us?</StyledTitle>
-        <StyledAdvatageContainer>
+        <Typography type="headLine" variant="extraBold" size={1}>
+          Why choose us?
+        </Typography>
+        <StyledAdvantageContainer>
           <StyledAdvantage>
             <CheckmarkFilled /> <span>Machine learning</span>
           </StyledAdvantage>
-          <StyledText>
+          <Typography type="paragraph" variant="regular" size={1} color="grey">
             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
             voluptatum deleniti atque corrupti quos dolores.
-          </StyledText>
-        </StyledAdvatageContainer>
-        <StyledAdvatageContainer>
+          </Typography>
+        </StyledAdvantageContainer>
+        <StyledAdvantageContainer>
           <StyledAdvantage>
             <CheckmarkFilled /> <span>Embed analytics</span>
           </StyledAdvantage>
-          <StyledText>
+          <Typography type="paragraph" variant="regular" size={1} color="grey">
             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
             voluptatum deleniti atque corrupti quos dolores.
-          </StyledText>
-        </StyledAdvatageContainer>
-        <StyledAdvatageContainer>
+          </Typography>
+        </StyledAdvantageContainer>
+        <StyledAdvantageContainer>
           <StyledAdvantage>
             <CheckmarkFilled /> <span>Access control</span>
           </StyledAdvantage>
-          <StyledText>
+          <Typography type="paragraph" variant="regular" size={1} color="grey">
             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
             voluptatum deleniti atque corrupti quos dolores.
-          </StyledText>
-        </StyledAdvatageContainer>
+          </Typography>
+        </StyledAdvantageContainer>
       </StyledDescription>
     </StyledAdvantagesSection>
   );

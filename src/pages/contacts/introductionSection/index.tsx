@@ -1,14 +1,9 @@
 import Breadcrumbs from 'components/business/breadcrumbs';
+import Typography from 'components/business/typography';
 import ContactForm from 'pages/contacts/introductionSection/contactForm';
 import Contacts from 'pages/contacts/introductionSection/contacts';
 
-import {
-  StyledIntroductionSection,
-  StyledContainer,
-  StyledContent,
-  StyledText,
-  StyledHighlightText,
-} from './styled';
+import { StyledIntroductionSection, StyledContainer, StyledContent } from './styled';
 
 function IntroductionSection(): JSX.Element {
   return (
@@ -16,9 +11,12 @@ function IntroductionSection(): JSX.Element {
       <StyledContainer>
         <Breadcrumbs page="Contacts" url="contacts" />
         <StyledContent>
-          <StyledText>
-            How can we <StyledHighlightText>help you?</StyledHighlightText>
-          </StyledText>
+          <Typography type="headLine" variant="extraBold" size={3}>
+            How can we
+            <Typography type="headLine" variant="extraBold" size={3} color="primary">
+              help you?
+            </Typography>
+          </Typography>
           <ContactForm />
         </StyledContent>
         <Contacts />

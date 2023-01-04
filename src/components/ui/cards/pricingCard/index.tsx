@@ -1,4 +1,6 @@
-import React, { useMemo, useRef, useState, memo } from 'react';
+import React, { useRef, useState, memo } from 'react';
+import Typography from 'components/business/typography';
+import { Checkmark16Filled } from '@fluentui/react-icons';
 
 import { ForwardRef } from 'appTypes/index';
 
@@ -7,28 +9,21 @@ import RectangleButtonFilled from 'components/ui/buttons/rectangleButtonFilled';
 import Modal from 'components/business/modal';
 import PaymentCard from 'components/ui/cards/paymentCard';
 
+import { IProps } from './types';
 import {
   StyledPricingCard,
   StyledPriceContainer,
   StyledPricingCardTitle,
-  StyledPrice,
   StyledButtonsContainer,
   StyledPriceButtonsContainer,
   StyledPossibilities,
+  StledPossitbilityContainer,
 } from './styled';
 
-interface IProps {
-  title: string;
-  price: string;
-  children: JSX.Element[] | JSX.Element;
-}
-
-function PricingCard({ title, price, children }: IProps): JSX.Element {
+function PricingCard({ title, price, possibilities }: IProps): JSX.Element {
   const ref = useRef<ForwardRef>(null);
 
   const [subscribeVariant, setSubscribeVariant] = useState<string>('Mo');
-
-  const child = useMemo(() => children, []);
 
   const handleClose = (): void => {
     ref.current?.closeModal(true);
@@ -43,20 +38,33 @@ function PricingCard({ title, price, children }: IProps): JSX.Element {
       <StyledPriceContainer>
         <StyledPricingCardTitle>{title}</StyledPricingCardTitle>
         <StyledPriceButtonsContainer>
-          <StyledPrice>{price}</StyledPrice>
-          <StyledButtonsContainer className="buttons">
+          <Typography type="headLine" variant="bold" size={0}>
+            {price}
+          </Typography>
+          <StyledButtonsContainer>
             <PricingButton text="Mo" onClick={handleSubscribeClick} />
             <PricingButton text="Yr" onClick={handleSubscribeClick} />
           </StyledButtonsContainer>
         </StyledPriceButtonsContainer>
       </StyledPriceContainer>
       <RectangleButtonFilled width="100%" text="Chose plan" onClick={handleClose} />
-      <StyledPossibilities className="possibilities">{children}</StyledPossibilities>
+      <StyledPossibilities>
+        {possibilities.map((item) => (
+          <StledPossitbilityContainer color="black">
+            <Checkmark16Filled />
+            <Typography type="paragraph" variant="regular" size={2} color="black">
+              &nbsp; {item}
+            </Typography>
+          </StledPossitbilityContainer>
+        ))}
+      </StyledPossibilities>
       {!ref.current?.isOpened && (
         <Modal ref={ref}>
-          <PaymentCard price={price} subscribeVariant={subscribeVariant}>
-            <StyledPossibilities>{child}</StyledPossibilities>
-          </PaymentCard>
+          <PaymentCard
+            price={price}
+            subscribeVariant={subscribeVariant}
+            possibilities={possibilities}
+          />
         </Modal>
       )}
     </StyledPricingCard>

@@ -1,14 +1,12 @@
+import Typography from 'components/business/typography';
 import { logos } from 'constants/companiesLogos';
 
 import {
   StyledBenefit,
   StyledBenefits,
   StyledTitle,
-  StyledCount,
   StyledDescription,
   StyledCompanyExperience,
-  StyledText,
-  StyledSubtitle,
   StyledLogo,
   StyledLogosContainer,
 } from './styled';
@@ -20,23 +18,35 @@ function CompanyOverviewSection(): JSX.Element {
       <StyledDescription>
         <StyledBenefits>
           <StyledBenefit>
-            <StyledCount>1830+</StyledCount>
-            <StyledText>Project executed</StyledText>
+            <Typography type="headLine" variant="extraBold" size={0} color="primary">
+              1830+
+            </Typography>
+            <Typography type="paragraph" variant="regular" size={1}>
+              Project executed
+            </Typography>
           </StyledBenefit>
           <StyledBenefit>
-            <StyledCount>834+</StyledCount>
-            <StyledText>Satisfied customers</StyledText>
+            <Typography type="headLine" variant="extraBold" size={0} color="primary">
+              834+
+            </Typography>
+            <Typography type="paragraph" variant="regular" size={1}>
+              Satisfied customers
+            </Typography>
           </StyledBenefit>
           <StyledBenefit>
-            <StyledCount>390</StyledCount>
-            <StyledText>Data management</StyledText>
+            <Typography type="headLine" variant="extraBold" size={0} color="primary">
+              390
+            </Typography>
+            <Typography type="paragraph" variant="regular" size={1}>
+              Data management
+            </Typography>
           </StyledBenefit>
         </StyledBenefits>
-        <StyledSubtitle>
+        <Typography type="paragraph" variant="regular" size={0}>
           Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque
           laudantium, totam rem aperiam, eaque ipsa quaeab illo inventore. Donec tincidunt tempor
           quam, non mollis quam finibus nec.
-        </StyledSubtitle>
+        </Typography>
       </StyledDescription>
       <StyledLogosContainer>
         {logos.map((logo, index) => (

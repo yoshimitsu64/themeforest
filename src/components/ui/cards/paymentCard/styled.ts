@@ -1,13 +1,10 @@
 import styled from 'styled-components';
-import {
-  StyledPossibilities,
-  StyledPrice,
-  StyledPricingCardTitle,
-} from 'components/ui/cards/pricingCard/styled';
+
+import { StyledPossibilities } from 'components/ui/cards/pricingCard/styled';
 
 export const StyledPaymentCard = styled.div`
-  width: ${({ theme }) => theme.sizes[9]}px;
-  max-height: ${({ theme }) => theme.sizes[10]}px;
+  width: ${({ theme }) => theme.sizes[7]}px;
+  max-height: ${({ theme }) => theme.sizes[11]}px;
   padding-left: ${({ theme }) => theme.space[3]}px;
   padding-right: ${({ theme }) => theme.space[3]}px;
   padding-right: ${({ theme }) => theme.space[3]}px;
@@ -26,7 +23,7 @@ export const StyledPaymentCard = styled.div`
   }
 
   &::-webkit-scrollbar {
-    width: ${({ theme }) => theme.space[1]}px;
+    width: ${({ theme }) => theme.space[0]}px;
     background-color: ${({ theme }) => theme.colors.helperBlue3};
   }
 
@@ -36,11 +33,20 @@ export const StyledPaymentCard = styled.div`
   }
 `;
 
-export const StyledPaymentCardTitle = StyledPricingCardTitle.withComponent('div');
-
-export const StyledPaymentCardPrice = StyledPrice.withComponent('div');
-
 export const StyledPaymentCardPossibilities = styled(StyledPossibilities)`
-  margin-top: 0;
+  display: flex;
+  flex-direction: column;
   margin-bottom: ${({ theme }) => theme.space[3]}px;
+`;
+
+export const StledPossitbilityContainer = styled.div`
+  display: flex;
+  align-items: center;
+  color: ${({ theme }) => theme.colors.primary};
+`;
+
+export const StyledCardHeader = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `;

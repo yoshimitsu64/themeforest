@@ -25,14 +25,3 @@ export const StyledFooter = styled.div`
   padding-right: ${({ theme }) => theme.space[4]}px;
   color: ${({ theme }) => theme.colors.white};
 `;
-
-export const StyledName = styled.div`
-  font-size: ${({ theme }) => theme.typography.headLine.bold[1].size}px;
-  font-weight: ${({ theme }) => theme.typography.headLine.bold[1].fontWeight};
-`;
-
-export const StyledSpeciality = styled.div`
-  font-size: ${({ theme }) => theme.typography.paragraph.regular[1].size}px;
-  font-weight: ${({ theme }) => theme.typography.paragraph.regular[1].fontWeight};
-  line-height: ${({ theme }) => theme.typography.paragraph.regular[1].lineHeight}px;
-`;

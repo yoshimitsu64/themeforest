@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StyledIntroductionSection = styled.section`
   display: flex;
   flex-direction: column;
-  width: 1110px;
+  width: 100%;
   align-items: center;
   align-content: space-between;
 `;
@@ -11,7 +11,7 @@ export const StyledIntroductionSection = styled.section`
 export const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: ${({ theme }) => theme.sizes[0]}vw;
+  width: 1110px;
   height: max-content;
   padding-top: ${({ theme }) => theme.space[3]}px;
   padding-bottom: ${({ theme }) => theme.sizes[1]}px;
@@ -20,7 +20,6 @@ export const StyledContainer = styled.div`
 export const StyledContent = styled.div`
   display: flex;
   justify-content: space-between;
-  width: ${({ theme }) => theme.sizes[1]}%;
 `;
 
 export const StyledText = styled.div`

@@ -1,19 +1,19 @@
+import Typography from 'components/business/typography';
 import { forwardRef, memo } from 'react';
 
-import { StyledTeamMemberCard, StyledFooter, StyledName, StyledSpeciality } from './styled';
-
-interface IProps {
-  name: string;
-  speciality: string;
-  imageURL: string;
-}
+import { IProps } from './types';
+import { StyledTeamMemberCard, StyledFooter } from './styled';
 
 const TeamMemberCard = forwardRef<any, IProps>(({ name, speciality, imageURL }, forwardedRef) => {
   return (
     <StyledTeamMemberCard imageURL={imageURL} className="member-card" ref={forwardedRef}>
       <StyledFooter>
-        <StyledName>{name}</StyledName>
-        <StyledSpeciality>{speciality}</StyledSpeciality>
+        <Typography type="headLine" variant="bold" size={1} color="white">
+          {name}
+        </Typography>
+        <Typography type="paragraph" variant="regular" size={1} color="white">
+          {speciality}
+        </Typography>
       </StyledFooter>
     </StyledTeamMemberCard>
   );

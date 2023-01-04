@@ -20,28 +20,3 @@ export const StyledCardImage = styled.div`
     color: ${({ theme }) => theme.colors.primary};
   }
 `;
-
-export const StyledCardTitle = styled.div`
-  font-size: ${({ theme }) => theme.typography.headLine.bold[1].size}px;
-  font-weight: ${({ theme }) => theme.typography.headLine.bold[1].fontWeight};
-  margin-bottom: ${({ theme }) => theme.space[1]}px;
-`;
-
-export const StyledCardSubtitle = styled.div`
-  font-size: ${({ theme }) => theme.typography.paragraph.regular[2].size}px;
-  font-weight: ${({ theme }) => theme.typography.paragraph.regular[2].fontWeight};
-  line-height: ${({ theme }) => theme.typography.paragraph.regular[2].lineHeight}px;
-  margin-bottom: ${({ theme }) => theme.space[3]}px;
-`;
-
-export const StyledReadMoreContainer = styled.div`
-  display: flex;
-  align-items: center;
-  color: ${({ theme }) => theme.colors.primary};
-`;
-
-export const StyledReadMore = styled.div`
-  font-size: ${({ theme }) => theme.typography.headLine.semiBold[0].size}px;
-  font-weight: ${({ theme }) => theme.typography.headLine.semiBold[0].fontWeight};
-  margin-right: ${({ theme }) => theme.space[1]}px;
-`;

@@ -1,35 +1,29 @@
+import Typography from 'components/business/typography';
 import { memo } from 'react';
 
 import { ArrowRightFilled } from '@fluentui/react-icons';
 
-import {
-  StyledBlogCard,
-  StyledBlogImage,
-  StyledBlogDate,
-  StyledBlogName,
-  StyledBlogText,
-  StyledReadMoreContainer,
-  StyledReadMore,
-} from './styled';
-
-interface IProps {
-  imageURL: string;
-  date: string;
-  name: string;
-  text: string;
-}
+import { IProps } from './types';
+import { StyledBlogCard, StyledBlogImage, StyledReadMoreContainer } from './styled';
 
 function BlogCard({ imageURL, date, name, text }: IProps): JSX.Element {
   return (
     <StyledBlogCard className="blogCard">
       <StyledBlogImage imageURL={imageURL} />
-      <StyledBlogDate>{date}</StyledBlogDate>
-      <StyledBlogName>{name}</StyledBlogName>
-      <StyledBlogText>{text}</StyledBlogText>
-      <StyledReadMoreContainer>
-        <StyledReadMore>Read more</StyledReadMore>
-        <ArrowRightFilled />
-      </StyledReadMoreContainer>
+      <Typography type="paragraph" variant="regular" size={2} color="grey" mb={10}>
+        {date}
+      </Typography>
+      <Typography type="headLine" variant="bold" size={0} mb={10}>
+        {name}
+      </Typography>
+      <Typography type="paragraph" variant="regular" size={1}>
+        {text}
+      </Typography>
+      <Typography type="paragraph" variant="semiBold" size={0} color="primary">
+        <StyledReadMoreContainer>
+          Read more &nbsp; <ArrowRightFilled />
+        </StyledReadMoreContainer>
+      </Typography>
     </StyledBlogCard>
   );
 }
