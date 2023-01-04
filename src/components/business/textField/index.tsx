@@ -1,3 +1,4 @@
+import Typography from 'components/business/typography';
 import { InputHTMLAttributes, memo } from 'react';
 import { IProps } from './types';
 
@@ -11,7 +12,11 @@ const TextField = ({
 }: IProps & InputHTMLAttributes<HTMLInputElement>): JSX.Element => {
   return (
     <StyledTextFieldContainer>
-      <StyledTextFiedldTitle error={error}>{title}</StyledTextFiedldTitle>
+      <StyledTextFiedldTitle error={error}>
+        <Typography type="headLine" variant="semiBold" size={0}>
+          {title}
+        </Typography>
+      </StyledTextFiedldTitle>
       <StyledTextField {...rest} value={value} error={error} />
       {error}
     </StyledTextFieldContainer>

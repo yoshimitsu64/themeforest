@@ -1,5 +1,6 @@
 import { memo } from 'react';
 
+import { IProps } from './types';
 import {
   StyledReviewCard,
   StyledPersonInfoContainer,
@@ -9,13 +10,6 @@ import {
   StyledPersonPosition,
   StyledReview,
 } from './styled';
-
-interface IProps {
-  imageURL: string;
-  name: string;
-  position: string;
-  review: string;
-}
 
 function ReviewCard({ imageURL, review, position, name }: IProps): JSX.Element {
   return (

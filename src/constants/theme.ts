@@ -37,34 +37,46 @@ export const theme = {
         {
           fontWeight: 800,
           size: 46,
+          lineHeight: 60,
         },
         {
           fontWeight: 800,
           size: 38,
+          lineHeight: 56,
         },
         {
           fontWeight: 800,
           size: 30,
+          lineHeight: 40,
+        },
+        {
+          fontWeight: 800,
+          size: 80,
+          lineHeight: 88,
         },
       ],
       bold: [
         {
           fontWeight: 700,
           size: 22,
+          lineHeight: 33,
         },
         {
           fontWeight: 700,
           size: 20,
+          lineHeight: 30,
         },
         {
           fontWeight: 700,
           size: 16,
+          lineHeight: 24,
         },
       ],
       semiBold: [
         {
           fontWeight: 600,
           size: 14,
+          lineHeight: 24,
         },
       ],
       medium: [

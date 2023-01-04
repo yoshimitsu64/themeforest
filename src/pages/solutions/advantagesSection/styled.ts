@@ -31,7 +31,7 @@ export const StyledDescription = styled.div`
   margin-left: ${({ theme }) => theme.space[6]}px;
 `;
 
-export const StyledAdvatageContainer = styled.div`
+export const StyledAdvantageContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: ${({ theme }) => theme.space[5]}px;
@@ -48,11 +48,4 @@ export const StyledAdvantage = styled.div`
     color: ${({ theme }) => theme.colors.primary};
     margin-right: ${({ theme }) => theme.space[3]}px;
   }
-`;
-
-export const StyledText = styled.div`
-  font-size: ${({ theme }) => theme.typography.paragraph.regular[1].size}px;
-  font-weight: ${({ theme }) => theme.typography.paragraph.regular[1].fontWeight};
-  line-height: ${({ theme }) => theme.typography.paragraph.regular[1].lineHeight}px;
-  color: ${({ theme }) => theme.colors.grey};
 `;

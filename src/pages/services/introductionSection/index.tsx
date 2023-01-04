@@ -1,12 +1,8 @@
 import Breadcrumbs from 'components/business/breadcrumbs';
+import Typography from 'components/business/typography';
 
 import { StyledIntroductionSection, StyledContainer } from 'pages/home/introductionSection/styled';
-import {
-  StyledPageDescription,
-  StyledTitlePage,
-  StyledDescriptor,
-  StyledDescription,
-} from './styled';
+import { StyledPageDescription } from './styled';
 
 function IntroductionSection(): JSX.Element {
   return (
@@ -14,12 +10,16 @@ function IntroductionSection(): JSX.Element {
       <StyledContainer>
         <Breadcrumbs page="Service" url="services" color="black" />
         <StyledPageDescription>
-          <StyledTitlePage>Services</StyledTitlePage>
-          <StyledDescriptor>Data Analytics Services</StyledDescriptor>
-          <StyledDescription>
+          <Typography type="headLine" variant="bold" size={2} color="primary">
+            Services
+          </Typography>
+          <Typography type="headLine" variant="extraBold" size={0} color="primary" mt={15}>
+            Data Analytics Services
+          </Typography>
+          <Typography type="paragraph" variant="regular" size={0} color="grey" mt={15}>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
             laudantium, totam rem aperiam, eaque ipsa quaeab illo inventore.
-          </StyledDescription>
+          </Typography>
         </StyledPageDescription>
       </StyledContainer>
     </StyledIntroductionSection>

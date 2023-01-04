@@ -38,31 +38,8 @@ export const StyledCardHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-`;
-
-export const StyledDescription = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: ${({ theme }) => theme.sizes[1] - 10}%;
-  overflow-y: hidden;
-`;
-
-export const StyledTitle = styled.div`
-  font-size: ${({ theme }) => theme.typography.headLine.bold[0].size}px;
-  font-weight: ${({ theme }) => theme.typography.headLine.bold[0].fontWeight};
-  color: ${({ theme }) => theme.colors.primary};
-  width: 70%;
   cursor: pointer;
 `;
-
-export const StyledSubtitle = styled.div<IProps>`
-  height: max-content;
-  margin-top: ${({ theme }) => theme.space[3]}px;
-  font-size: ${({ theme }) => theme.typography.paragraph.regular[0].size}px;
-  font-weight: ${({ theme }) => theme.typography.paragraph.regular[0].fontWeight};
-  line-height: ${({ theme }) => theme.typography.paragraph.regular[0].lineHeight}px;
-`;
-
 export const StyledIcon = styled.div`
   cursor: pointer;
   user-select: none;

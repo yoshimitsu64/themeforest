@@ -18,15 +18,3 @@ export const StyledImage = styled.div`
     color: ${({ theme }) => theme.colors.primary};
   }
 `;
-
-export const StyledTitle = styled.div`
-  font-size: ${({ theme }) => theme.typography.headLine.bold[1].size}px;
-  font-weight: ${({ theme }) => theme.typography.headLine.bold[1].fontWeight};
-  margin-bottom: ${({ theme }) => theme.space[1]}px;
-`;
-
-export const StyledSubtitle = styled.div`
-  font-size: ${({ theme }) => theme.typography.paragraph.regular[2].size}px;
-  font-weight: ${({ theme }) => theme.typography.paragraph.regular[2].fontWeight};
-  line-height: ${({ theme }) => theme.typography.paragraph.regular[2].lineHeight}px;
-`;

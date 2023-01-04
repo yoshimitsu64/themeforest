@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StyledContacts = styled.div`
   display: flex;
   justify-content: space-between;
-  width: ${({ theme }) => theme.sizes[0] + 30}%;
+  width: ${({ theme }) => theme.sizes[0]}%;
 `;
 
 export const StyledContactCard = styled.div`
@@ -15,12 +15,9 @@ export const StyledContactCard = styled.div`
   }
 `;
 
-export const StyledContactTitle = styled.div`
+export const StyledContactHeader = styled.div`
   display: flex;
   align-items: center;
-  color: ${({ theme }) => theme.colors.black};
-  font-size: ${({ theme }) => theme.typography.headLine.semiBold[0].size}px;
-  font-weight: ${({ theme }) => theme.typography.headLine.semiBold[0].fontWeight};
 
   & svg {
     margin-right: ${({ theme }) => theme.space[1]}px;
