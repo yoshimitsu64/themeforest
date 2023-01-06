@@ -1,3 +1,4 @@
+import useMediaQuery from 'hooks/useMediaQuery';
 import { StyledDescription } from './styled';
 
 interface IProps {
@@ -5,7 +6,9 @@ interface IProps {
 }
 
 function Description({ children }: IProps): JSX.Element {
-  return <StyledDescription>{children}</StyledDescription>;
+  const isMobile = useMediaQuery(640);
+
+  return <StyledDescription isMobile={isMobile}>{children}</StyledDescription>;
 }
 
 export default Description;

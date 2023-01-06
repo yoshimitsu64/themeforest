@@ -1,14 +1,13 @@
+import useMediaQuery from 'hooks/useMediaQuery';
+
+import { IProps } from './types';
 import { StyledTitle } from './styled';
 
-interface IProps {
-  children: JSX.Element;
-  variant: string;
-  size: number;
-}
-
 function Title({ children, variant, size }: IProps): JSX.Element {
+  const isMobile = useMediaQuery(640);
+
   return (
-    <StyledTitle variant={variant} size={size}>
+    <StyledTitle variant={variant} size={size} isMobile={isMobile}>
       {children}
     </StyledTitle>
   );

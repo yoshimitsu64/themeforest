@@ -1,12 +1,26 @@
 import styled from 'styled-components';
 
-export const StyledContainer = styled.div`
+export const StyledContainer = styled.div<{ isMobile: boolean }>`
   display: flex;
   position: relative;
   align-items: center;
-  height: ${({ theme }) => theme.sizes[5]}px;
-  width: 1110px;
+  padding-top: ${({ theme }) => theme.space[9]}px;
+  padding-bottom: ${({ theme }) => theme.space[9]}px;
+
+  max-height: ${({ theme }) => theme.sizes[5]}px;
+  max-width: 1110px;
   justify-content: space-between;
+
+  ${({ isMobile }) => {
+    if (isMobile) {
+      return {
+        paddingTop: 20,
+        paddingBottom: 20,
+        flexDirection: 'column',
+        alignItems: 'center',
+      };
+    }
+  }};
 
   &::after {
     position: absolute;
@@ -22,14 +36,14 @@ export const StyledContainer = styled.div`
 export const StyledDescription = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: ${({ theme }) => theme.sizes[0]}%;
+  width: ${({ theme }) => theme.sizes[1]}%;
 `;
 
 export const StyledTitle = styled.div`
   color: ${({ theme }) => theme.colors.white};
   font-size: ${({ theme }) => theme.typography.headLine.extraBold[1].size}px;
   font-weight: ${({ theme }) => theme.typography.headLine.extraBold[1].fontWeight};
-  margin-bottom: ${({ theme }) => theme.space[4]}px;
+  margin-bottom: 20px;
 `;
 
 export const StyledSubtitle = styled.div`

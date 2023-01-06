@@ -1,11 +1,20 @@
 import styled from 'styled-components';
 
-export const StyledDescription = styled.section`
+export const StyledDescription = styled.section<{ isMobile: boolean }>`
   display: flex;
   justify-content: center;
-  padding-top: ${({ theme }) => theme.sizes[1]}px;
-  padding-bottom: ${({ theme }) => theme.sizes[1]}px;
   width: ${({ theme }) => theme.sizes[1]}%;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  ${({ isMobile }) => {
+    if (isMobile) {
+      return {
+        marginTop: 20,
+        marginBottom: 20,
+        flexDirection: 'column',
+      };
+    }
+  }};
 
   & > *:first-child {
     margin-right: 30px;

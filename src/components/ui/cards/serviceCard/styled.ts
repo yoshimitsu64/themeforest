@@ -11,7 +11,7 @@ export const StyledServiceCard = styled.div`
   padding: ${({ theme }) => theme.space[6]}px;
   box-shadow: ${({ theme }) => theme.shadows.shadowCard3.boxShadow};
   scroll-margin: inherit;
-  width: ${({ theme }) => theme.sizes[0] - 3}%;
+  width: ${({ theme }) => theme.sizes[1]}%;
   margin-bottom: ${({ theme }) => theme.space[7]}px;
 `;
 export const StyledServiceCardLogo = styled.div<IProps>`

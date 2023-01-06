@@ -1,6 +1,6 @@
-import Description from 'components/business/description';
 import Title from 'components/business/description/title';
 import Subtitle from 'components/business/description/subtitle';
+import Description from 'components/business/description';
 
 function FeaturesSection(): JSX.Element {
   return (

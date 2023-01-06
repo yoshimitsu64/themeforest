@@ -1,21 +1,25 @@
 import Typography from 'components/business/typography';
 import { logos } from 'constants/companiesLogos';
+import useMediaQuery from 'hooks/useMediaQuery';
 
 import {
   StyledBenefit,
   StyledBenefits,
-  StyledTitle,
   StyledDescription,
-  StyledCompanyExperience,
   StyledLogo,
   StyledLogosContainer,
+  StyledCompanyExperience,
 } from './styled';
 
 function CompanyOverviewSection(): JSX.Element {
+  const isMobile = useMediaQuery(1000);
+
   return (
     <StyledCompanyExperience>
-      <StyledTitle>We provide services that guarantee your success</StyledTitle>
-      <StyledDescription>
+      <Typography type="headLine" variant="extraBold" size={1} mb={20}>
+        We provide services that guarantee your success
+      </Typography>
+      <StyledDescription isMobile={isMobile}>
         <StyledBenefits>
           <StyledBenefit>
             <Typography type="headLine" variant="extraBold" size={0} color="primary">

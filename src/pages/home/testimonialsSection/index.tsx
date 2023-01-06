@@ -1,44 +1,35 @@
-import { useState } from 'react';
+import { ITestimonialsCards } from 'appTypes/index';
+import Typography from 'components/business/typography';
+import { useCountOfCards } from 'hooks/useCountCards';
+import { usePagination } from 'hooks/usePagination';
 
 import { ArrowLeft48Filled, ArrowRight48Filled } from '@fluentui/react-icons';
 
 import ReviewCard from 'components/ui/cards/reviewCard';
-import Paginate from 'components/business/paginate';
 
 import { testimonialCards } from 'constants/cardsPayload/testimonialCards';
-
-import { usePaginationValidation } from 'hooks';
 
 import { StyledArrow } from 'pages/home/blogSection/styled';
 
 import {
   StyledTestimonialsSection,
   StyledTestimonialsSectionHeader,
-  StyledTestimonialsSectionTitle,
   StyledArrowsContainer,
   StyledReviewCardsContainer,
 } from './styled';
 
-function TestimonialsSection({ count = 3 }: { count?: number }): JSX.Element {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [isAvailableNextPage, isAvailablePrevPage] = usePaginationValidation(
-    currentPage,
-    testimonialCards,
-    count
-  );
+function TestimonialsSection(): JSX.Element {
+  const countOfCards = useCountOfCards();
 
-  const handleNextClick = () => {
-    isAvailableNextPage && setCurrentPage(currentPage + 1);
-  };
-
-  const handlePreviousClick = () => {
-    isAvailablePrevPage && setCurrentPage(currentPage - 1);
-  };
+  const [handleNextClick, handlePreviousClick, isAvailableNextPage, isAvailablePrevPage, cards] =
+    usePagination<ITestimonialsCards>(testimonialCards, countOfCards);
 
   return (
     <StyledTestimonialsSection>
       <StyledTestimonialsSectionHeader>
-        <StyledTestimonialsSectionTitle>Testimonials</StyledTestimonialsSectionTitle>
+        <Typography type="headLine" variant="extraBold" size={1}>
+          Testimonials
+        </Typography>
         <StyledArrowsContainer>
           <StyledArrow onClick={handleNextClick}>
             <ArrowRight48Filled style={{ color: isAvailableNextPage ? 'black' : 'grey' }} />
@@ -49,17 +40,15 @@ function TestimonialsSection({ count = 3 }: { count?: number }): JSX.Element {
         </StyledArrowsContainer>
       </StyledTestimonialsSectionHeader>
       <StyledReviewCardsContainer className="testimonials">
-        <Paginate currentPage={currentPage} itemCount={count}>
-          {testimonialCards.map(({ imageURL, name, position, review }, index) => (
-            <ReviewCard
-              imageURL={imageURL}
-              name={name}
-              position={position}
-              review={review}
-              key={index}
-            />
-          ))}
-        </Paginate>
+        {cards.map(({ imageURL, name, position, review }, index) => (
+          <ReviewCard
+            imageURL={imageURL}
+            name={name}
+            position={position}
+            review={review}
+            key={index}
+          />
+        ))}
       </StyledReviewCardsContainer>
     </StyledTestimonialsSection>
   );

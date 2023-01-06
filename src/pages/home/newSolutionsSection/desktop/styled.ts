@@ -4,9 +4,10 @@ import Image from 'assets/images/homePage/02_img_10.jpg';
 export const StyledNewSolutions = styled.div`
   display: flex;
   width: ${({ theme }) => theme.sizes[1]}%;
-  height: ${({ theme }) => theme.sizes[14]}px;
+  max-height: ${({ theme }) => theme.sizes[14]}px;
   background-color: ${({ theme }) => theme.colors.background};
   align-items: center;
+  column-gap: ${({ theme }) => theme.space[3]}px;
 `;
 
 export const StyledImage = styled.div`
@@ -20,4 +21,14 @@ export const StyledDescription = styled.section`
   display: flex;
   flex-direction: column;
   width: ${({ theme }) => theme.sizes[7]}px;
+`;
+
+export const StyledImageContainer = styled.div`
+  width: fit-content;
+
+  & img {
+    width: ${({ theme }) => theme.sizes[1]}%;
+    min-height: 230px;
+    object-fit: cover;
+  }
 `;

@@ -1,17 +1,16 @@
 import FaqCard from 'components/ui/cards/faqCard';
 
+import { faqsCards } from 'constants/cardsPayload/faqsCards';
+
 import { StyledFaqsSection, StyledContainer } from './styled';
 
 export const FaqSection = (): JSX.Element => {
   return (
     <StyledFaqsSection>
       <StyledContainer>
-        <FaqCard />
-        <FaqCard />
-        <FaqCard />
-        <FaqCard />
-        <FaqCard />
-        <FaqCard />
+        {faqsCards.map(({ title, text }, index) => (
+          <FaqCard title={title} text={text} key={index} />
+        ))}
       </StyledContainer>
     </StyledFaqsSection>
   );

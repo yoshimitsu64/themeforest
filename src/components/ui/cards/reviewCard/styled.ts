@@ -7,7 +7,7 @@ interface IProps {
 export const StyledReviewCard = styled.div`
   display: flex;
   flex-direction: column;
-  min-width: ${({ theme }) => theme.sizes[6]}px;
+  max-width: ${({ theme }) => theme.sizes[6]}px;
   background-color: ${({ theme }) => theme.colors.white};
   padding: ${({ theme }) => theme.space[6]}px;
   box-shadow: ${({ theme }) => theme.shadows.shadowCard3.boxShadow};
