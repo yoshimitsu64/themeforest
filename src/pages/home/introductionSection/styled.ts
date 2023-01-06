@@ -1,12 +1,9 @@
 import styled from 'styled-components';
-import Image1 from 'assets/images/homePage/img_11.jpg';
 
 export const StyledIntroductionSection = styled.section`
   display: flex;
   flex-direction: column;
   width: ${({ theme }) => theme.sizes[1]}%;
-  align-items: center;
-  margin-top: ${({ theme }) => theme.space[3]}px;
 `;
 
 export const StyledContainer = styled.div`
@@ -16,17 +13,17 @@ export const StyledContainer = styled.div`
   height: max-content;
 `;
 
-export const StyledImage = styled.div`
-  width: 100%;
-  height: 100%;
+export const StyledImageContainer = styled.div`
   position: relative;
+  width: 100%;
 
-  &:after {
-    content: url(${Image1});
-    overflow: hidden;
+  & img {
+    width: 100%;
+    min-height: 230px;
+    object-fit: cover;
   }
 
-  & > * {
+  & > *:not(img) {
     position: absolute;
     top: -10%;
     left: 55%;

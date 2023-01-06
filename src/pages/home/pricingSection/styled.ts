@@ -3,34 +3,19 @@ import styled from 'styled-components';
 export const StyledPricingSection = styled.section`
   display: flex;
   flex-direction: column;
-  padding-left: 405px;
-  padding-right: 405px;
-`;
-
-export const StyledPricingSectionTitle = styled.div`
-  font-size: ${({ theme }) => theme.typography.headLine.extraBold[1].size}px;
-  font-weight: ${({ theme }) => theme.typography.headLine.extraBold[1].fontWeight};
-  margin-bottom: ${({ theme }) => theme.sizes[0]}px;
+  max-width: 1110px;
 `;
 
 export const StyledPricingCardsContainer = styled.div`
   display: flex;
-  width: 100%;
+  max-width: 100vw;
+  overflow-x: scroll;
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
 
   & .pricingCard:not(:last-child) {
     margin-right: ${({ theme }) => theme.space[5]}px;
-  }
-`;
-
-export const StyledPossibility = styled.div`
-  display: flex;
-  align-items: center;
-
-  & span {
-    margin-left: ${({ theme }) => theme.space[1]}px;
-  }
-
-  & svg {
-    color: ${({ theme }) => theme.colors.primary};
   }
 `;

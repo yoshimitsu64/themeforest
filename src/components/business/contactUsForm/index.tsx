@@ -42,7 +42,7 @@ const ContactUsFormBlank = (): JSX.Element => {
   return (
     <StyledContactUsForm ref={formRef} onSubmit={formik.handleSubmit}>
       <StyledTitle>Contact us</StyledTitle>
-      {contactFormFields.map(({ name, title, type, autoComplete }) => (
+      {contactFormFields.map(({ name, title, type, autoComplete }, index) => (
         <TextField
           name={name}
           title={title}
@@ -51,6 +51,7 @@ const ContactUsFormBlank = (): JSX.Element => {
           onChange={formik.handleChange}
           value={formik.values[name]}
           error={formik.touched && formik.errors[name]}
+          key={index}
         />
       ))}
       <LargeButtonFill>Send</LargeButtonFill>

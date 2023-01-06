@@ -26,8 +26,8 @@ function PaymentCard({ price, subscribeVariant, possibilities }: IProps): JSX.El
           <Typography type="headLine" variant="bold" size={0}>
             Price: {price}
           </Typography>
-          {possibilities.map((item) => (
-            <StledPossitbilityContainer color="black">
+          {possibilities.map((item, index) => (
+            <StledPossitbilityContainer color="black" key={index}>
               <Checkmark16Filled />
               <Typography type="paragraph" variant="regular" size={2} color="black">
                 &nbsp; {item}

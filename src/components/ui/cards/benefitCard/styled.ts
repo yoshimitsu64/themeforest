@@ -4,7 +4,8 @@ export const StyledCard = styled.div`
   display: flex;
   flex-direction: column;
   height: max-content;
-  width: ${({ theme }) => theme.sizes[4]}px;
+  min-width: 255px;
+  max-width: 255px;
   padding: ${({ theme }) => theme.space[4]}px;
   background-color: ${({ theme }) => theme.colors.white};
   background: ${({ theme }) => theme.shadows.shadowCard3.background};

@@ -8,6 +8,8 @@ export const StyledEmailTextField = styled.div<InputVariant>`
   background-color: ${({ theme }) => theme.colors.helperBlue3};
   border-radius: ${({ theme }) => theme.borders.borderRadius[0]}px;
   justify-content: space-between;
+  min-width: ${({ theme }) => theme.sizes[1] + 20}px;
+  box-sizing: border-box;
 
   &:has(input:focus) {
     ${({ theme, variant }) => {
@@ -40,7 +42,7 @@ export const StyledEmailTextField = styled.div<InputVariant>`
 `;
 
 export const StyledInput = styled.input`
-  max-width: ${({ theme }) => theme.sizes[1] + 20}px;
+  width: 100%;
   padding-left: ${({ theme }) => theme.space[3]}px;
   border-radius: inherit;
   border: none;

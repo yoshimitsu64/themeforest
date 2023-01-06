@@ -28,7 +28,7 @@ const AboutUs = (): JSX.Element => {
       />
       <CompanyOverviewSection />
       <CustomersSection />
-      <TestimonialsSection count={2} />
+      <TestimonialsSection />
       <ContactUsSection />
     </Suspense>
   );

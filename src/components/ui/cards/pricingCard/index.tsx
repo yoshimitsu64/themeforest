@@ -49,8 +49,8 @@ function PricingCard({ title, price, possibilities }: IProps): JSX.Element {
       </StyledPriceContainer>
       <RectangleButtonFilled width="100%" text="Chose plan" onClick={handleClose} />
       <StyledPossibilities>
-        {possibilities.map((item) => (
-          <StledPossitbilityContainer color="black">
+        {possibilities.map((item, index) => (
+          <StledPossitbilityContainer color="black" key={index}>
             <Checkmark16Filled />
             <Typography type="paragraph" variant="regular" size={2} color="black">
               &nbsp; {item}

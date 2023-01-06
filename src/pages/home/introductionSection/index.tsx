@@ -4,7 +4,9 @@ import Description from 'components/business/description';
 import Title from 'components/business/description/title';
 import Subtitle from 'components/business/description/subtitle';
 import CircleButton from 'components/ui/buttons/circleButton';
-import { StyledIntroductionSection, StyledImage } from './styled';
+import Image1 from 'assets/images/homePage/img_11.jpg';
+
+import { StyledIntroductionSection, StyledImageContainer } from './styled';
 
 function IntroductionSection(): JSX.Element {
   const navigate = useNavigate();
@@ -25,9 +27,10 @@ function IntroductionSection(): JSX.Element {
           lauda, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.
         </Subtitle>
       </Description>
-      <StyledImage>
+      <StyledImageContainer>
+        <img src={Image1} alt="People" />
         <CircleButton onClick={handleClick}>Learn more</CircleButton>
-      </StyledImage>
+      </StyledImageContainer>
     </StyledIntroductionSection>
   );
 }

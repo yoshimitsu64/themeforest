@@ -2,29 +2,28 @@ import styled from 'styled-components';
 
 export const StyledBlogSection = styled.section`
   display: flex;
+  width: ${({ theme }) => theme.sizes[1]}%;
   justify-content: center;
   margin-top: ${({ theme }) => theme.sizes[1] + 20}px;
   margin-bottom: ${({ theme }) => theme.sizes[1]}px;
 `;
 
 export const StyledContainer = styled.div`
-  width: 1110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1110px;
 `;
 
 export const StyledBlogsSectionHeader = styled.div`
   display: flex;
+  width: ${({ theme }) => theme.sizes[1]}%;
   justify-content: space-between;
   margin-bottom: ${({ theme }) => theme.sizes[0]}px;
 `;
-
-export const StyledBlogSectionTitle = styled.div`
-  font-size: ${({ theme }) => theme.typography.headLine.extraBold[1].size}px;
-  font-weight: ${({ theme }) => theme.typography.headLine.extraBold[1].fontWeight};
-`;
-
 export const StyledBlogCardsContainer = styled.div`
   display: flex;
-  width: 100%;
+  width: ${({ theme }) => theme.sizes[1]}%;
 
   & .blogCard:not(:last-child) {
     margin-right: ${({ theme }) => theme.space[5]}px;

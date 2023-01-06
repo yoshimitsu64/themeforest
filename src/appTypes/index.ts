@@ -29,3 +29,17 @@ export interface IContactFormFields {
   user_theme: string;
   user_message: string;
 }
+
+export interface ITestimonialsCards {
+  imageURL: string;
+  name: string;
+  position: string;
+  review: string;
+}
+
+export interface IBlogCards {
+  date: string;
+  name: string;
+  text: string;
+  imageURL: string;
+}
