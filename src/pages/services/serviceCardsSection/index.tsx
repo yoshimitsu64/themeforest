@@ -1,22 +1,26 @@
 import { serviceCards } from 'constants/cardsPayload/serviceCards';
 
 import ServiceCard from 'components/ui/cards/serviceCard';
-import useMediaQuery from 'hooks/useMediaQuery';
+import { useMediaQueryNew } from 'hooks/useMediaQueryNew';
 
-import { StyledServiceCardsSection, StyledContainer } from './styled';
+import { StyledServiceCardsSection, StyledContainer, StyledMobileContainer } from './styled';
 
 function ServiceCardsSection(): JSX.Element {
-  const isMobile = useMediaQuery(670);
+  const { isMobile } = useMediaQueryNew();
+
+  const child = serviceCards.map(({ image, title, subtitle }, index) => (
+    <ServiceCard imageURL={image} title={title} key={index}>
+      {subtitle}
+    </ServiceCard>
+  ));
 
   return (
     <StyledServiceCardsSection>
-      <StyledContainer isMobile={isMobile}>
-        {serviceCards.map(({ image, title, subtitle }, index) => (
-          <ServiceCard imageURL={image} title={title} key={index}>
-            {subtitle}
-          </ServiceCard>
-        ))}
-      </StyledContainer>
+      {isMobile ? (
+        <StyledMobileContainer>{child}</StyledMobileContainer>
+      ) : (
+        <StyledContainer>{child}</StyledContainer>
+      )}
     </StyledServiceCardsSection>
   );
 }

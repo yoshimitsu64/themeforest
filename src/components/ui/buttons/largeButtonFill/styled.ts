@@ -11,7 +11,7 @@ export const StyledLargeButton = styled.button`
   font-size: ${({ theme }) => theme.typography.headLine.bold[2].size}px;
   font-weight: ${({ theme }) => theme.typography.headLine.bold[2].fontWeight};
   border-radius: ${({ theme }) => theme.borders.borderRadius[0]}px;
-  cursor: pointer;
+  box-shadow: ${({ theme }) => theme.shadows.shadowCard3};
   border: none;
 
   &:hover {

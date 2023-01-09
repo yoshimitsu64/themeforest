@@ -1,5 +1,6 @@
 import { CheckmarkFilled } from '@fluentui/react-icons';
 import Typography from 'components/business/typography';
+import { useMediaQueryNew } from 'hooks/useMediaQueryNew';
 
 import {
   StyledAdvantagesSection,
@@ -7,14 +8,21 @@ import {
   StyledDescription,
   StyledAdvantageContainer,
   StyledAdvantage,
+  StyledAdvantagesSectionMobile,
+  StyledImageMobile,
 } from './styled';
 
 const AdvantagesSection = (): JSX.Element => {
+  const { isMobile } = useMediaQueryNew();
+
+  const Container = isMobile ? StyledAdvantagesSectionMobile : StyledAdvantagesSection;
+  const Image = isMobile ? StyledImageMobile : StyledImage;
+
   return (
-    <StyledAdvantagesSection>
-      <StyledImage />
+    <Container>
+      <Image />
       <StyledDescription>
-        <Typography type="headLine" variant="extraBold" size={1}>
+        <Typography type="headLine" variant="extraBold" size={1} mb={20}>
           Why choose us?
         </Typography>
         <StyledAdvantageContainer>
@@ -45,7 +53,7 @@ const AdvantagesSection = (): JSX.Element => {
           </Typography>
         </StyledAdvantageContainer>
       </StyledDescription>
-    </StyledAdvantagesSection>
+    </Container>
   );
 };
 

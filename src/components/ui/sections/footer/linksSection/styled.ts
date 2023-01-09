@@ -12,6 +12,12 @@ export const StyledLinksSection = styled.section`
   justify-content: center;
 `;
 
+export const StyledLinksSectionDesktopOrTablet = styled(StyledLinksSection)`
+  width: max-content;
+  flex-direction: column;
+  align-self: center;
+`;
+
 export const StyledDescription = styled.div`
   display: flex;
   flex-direction: column;
@@ -27,8 +33,12 @@ export const StyledLogo = styled.div`
 
 export const StyledFooterLinks = styled.div`
   display: flex;
-  width: 100%;
+  width: ${({ theme }) => theme.sizes[1]}%;
   justify-content: space-between;
+`;
+
+export const StyledFooterLinksDesktopOrTablet = styled(StyledFooterLinks)`
+  flex-direction: column;
 `;
 
 export const StyledSubtitle = styled.div`

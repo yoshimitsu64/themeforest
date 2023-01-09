@@ -10,10 +10,10 @@ import Footer from 'components/ui/sections/footer';
 
 function App(): JSX.Element {
   return (
-    <Layout>
-      <ErrorBoundary>
-        <Suspense fallback={<h1>Wait a second</h1>}>
-          <Header />
+    <ErrorBoundary>
+      <Suspense fallback={<h1>Wait a second</h1>}>
+        <Header />
+        <Layout>
           <Routes>
             <Route path="/" element={<Navigate to="/home" />} />
             {links.map(({ id, path, component }) => (
@@ -21,9 +21,9 @@ function App(): JSX.Element {
             ))}
           </Routes>
           <Footer />
-        </Suspense>
-      </ErrorBoundary>
-    </Layout>
+        </Layout>
+      </Suspense>
+    </ErrorBoundary>
   );
 }
 

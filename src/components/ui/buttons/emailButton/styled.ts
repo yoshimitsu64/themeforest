@@ -5,6 +5,7 @@ export const StyledEmailButton = styled.input<InputVariant>`
   display: flex;
   align-items: center;
   justify-content: center;
+  width: ${({ theme }) => theme.sizes[1]}%;
   min-width: ${({ theme }) => theme.sizes[1] + 20}px;
   height: ${({ theme }) => theme.sizes[0] + 5}px;
   background-color: ${({ theme, color }) => theme.colors[color!]};

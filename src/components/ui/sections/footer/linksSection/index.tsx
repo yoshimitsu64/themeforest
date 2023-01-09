@@ -1,3 +1,5 @@
+import Typography from 'components/business/typography';
+import { useMediaQueryNew } from 'hooks/useMediaQueryNew';
 import { SocialIcon } from 'react-social-icons';
 
 import { quickLinks, serviceLinks } from 'constants/links';
@@ -7,24 +9,30 @@ import {
   StyledLinksSection,
   StyledDescription,
   StyledLogo,
-  StyledSubtitle,
   StyledSocialNetworksLinks,
   StyledQuickLinks,
   StyledQuickLinkTitle,
   StyledQuickLink,
   StyledText,
   StyledFooterLinks,
+  StyledLinksSectionDesktopOrTablet,
+  StyledFooterLinksDesktopOrTablet,
 } from './styled';
 
 function LinksSection(): JSX.Element {
+  const { isDesktopOrTablet } = useMediaQueryNew();
+
+  const Container = isDesktopOrTablet ? StyledLinksSectionDesktopOrTablet : StyledLinksSection;
+  const LinksContainer = isDesktopOrTablet ? StyledFooterLinksDesktopOrTablet : StyledFooterLinks;
+
   return (
-    <StyledLinksSection>
+    <Container>
       <StyledDescription>
         <StyledLogo />
-        <StyledSubtitle>
+        <Typography type="paragraph" variant="regular" size={2} color="white" mb={20}>
           Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
           nisi ut aliquid ex ea commodi.
-        </StyledSubtitle>
+        </Typography>
         <StyledSocialNetworksLinks>
           {socialNetworks.map((network) => (
             <SocialIcon
@@ -36,7 +44,7 @@ function LinksSection(): JSX.Element {
           ))}
         </StyledSocialNetworksLinks>
       </StyledDescription>
-      <StyledFooterLinks>
+      <LinksContainer>
         <StyledQuickLinks>
           <StyledQuickLinkTitle>Quick links</StyledQuickLinkTitle>
           {quickLinks.map(({ title, path, id }) => (
@@ -59,8 +67,8 @@ function LinksSection(): JSX.Element {
           <StyledText>+1 601-201-5580</StyledText>
           <StyledText>1642 Washington Avenue, Jackson, MS, Mississippi, 39201</StyledText>
         </StyledQuickLinks>
-      </StyledFooterLinks>
-    </StyledLinksSection>
+      </LinksContainer>
+    </Container>
   );
 }
 

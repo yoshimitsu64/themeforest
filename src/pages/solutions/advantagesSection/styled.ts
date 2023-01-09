@@ -9,10 +9,19 @@ export const StyledAdvantagesSection = styled.section`
   background-color: ${({ theme }) => theme.colors.tertiary};
 `;
 
+export const StyledAdvantagesSectionMobile = styled(StyledAdvantagesSection)`
+  align-items: unset;
+  flex-direction: column;
+`;
+
 export const StyledImage = styled.div`
-  width: 50%;
-  height: 100%;
+  width: ${({ theme }) => theme.sizes[0]}%;
+  height: ${({ theme }) => theme.sizes[1]}%;
   content: url(${Image});
+`;
+
+export const StyledImageMobile = styled(StyledImage)`
+  width: ${({ theme }) => theme.sizes[1]}%;
 `;
 export const StyledTitle = styled.div`
   font-size: ${({ theme }) => theme.typography.headLine.extraBold[1].size}px;
@@ -26,7 +35,7 @@ export const StyledTitle = styled.div`
 
 export const StyledDescription = styled.div`
   display: flex;
-  width: ${({ theme }) => theme.sizes[0] - 10}%;
+  min-width: ${({ theme }) => theme.sizes[0]}%;
   flex-direction: column;
   margin-left: ${({ theme }) => theme.space[6]}px;
 `;

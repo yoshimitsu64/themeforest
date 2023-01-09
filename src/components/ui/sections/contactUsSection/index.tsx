@@ -1,8 +1,9 @@
+import Typography from 'components/business/typography';
 import { useNavigate } from 'react-router-dom';
 
 import LargeButtonFill from 'components/ui/buttons/largeButtonFill';
 
-import { StyledContactUsSection, StyledContactUsTitle, StyledContactUsSubtitle } from './styled';
+import { StyledContactUsSection } from './styled';
 
 function ContactUsSection(): JSX.Element {
   const navigate = useNavigate();
@@ -12,11 +13,20 @@ function ContactUsSection(): JSX.Element {
   };
   return (
     <StyledContactUsSection>
-      <StyledContactUsTitle>Do you need help?</StyledContactUsTitle>
-      <StyledContactUsSubtitle>
+      <Typography type="headLine" variant="extraBold" size={1} mb={20} textAlign="center">
+        Do you need help?
+      </Typography>
+      <Typography
+        type="paragraph"
+        variant="regular"
+        size={1}
+        mb={20}
+        width={540}
+        textAlign="center"
+      >
         Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
         nisi ut aliquid ex ea commodi.
-      </StyledContactUsSubtitle>
+      </Typography>
       <LargeButtonFill onClick={handleCLick}>Contact us</LargeButtonFill>
     </StyledContactUsSection>
   );

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 
 export interface IProps {
   type: 'headLine' | 'paragraph';
@@ -12,4 +12,6 @@ export interface IProps {
   ml?: number;
   mr?: number;
   m?: number;
+  width?: number;
+  textAlign?: CSSProperties['textAlign'];
 }

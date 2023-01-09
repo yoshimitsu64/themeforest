@@ -1,16 +1,21 @@
 import { Call16Filled, Location16Filled, Mail16Filled } from '@fluentui/react-icons';
 import Typography from 'components/business/typography';
+import { useMediaQueryNew } from 'hooks/useMediaQueryNew';
 
 import {
   StyledContacts,
   StyledContactCard,
   StyledContactHeader,
-  StyledContactDescription,
+  StyledContactsMobile,
 } from './styled';
 
 function Contacts(): JSX.Element {
+  const { isMobile } = useMediaQueryNew();
+
+  const Container = isMobile ? StyledContactsMobile : StyledContacts;
+
   return (
-    <StyledContacts>
+    <Container>
       <StyledContactCard>
         <StyledContactHeader>
           <Mail16Filled />
@@ -18,7 +23,9 @@ function Contacts(): JSX.Element {
             Email
           </Typography>
         </StyledContactHeader>
-        <StyledContactDescription>ensome@info.co.us</StyledContactDescription>
+        <Typography type="paragraph" variant="regular" size={1} color="grey">
+          ensome@info.co.us
+        </Typography>
       </StyledContactCard>
       <StyledContactCard>
         <StyledContactHeader>
@@ -27,7 +34,9 @@ function Contacts(): JSX.Element {
             Phone
           </Typography>
         </StyledContactHeader>
-        <StyledContactDescription>+1 601-201-5580</StyledContactDescription>
+        <Typography type="paragraph" variant="regular" size={1} color="grey">
+          +1 601-201-5580
+        </Typography>
       </StyledContactCard>
       <StyledContactCard>
         <StyledContactHeader>
@@ -36,9 +45,11 @@ function Contacts(): JSX.Element {
             Address
           </Typography>
         </StyledContactHeader>
-        <StyledContactDescription>1642 Washington Ave, Jackson, MS</StyledContactDescription>
+        <Typography type="paragraph" variant="regular" size={1} color="grey">
+          1642 Washington Ave, Jackson, MS
+        </Typography>
       </StyledContactCard>
-    </StyledContacts>
+    </Container>
   );
 }
 

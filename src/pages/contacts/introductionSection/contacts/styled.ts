@@ -4,6 +4,15 @@ export const StyledContacts = styled.div`
   display: flex;
   justify-content: space-between;
   width: ${({ theme }) => theme.sizes[0]}%;
+  margin-bottom: ${({ theme }) => theme.space[12]}px;
+  margin-top: ${({ theme }) => theme.space[7]}px;
+`;
+
+export const StyledContactsMobile = styled(StyledContacts)`
+  margin-top: ${({ theme }) => theme.space[3]}px;
+  margin-bottom: ${({ theme }) => theme.space[9]}px;
+  row-gap: ${({ theme }) => theme.space[1]}px;
+  flex-direction: column;
 `;
 
 export const StyledContactCard = styled.div`
@@ -22,10 +31,4 @@ export const StyledContactHeader = styled.div`
   & svg {
     margin-right: ${({ theme }) => theme.space[1]}px;
   }
-`;
-
-export const StyledContactDescription = styled.div`
-  color: ${({ theme }) => theme.colors.grey};
-  font-size: ${({ theme }) => theme.typography.paragraph.regular[1].size}px;
-  font-weight: ${({ theme }) => theme.typography.paragraph.regular[0].fontWeight};
 `;

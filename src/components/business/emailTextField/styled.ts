@@ -4,11 +4,11 @@ import { InputVariant } from 'appTypes/index';
 
 export const StyledEmailTextField = styled.div<InputVariant>`
   display: flex;
-  width: ${({ theme }) => theme.sizes[8]}px;
+  min-width: ${({ theme }) => theme.sizes[8]}px;
   background-color: ${({ theme }) => theme.colors.helperBlue3};
   border-radius: ${({ theme }) => theme.borders.borderRadius[0]}px;
   justify-content: space-between;
-  min-width: ${({ theme }) => theme.sizes[1] + 20}px;
+  width: ${({ theme }) => theme.sizes[1]}%;
   box-sizing: border-box;
 
   &:has(input:focus) {

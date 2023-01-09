@@ -1,9 +1,7 @@
 import Breadcrumbs from 'components/business/breadcrumbs';
 import Typography from 'components/business/typography';
 
-import { StyledIntroductionSection, StyledContainer } from 'pages/home/introductionSection/styled';
-
-import { StyledPageDescription } from './styled';
+import { StyledIntroductionSection, StyledContainer, StyledPageDescription } from './styled';
 
 const IntroductionSection = (): JSX.Element => {
   return (

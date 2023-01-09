@@ -13,7 +13,13 @@ export const theme = {
     white: '#FFFFFF',
     lightTertiary: '#467DFF',
   },
-  space: [5, 10, 15, 20, 25, 30, 35, 40, 45, 50],
+  breakPoints: {
+    mobile: 480,
+    tablet: 768,
+    desktopOrLaptop: 1110,
+    desktop: 1920,
+  },
+  space: [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 70, 90, 120],
   sizes: [50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 820, 1110],
   borders: {
     borderRadius: [5, 10, 15, 20, 25, 30],
