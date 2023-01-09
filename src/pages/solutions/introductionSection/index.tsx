@@ -1,12 +1,12 @@
 import Breadcrumbs from 'components/business/breadcrumbs';
 import Typography from 'components/business/typography';
 
-import { StyledContainer, StyledIntroductionSection } from 'pages/home/introductionSection/styled';
+import { StyledContainer } from 'pages/home/introductionSection/styled';
 import { StyledPageDescription } from 'pages/services/introductionSection/styled';
 
 const IntroductionSection = (): JSX.Element => {
   return (
-    <StyledIntroductionSection>
+    <StyledContainer>
       <StyledContainer>
         <Breadcrumbs page="Service" url="service" color="black" />
         <StyledPageDescription>
@@ -21,7 +21,7 @@ const IntroductionSection = (): JSX.Element => {
           </Typography>
         </StyledPageDescription>
       </StyledContainer>
-    </StyledIntroductionSection>
+    </StyledContainer>
   );
 };
 

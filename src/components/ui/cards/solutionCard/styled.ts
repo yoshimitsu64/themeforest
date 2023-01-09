@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const StyledSolutionCard = styled.div`
-  width: 49%;
   display: flex;
   flex-direction: column;
   padding-top: ${({ theme }) => theme.space[4]}px;

@@ -32,9 +32,10 @@ const sharedInputStyle = css<InputVariant & Iprops>`
 
 export const StyledContactForm = styled.form`
   display: flex;
-  flex-direction: column;
-  margin-top: ${({ theme }) => theme.space[6]}px;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: ${({ theme }) => theme.sizes[0]}%;
+  justify-content: space-between;
 
   & button {
     align-self: flex-end;
@@ -46,15 +47,17 @@ export const StyledContactForm = styled.form`
   }
 `;
 
-export const StyledContactFormHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
+export const StyledContactFormMobile = styled(StyledContactForm)`
   width: ${({ theme }) => theme.sizes[1]}%;
 `;
 
 export const StyledHeaderInput = styled.input`
   ${sharedInputStyle};
   width: ${({ theme }) => theme.sizes[0] - 3}%;
+`;
+
+export const StyledHeaderInputMobile = styled(StyledHeaderInput)`
+  width: ${({ theme }) => theme.sizes[1]}%;
 `;
 
 export const StyledThemeInput = styled(StyledHeaderInput)`

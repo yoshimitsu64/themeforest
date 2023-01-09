@@ -8,18 +8,15 @@ export const StyledServiceCardsSection = styled.section`
   margin-top: ${({ theme }) => theme.sizes[1]}px;
 `;
 
-export const StyledContainer = styled.div<{ isMobile: boolean }>`
+export const StyledContainer = styled.div`
   max-width: 1110px;
   display: grid;
   grid-template-columns: 45% 45%;
   height: max-content;
   justify-content: space-between;
-  ${({ isMobile }) => {
-    if (isMobile) {
-      return {
-        display: 'flex',
-        flexDirection: 'column',
-      };
-    }
-  }};
+`;
+
+export const StyledMobileContainer = styled(StyledContainer)`
+  display: flex;
+  flex-direction: column;
 `;

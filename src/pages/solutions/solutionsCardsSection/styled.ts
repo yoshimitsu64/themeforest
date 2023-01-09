@@ -9,14 +9,19 @@ export const StyledServiceCardsSection = styled.section`
 `;
 
 export const StyledContainer = styled.div`
-  display: flex;
-  width: 1110px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  max-width: 1110px;
+  column-gap: ${({ theme }) => theme.space[1]}px;
+  row-gap: ${({ theme }) => theme.space[3]}px;
   height: max-content;
   flex-wrap: wrap;
   justify-content: space-between;
   padding-bottom: ${({ theme }) => theme.sizes[1]}px;
+`;
 
-  & .solution-card:not(:nth-last-child(-n + 2)) {
-    margin-bottom: ${({ theme }) => theme.space[5]}px;
-  }
+export const StyledContainerMobile = styled(StyledContainer)`
+  display: flex;
+  flex-direction: column;
+  width: ${({ theme }) => theme.sizes[1]}%;
 `;

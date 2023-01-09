@@ -5,7 +5,7 @@ import { IProps } from './types';
 export const StyledTypography = styled.div<Omit<IProps, 'children'>>`
   display: ${({ element }) => element === 'span' && 'inline'};
   height: max-content;
-  ${({ theme, type, variant, size, color, mt, mb, ml, mr, m }) => {
+  ${({ theme, type, variant, size, color, mt, mb, ml, mr, m, width, textAlign }) => {
     return {
       fontSize: `${theme.typography[type][variant][size].size}px`,
       fontWeight: theme.typography[type][variant][size].fontWeight,
@@ -16,6 +16,8 @@ export const StyledTypography = styled.div<Omit<IProps, 'children'>>`
       marginLeft: ml,
       marginRight: mr,
       margin: m,
+      maxWidth: width,
+      textAlign,
     };
   }}
 `;

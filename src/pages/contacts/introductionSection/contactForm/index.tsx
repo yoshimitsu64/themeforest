@@ -1,4 +1,5 @@
-import { ChangeEvent, FormEvent, useEffect, useMemo, useRef, useState } from 'react';
+import { useMediaQueryNew } from 'hooks/useMediaQueryNew';
+import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
 
 import { IInputsState, InputVariant } from 'appTypes/index';
 
@@ -7,27 +8,31 @@ import EmailButton from 'components/ui/buttons/emailButton';
 import { validateInput, checkInputs, sendEmail } from 'helpers';
 
 import {
-  StyledContactFormHeader,
   StyledContactForm,
   StyledHeaderInput,
   StyledThemeInput,
   StyledMessageInput,
+  StyledHeaderInputMobile,
+  StyledContactFormMobile,
 } from './styled';
 
-function ContactForm(): JSX.Element {
-  const initialState = useMemo(() => {
-    return {
-      user_email: false,
-      user_name: false,
-      user_theme: false,
-      user_message: false,
-    };
-  }, []);
+const initialState = {
+  user_email: false,
+  user_name: false,
+  user_theme: false,
+  user_message: false,
+};
 
+function ContactForm(): JSX.Element {
   const formRef = useRef<HTMLFormElement>(null);
 
   const [inputVariant, setInputVariant] = useState<InputVariant['variant']>('disabled');
   const [inputState, setInputState] = useState<IInputsState>(() => initialState);
+
+  const { isMobile } = useMediaQueryNew();
+
+  const Input = isMobile ? StyledHeaderInputMobile : StyledHeaderInput;
+  const Form = isMobile ? StyledContactFormMobile : StyledContactForm;
 
   const handleClick = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -53,22 +58,20 @@ function ContactForm(): JSX.Element {
   }, [inputState]);
 
   return (
-    <StyledContactForm ref={formRef} onSubmit={handleClick}>
-      <StyledContactFormHeader>
-        <StyledHeaderInput
-          name="user_email"
-          placeholder="Your email"
-          onChange={handleChange}
-          error={inputState.user_email}
-        />
-        <StyledHeaderInput
-          name="user_name"
-          placeholder="Your name"
-          error={inputState.user_name}
-          autoComplete="off"
-          onChange={handleChange}
-        />
-      </StyledContactFormHeader>
+    <Form ref={formRef} onSubmit={handleClick}>
+      <Input
+        name="user_email"
+        placeholder="Your email"
+        onChange={handleChange}
+        error={inputState.user_email}
+      />
+      <Input
+        name="user_name"
+        placeholder="Your name"
+        error={inputState.user_name}
+        autoComplete="off"
+        onChange={handleChange}
+      />
       <StyledThemeInput
         name="user_theme"
         placeholder="Your theme"
@@ -84,7 +87,7 @@ function ContactForm(): JSX.Element {
         onChange={handleChange}
       />
       <EmailButton variant={inputVariant} value="Send" color="primary" />
-    </StyledContactForm>
+    </Form>
   );
 }
 

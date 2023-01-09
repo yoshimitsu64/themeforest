@@ -1,24 +1,28 @@
-import EmailTextField from 'components/business/emailTextField';
-import useMediaQuery from 'hooks/useMediaQuery';
+import { useMediaQueryNew } from 'hooks/useMediaQueryNew';
 
-import { StyledContainer, StyledDescription, StyledTitle, StyledSubtitle } from './styled';
+import EmailTextField from 'components/business/emailTextField';
+import Typography from 'components/business/typography';
+
+import { StyledContainer, StyledContainerDesktopOrTablet } from './styled';
 
 function SubscribeUsSection(): JSX.Element {
-  const isMobile = useMediaQuery(1000);
+  const { isDesktopOrTablet } = useMediaQueryNew();
+
+  const Container = isDesktopOrTablet ? StyledContainerDesktopOrTablet : StyledContainer;
 
   return (
-    <StyledContainer isMobile={isMobile}>
-      <StyledDescription>
-        <StyledTitle>Subscribe to our newsletter</StyledTitle>
-        {!isMobile && (
-          <StyledSubtitle>
+    <Container>
+      <Typography type="headLine" variant="extraBold" size={1} color="white" width={540} mb={20}>
+        Subscribe to our newsletter
+        {!isDesktopOrTablet && (
+          <Typography type="paragraph" variant="regular" size={0} color="white">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
             laudantium.
-          </StyledSubtitle>
+          </Typography>
         )}
-      </StyledDescription>
+      </Typography>
       <EmailTextField />
-    </StyledContainer>
+    </Container>
   );
 }
 
