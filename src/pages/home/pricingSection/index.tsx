@@ -1,5 +1,5 @@
-import Typography from 'components/business/typography';
-import PricingCard from 'components/ui/cards/pricingCard';
+import Typography from 'components/typography';
+import PricingCard from 'components/cards/pricingCard';
 import { pricingCards } from 'constants/cardsPayload/pricingCards';
 
 import { StyledPricingSection, StyledPricingCardsContainer } from './styled';

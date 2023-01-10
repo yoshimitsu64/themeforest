@@ -1,8 +1,7 @@
-import useMediaQuery from 'hooks/useMediaQuery';
+import { useMediaQuery } from 'hooks/useMediaQuery';
 
 export const useCountOfCards = () => {
-  const isTablet = useMediaQuery(1110);
-  const isMobile = useMediaQuery(640);
+  const { isMobile, isTablet } = useMediaQuery();
 
   if (isMobile) {
     return 1;

@@ -1,6 +1,6 @@
 import { CheckmarkFilled } from '@fluentui/react-icons';
-import Typography from 'components/business/typography';
-import { useMediaQueryNew } from 'hooks/useMediaQueryNew';
+import Typography from 'components/typography';
+import { useMediaQuery } from 'hooks/useMediaQuery';
 
 import {
   StyledAdvantagesSection,
@@ -13,7 +13,7 @@ import {
 } from './styled';
 
 const AdvantagesSection = (): JSX.Element => {
-  const { isMobile } = useMediaQueryNew();
+  const { isMobile } = useMediaQuery();
 
   const Container = isMobile ? StyledAdvantagesSectionMobile : StyledAdvantagesSection;
   const Image = isMobile ? StyledImageMobile : StyledImage;

@@ -11,12 +11,12 @@ export const StyledIntroductionSection = styled.section`
 export const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 1110px;
+  max-width: ${({ theme }) => theme.sizes[17]}px;
   height: max-content;
 `;
 export const StyledPageDescription = styled.div`
   align-self: center;
-  max-width: 1110px;
+  max-width: ${({ theme }) => theme.sizes[17]}px;
   display: flex;
   flex-direction: column;
   align-items: center;

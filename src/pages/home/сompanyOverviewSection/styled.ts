@@ -6,10 +6,14 @@ interface ILogos {
 export const StyledCompanyExperience = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 1110px;
+  max-width: ${({ theme }) => theme.sizes[17]}px;
   align-items: center;
-  padding-top: ${({ theme }) => theme.sizes[1]}px;
-  padding-bottom: ${({ theme }) => theme.sizes[1]}px;
+  margin-top: ${({ theme }) => theme.sizes[1]}px;
+`;
+
+export const StyledCompanyExperienceMobile = styled(StyledCompanyExperience)`
+  margin-top: ${({ theme }) => theme.space[9]}px;
+  padding: ${({ theme }) => theme.space[2]}px;
 `;
 
 export const StyledDescription = styled.div`
@@ -44,7 +48,12 @@ export const StyledBenefit = styled.div`
 export const StyledLogosContainer = styled.div`
   display: flex;
   width: ${({ theme }) => theme.sizes[1]}%;
+  overflow: auto;
   justify-content: space-between;
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
 `;
 
 export const StyledLogo = styled.div<ILogos>`

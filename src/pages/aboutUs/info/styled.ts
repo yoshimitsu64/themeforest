@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const StyledInfo = styled.div<Pick<IProps, 'reversed' | 'mb' | 'mt'>>`
   display: flex;
   flex-direction: ${({ reversed }) => (reversed ? 'row-reverse' : 'row')};
-  max-width: 1110px;
+  max-width: ${({ theme }) => theme.sizes[17]}px;
   height: max-content;
   column-gap: ${({ theme }) => theme.space[4]}px;
   ${({ mb, mt }) => {

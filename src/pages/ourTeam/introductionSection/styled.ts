@@ -13,7 +13,7 @@ export const StyledIntroductionSection = styled.section`
 export const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 1110px;
+  width: ${({ theme }) => theme.sizes[17]}px;
 
   & div:first-child {
     margin-bottom: ${({ theme }) => theme.sizes[2]}px;

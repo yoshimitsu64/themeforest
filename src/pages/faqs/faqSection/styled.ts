@@ -10,7 +10,7 @@ export const StyledFaqsSection = styled.section`
 export const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 1110px;
+  width: ${({ theme }) => theme.sizes[17]}px;
   padding-top: ${({ theme }) => theme.sizes[1]}px;
   padding-bottom: ${({ theme }) => theme.sizes[1]}px;
 

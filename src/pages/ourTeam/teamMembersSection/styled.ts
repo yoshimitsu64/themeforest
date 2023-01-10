@@ -13,7 +13,7 @@ export const StyledContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
-  max-width: 1110px;
+  max-width: ${({ theme }) => theme.sizes[17]}px;
   height: max-content;
   column-gap: ${({ theme }) => theme.space[2]}px;
 

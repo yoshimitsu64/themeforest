@@ -1,9 +1,9 @@
-import { useMediaQueryNew } from 'hooks/useMediaQueryNew';
+import { useMediaQuery } from 'hooks/useMediaQuery';
 import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
 
 import { IInputsState, InputVariant } from 'appTypes/index';
 
-import EmailButton from 'components/ui/buttons/emailButton';
+import EmailButton from 'components/buttons/emailButton';
 
 import { validateInput, checkInputs, sendEmail } from 'helpers';
 
@@ -29,7 +29,7 @@ function ContactForm(): JSX.Element {
   const [inputVariant, setInputVariant] = useState<InputVariant['variant']>('disabled');
   const [inputState, setInputState] = useState<IInputsState>(() => initialState);
 
-  const { isMobile } = useMediaQueryNew();
+  const { isMobile } = useMediaQuery();
 
   const Input = isMobile ? StyledHeaderInputMobile : StyledHeaderInput;
   const Form = isMobile ? StyledContactFormMobile : StyledContactForm;
