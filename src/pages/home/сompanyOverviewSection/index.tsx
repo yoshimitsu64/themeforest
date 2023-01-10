@@ -1,6 +1,6 @@
-import Typography from 'components/business/typography';
+import Typography from 'components/typography';
 import { logos } from 'constants/companiesLogos';
-import { useMediaQueryNew } from 'hooks/useMediaQueryNew';
+import { useMediaQuery } from 'hooks/useMediaQuery';
 
 import {
   StyledBenefit,
@@ -11,15 +11,17 @@ import {
   StyledCompanyExperience,
   StyledDescriptionMobile,
   StyledBenefitsMobile,
+  StyledCompanyExperienceMobile,
 } from './styled';
 
 function CompanyOverviewSection(): JSX.Element {
-  const { isDesktop, isMobile } = useMediaQueryNew();
+  const { isDesktop, isMobile, isTablet } = useMediaQuery();
 
   const Description = !isDesktop ? StyledDescriptionMobile : StyledDescription;
+  const Section = isMobile || isTablet ? StyledCompanyExperienceMobile : StyledCompanyExperience;
 
   return (
-    <StyledCompanyExperience>
+    <Section>
       {isMobile ? (
         <Typography type="headLine" variant="extraBold" size={2} mb={20} textAlign="center">
           We provide services that guarantee your success
@@ -105,7 +107,7 @@ function CompanyOverviewSection(): JSX.Element {
           <StyledLogo logo={logo} key={index} />
         ))}
       </StyledLogosContainer>
-    </StyledCompanyExperience>
+    </Section>
   );
 }
 

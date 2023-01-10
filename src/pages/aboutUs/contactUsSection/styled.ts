@@ -13,7 +13,7 @@ export const StyledContactUsSection = styled.section`
 
 export const StyledContainer = styled.div`
   display: flex;
-  width: 1110px;
+  width: ${({ theme }) => theme.sizes[17]}px;
   height: max-content;
   justify-content: space-between;
 `;

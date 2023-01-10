@@ -1,7 +1,7 @@
-import { useMediaQueryNew } from 'hooks/useMediaQueryNew';
+import { useMediaQuery } from 'hooks/useMediaQuery';
 import { useRef } from 'react';
 
-import TeamMemberCard from 'components/ui/cards/teamMemberCard';
+import TeamMemberCard from 'components/cards/teamMemberCard';
 
 import { teamMemberCards } from 'constants/cardsPayload/teamMemberCards';
 
@@ -12,7 +12,7 @@ import { StyledTeamMembersSection, StyledContainer, StyledContainerMobile } from
 const TeamMembersSection = (): JSX.Element => {
   const observer = useRef<IntersectionObserver>();
 
-  const { isMobile } = useMediaQueryNew();
+  const { isMobile } = useMediaQuery();
 
   const [lastCardRef, countOfCards] = useLastCardRef(observer);
 

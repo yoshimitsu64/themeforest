@@ -1,12 +1,12 @@
-import { useMediaQueryNew } from 'hooks/useMediaQueryNew';
+import { useMediaQuery } from 'hooks/useMediaQuery';
 
-import EmailTextField from 'components/business/emailTextField';
-import Typography from 'components/business/typography';
+import EmailTextField from 'components/emailTextField';
+import Typography from 'components/typography';
 
 import { StyledContainer, StyledContainerDesktopOrTablet } from './styled';
 
 function SubscribeUsSection(): JSX.Element {
-  const { isDesktopOrTablet } = useMediaQueryNew();
+  const { isDesktopOrTablet } = useMediaQuery();
 
   const Container = isDesktopOrTablet ? StyledContainerDesktopOrTablet : StyledContainer;
 

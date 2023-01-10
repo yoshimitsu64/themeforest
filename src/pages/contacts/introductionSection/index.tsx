@@ -1,6 +1,6 @@
-import Breadcrumbs from 'components/business/breadcrumbs';
-import Typography from 'components/business/typography';
-import { useMediaQueryNew } from 'hooks/useMediaQueryNew';
+import Breadcrumbs from 'components/breadcrumbs';
+import Typography from 'components/typography';
+import { useMediaQuery } from 'hooks/useMediaQuery';
 import ContactForm from 'pages/contacts/introductionSection/contactForm';
 import Contacts from 'pages/contacts/introductionSection/contacts';
 
@@ -12,7 +12,7 @@ import {
 } from './styled';
 
 function IntroductionSection(): JSX.Element {
-  const { isMobile, isDesktop, isDesktopOrTablet, isTablet } = useMediaQueryNew();
+  const { isMobile, isDesktop, isDesktopOrTablet, isTablet } = useMediaQuery();
 
   const Content = isMobile ? StyledContentMobile : StyledContent;
 

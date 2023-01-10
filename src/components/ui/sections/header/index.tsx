@@ -3,11 +3,11 @@ import { Dismiss24Filled, Navigation24Filled } from '@fluentui/react-icons';
 
 import Logo from 'assets/images/logo/logo_blue.png';
 
-import { useMediaQueryNew } from 'hooks/useMediaQueryNew';
+import { useMediaQuery } from 'hooks/useMediaQuery';
 
-import BurgerMenu from 'components/business/burgerMenu';
+import BurgerMenu from 'components/burgerMenu';
 import Navbar from 'components/ui/sections/header/navbar';
-import DemoButton from 'components/ui/buttons/demoButton';
+import DemoButton from 'components/buttons/demoButton';
 
 import {
   StyledHeader,
@@ -20,7 +20,7 @@ import {
 const Header = (): JSX.Element => {
   const [isOpened, setIsOpened] = useState(false);
 
-  const { isDesktopOrTablet, isDesktop } = useMediaQueryNew();
+  const { isDesktopOrTablet, isDesktop } = useMediaQuery();
 
   const Content = isDesktopOrTablet ? StyledContentMobile : StyledContent;
 

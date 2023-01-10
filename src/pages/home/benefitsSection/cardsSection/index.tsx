@@ -1,7 +1,10 @@
-import Card from 'components/ui/cards/benefitCard';
-import { benefitsCards } from 'constants/cardsPayload/benefitsCards';
-import useMediaQuery from 'hooks/useMediaQuery';
 import { useMemo } from 'react';
+
+import Card from 'components/cards/benefitCard';
+
+import { benefitsCards } from 'constants/cardsPayload/benefitsCards';
+
+import { useMediaQuery } from 'hooks/useMediaQuery';
 
 import {
   StyledCardsContainer,
@@ -10,8 +13,7 @@ import {
 } from './styled';
 
 function CardsSection(): JSX.Element {
-  const isMobile = useMediaQuery(640);
-  const isTablet = useMediaQuery(1110);
+  const { isDesktopOrTablet, isMobile, isTablet } = useMediaQuery();
 
   const cards = useMemo(
     () =>
@@ -24,7 +26,7 @@ function CardsSection(): JSX.Element {
   if (isMobile) {
     return <StyledMobileCardsContainer>{cards}</StyledMobileCardsContainer>;
   }
-  if (isTablet) {
+  if (isDesktopOrTablet || isTablet) {
     return <StyledTabletCardsContainer>{cards}</StyledTabletCardsContainer>;
   }
   return <StyledCardsContainer>{cards}</StyledCardsContainer>;

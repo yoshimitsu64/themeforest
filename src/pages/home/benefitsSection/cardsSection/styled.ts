@@ -6,20 +6,13 @@ export const StyledCardsContainer = styled.div<{ isTablet?: boolean; isMobile?: 
   flex-wrap: wrap;
   width: 540px;
   column-gap: ${({ theme }) => theme.space[5]}px;
-  & .card:nth-child(-n + 2) {
-    margin-right: ${({ theme }) => theme.space[3]}px;
-  }
-
+  row-gap: ${({ theme }) => theme.space[3]}px;
   & .card:nth-child(1) {
     margin-top: ${({ theme }) => theme.sizes[1] + 20}px;
   }
 
   & .card:nth-child(3) {
     margin-top: ${({ theme }) => theme.sizes[3]}px;
-  }
-
-  & > * {
-    margin-bottom: ${({ theme }) => theme.space[3]}px;
   }
 
   &::-webkit-scrollbar {
@@ -33,6 +26,8 @@ export const StyledTabletCardsContainer = styled(StyledCardsContainer)`
   flex-direction: unset;
   display: grid;
   grid-template-columns: 50% 50%;
+  row-gap: ${({ theme }) => theme.space[2]}px;
+  margin-bottom: ${({ theme }) => theme.space[3]}px;
 
   & .card {
     margin-top: 0 !important;
@@ -49,4 +44,5 @@ export const StyledMobileCardsContainer = styled(StyledTabletCardsContainer)`
   box-sizing: border-box;
   width: ${({ theme }) => theme.sizes[1]}vw;
   align-items: center;
+  padding: ${({ theme }) => theme.space[2]}px;
 `;

@@ -1,11 +1,12 @@
 import { ITestimonialsCards } from 'appTypes/index';
-import Typography from 'components/business/typography';
+import Typography from 'components/typography';
 import { useCountOfCards } from 'hooks/useCountCards';
+import { useMediaQuery } from 'hooks/useMediaQuery';
 import { usePagination } from 'hooks/usePagination';
 
-import { ArrowLeft48Filled, ArrowRight48Filled } from '@fluentui/react-icons';
+import { ArrowLeft32Filled, ArrowRight32Filled } from '@fluentui/react-icons';
 
-import ReviewCard from 'components/ui/cards/reviewCard';
+import ReviewCard from 'components/cards/reviewCard';
 
 import { testimonialCards } from 'constants/cardsPayload/testimonialCards';
 
@@ -16,30 +17,41 @@ import {
   StyledTestimonialsSectionHeader,
   StyledArrowsContainer,
   StyledReviewCardsContainer,
+  StyledTestimonialsSectionMobile,
 } from './styled';
 
 function TestimonialsSection(): JSX.Element {
+  const { isMobile } = useMediaQuery();
+
   const countOfCards = useCountOfCards();
 
   const [handleNextClick, handlePreviousClick, isAvailableNextPage, isAvailablePrevPage, cards] =
     usePagination<ITestimonialsCards>(testimonialCards, countOfCards);
 
+  const Section = isMobile ? StyledTestimonialsSectionMobile : StyledTestimonialsSection;
+
   return (
-    <StyledTestimonialsSection>
+    <Section>
       <StyledTestimonialsSectionHeader>
-        <Typography type="headLine" variant="extraBold" size={1}>
-          Testimonials
-        </Typography>
+        {!isMobile ? (
+          <Typography type="headLine" variant="extraBold" size={1}>
+            Testimonials
+          </Typography>
+        ) : (
+          <Typography type="headLine" variant="extraBold" size={2}>
+            Testimonials
+          </Typography>
+        )}
         <StyledArrowsContainer>
           <StyledArrow onClick={handleNextClick}>
-            <ArrowRight48Filled style={{ color: isAvailableNextPage ? 'black' : 'grey' }} />
+            <ArrowRight32Filled style={{ color: isAvailableNextPage ? 'black' : 'grey' }} />
           </StyledArrow>
           <StyledArrow onClick={handlePreviousClick}>
-            <ArrowLeft48Filled style={{ color: isAvailablePrevPage ? 'black' : 'grey' }} />
+            <ArrowLeft32Filled style={{ color: isAvailablePrevPage ? 'black' : 'grey' }} />
           </StyledArrow>
         </StyledArrowsContainer>
       </StyledTestimonialsSectionHeader>
-      <StyledReviewCardsContainer className="testimonials">
+      <StyledReviewCardsContainer>
         {cards.map(({ imageURL, name, position, review }, index) => (
           <ReviewCard
             imageURL={imageURL}
@@ -50,7 +62,7 @@ function TestimonialsSection(): JSX.Element {
           />
         ))}
       </StyledReviewCardsContainer>
-    </StyledTestimonialsSection>
+    </Section>
   );
 }
 

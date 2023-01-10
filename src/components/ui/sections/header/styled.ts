@@ -14,7 +14,7 @@ export const StyledContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 1110px;
+  width: ${({ theme }) => theme.sizes[17]}px;
 `;
 
 export const StyledContentMobile = styled(StyledContent)`

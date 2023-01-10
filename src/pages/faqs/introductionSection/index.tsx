@@ -1,5 +1,5 @@
-import Breadcrumbs from 'components/business/breadcrumbs';
-import Typography from 'components/business/typography';
+import Breadcrumbs from 'components/breadcrumbs';
+import Typography from 'components/typography';
 
 import { StyledIntroductionSection, StyledContainer, StyledPageDescription } from './styled';
 

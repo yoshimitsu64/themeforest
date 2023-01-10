@@ -1,5 +1,5 @@
-import Typography from 'components/business/typography';
-import { useMediaQueryNew } from 'hooks/useMediaQueryNew';
+import Typography from 'components/typography';
+import { useMediaQuery } from 'hooks/useMediaQuery';
 import { SocialIcon } from 'react-social-icons';
 
 import { quickLinks, serviceLinks } from 'constants/links';
@@ -20,7 +20,7 @@ import {
 } from './styled';
 
 function LinksSection(): JSX.Element {
-  const { isDesktopOrTablet } = useMediaQueryNew();
+  const { isDesktopOrTablet } = useMediaQuery();
 
   const Container = isDesktopOrTablet ? StyledLinksSectionDesktopOrTablet : StyledLinksSection;
   const LinksContainer = isDesktopOrTablet ? StyledFooterLinksDesktopOrTablet : StyledFooterLinks;

@@ -11,7 +11,7 @@ export const StyledIntroductionSection = styled.section`
 export const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 1110px;
+  max-width: ${({ theme }) => theme.sizes[17]}px;
   height: max-content;
   padding-top: ${({ theme }) => theme.space[3]}px;
 `;

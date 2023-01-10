@@ -1,12 +1,12 @@
 import { solutionsCards } from 'constants/cardsPayload/solutionsCards';
 
-import SolutionCard from 'components/ui/cards/solutionCard';
-import { useMediaQueryNew } from 'hooks/useMediaQueryNew';
+import SolutionCard from 'components/cards/solutionCard';
+import { useMediaQuery } from 'hooks/useMediaQuery';
 
 import { StyledServiceCardsSection, StyledContainer, StyledContainerMobile } from './styled';
 
 const SolutionsCardsSection = (): JSX.Element => {
-  const { isMobile } = useMediaQueryNew();
+  const { isMobile } = useMediaQuery();
 
   const Container = isMobile ? StyledContainerMobile : StyledContainer;
 

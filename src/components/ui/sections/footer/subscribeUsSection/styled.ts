@@ -8,7 +8,7 @@ export const StyledContainer = styled.div`
   padding-bottom: ${({ theme }) => theme.space[9]}px;
 
   max-height: ${({ theme }) => theme.sizes[5]}px;
-  width: 1110px;
+  width: ${({ theme }) => theme.sizes[17]}px;
   align-self: center;
   justify-content: space-between;
 

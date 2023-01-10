@@ -11,7 +11,7 @@ export const StyledServiceCardsSection = styled.section`
 export const StyledContainer = styled.div`
   display: grid;
   grid-template-columns: 50% 50%;
-  max-width: 1110px;
+  max-width: ${({ theme }) => theme.sizes[17]}px;
   column-gap: ${({ theme }) => theme.space[1]}px;
   row-gap: ${({ theme }) => theme.space[3]}px;
   height: max-content;

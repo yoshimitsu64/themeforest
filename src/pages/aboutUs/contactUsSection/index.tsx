@@ -1,4 +1,4 @@
-import ContactUsFormBlank from 'components/business/contactUsForm';
+import ContactUsFormBlank from 'components/contactUsForm';
 import { StyledContacts } from 'pages/contacts/introductionSection/contacts/styled';
 import {
   StyledContactUsSection,

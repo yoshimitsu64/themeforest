@@ -1,7 +1,7 @@
-import Typography from 'components/business/typography';
+import Typography from 'components/typography';
 import { useNavigate } from 'react-router-dom';
 
-import LargeButtonFill from 'components/ui/buttons/largeButtonFill';
+import LargeButtonFill from 'components/buttons/largeButtonFill';
 
 import { StyledContactUsSection } from './styled';
 

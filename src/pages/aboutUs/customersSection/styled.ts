@@ -15,7 +15,7 @@ export const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 1110px;
+  width: ${({ theme }) => theme.sizes[17]}px;
   height: max-content;
 `;
 

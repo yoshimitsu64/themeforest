@@ -93,4 +93,14 @@ export const testimonialCards = [
       ' ex ea commodi consequatur? Quis utem vel eum iure reprehender qui' +
       ' in ea voluptate velit esse quam nihil molesti consequatur, vel illum.',
   },
+  {
+    imageURL: Image2,
+    name: 'Ruben Chifundo',
+    position: 'CEO by NOX',
+    review:
+      'Ut enim ad minima veniam, quis nostrum exercitationem' +
+      ' ullam corpor suscipit laboriosam, nisi ut aliquid' +
+      ' ex ea commodi consequatur? Quis utem vel eum iure reprehender qui' +
+      ' in ea voluptate velit esse quam nihil molesti consequatur, vel illum.',
+  },
 ];

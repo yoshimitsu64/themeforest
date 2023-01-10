@@ -1,6 +1,6 @@
-import Breadcrumbs from 'components/business/breadcrumbs';
-import Typography from 'components/business/typography';
-import { useMediaQueryNew } from 'hooks/useMediaQueryNew';
+import Breadcrumbs from 'components/breadcrumbs';
+import Typography from 'components/typography';
+import { useMediaQuery } from 'hooks/useMediaQuery';
 
 import Image from 'assets/images/ourTeam/image10.png';
 
@@ -15,7 +15,7 @@ import {
 } from './styled';
 
 const IntroductionSection = (): JSX.Element => {
-  const { isMobile } = useMediaQueryNew();
+  const { isMobile } = useMediaQuery();
 
   const Section = isMobile ? StyledIntroductionSectionMobile : StyledIntroductionSection;
   const Container = isMobile ? StyledContainerMobile : StyledContainer;

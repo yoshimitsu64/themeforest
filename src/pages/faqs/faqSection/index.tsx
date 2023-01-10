@@ -1,4 +1,4 @@
-import FaqCard from 'components/ui/cards/faqCard';
+import FaqCard from 'components/cards/faqCard';
 
 import { faqsCards } from 'constants/cardsPayload/faqsCards';
 

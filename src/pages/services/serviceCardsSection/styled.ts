@@ -9,7 +9,7 @@ export const StyledServiceCardsSection = styled.section`
 `;
 
 export const StyledContainer = styled.div`
-  max-width: 1110px;
+  max-width: ${({ theme }) => theme.sizes[17]}px;
   display: grid;
   grid-template-columns: 45% 45%;
   height: max-content;

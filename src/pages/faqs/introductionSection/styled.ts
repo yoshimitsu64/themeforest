@@ -20,6 +20,6 @@ export const StyledPageDescription = styled.div`
 export const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 1110px;
+  width: ${({ theme }) => theme.sizes[17]}px;
   height: max-content;
 `;

@@ -1,13 +1,14 @@
 import { IBlogCards } from 'appTypes/index';
-import Typography from 'components/business/typography';
+import Typography from 'components/typography';
 import { useCountOfCards } from 'hooks/useCountCards';
+import { useMediaQuery } from 'hooks/useMediaQuery';
 import { usePagination } from 'hooks/usePagination';
 
 import { ArrowLeft48Filled, ArrowRight48Filled } from '@fluentui/react-icons';
 
 import { blogCards } from 'constants/cardsPayload/blogCards';
 
-import BlogCard from 'components/ui/cards/blogCard';
+import BlogCard from 'components/cards/blogCard';
 
 import {
   StyledBlogSection,
@@ -16,16 +17,21 @@ import {
   StyledArrowsContainer,
   StyledContainer,
   StyledBlogCardsContainer,
+  StyledBlogSectionMobile,
 } from './styled';
 
 function BlogSection(): JSX.Element {
+  const { isMobile, isTablet } = useMediaQuery();
+
   const countOfCards = useCountOfCards();
 
   const [handleNextClick, handlePreviousClick, isAvailableNextPage, isAvailablePrevPage, cards] =
     usePagination<IBlogCards>(blogCards, countOfCards);
 
+  const Section = isMobile || isTablet ? StyledBlogSectionMobile : StyledBlogSection;
+
   return (
-    <StyledBlogSection>
+    <Section>
       <StyledContainer>
         <StyledBlogsSectionHeader>
           <Typography type="headLine" variant="extraBold" size={1}>
@@ -46,7 +52,7 @@ function BlogSection(): JSX.Element {
           ))}
         </StyledBlogCardsContainer>
       </StyledContainer>
-    </StyledBlogSection>
+    </Section>
   );
 }
 

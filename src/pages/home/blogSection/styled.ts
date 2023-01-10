@@ -8,11 +8,17 @@ export const StyledBlogSection = styled.section`
   margin-bottom: ${({ theme }) => theme.sizes[1]}px;
 `;
 
+export const StyledBlogSectionMobile = styled(StyledBlogSection)`
+  margin-top: ${({ theme }) => theme.space[9]}px;
+  margin-bottom: ${({ theme }) => theme.space[9]}px;
+`;
+
 export const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1110px;
+  padding: 15px;
+  max-width: ${({ theme }) => theme.sizes[17]}px;
 `;
 
 export const StyledBlogsSectionHeader = styled.div`
@@ -24,10 +30,7 @@ export const StyledBlogsSectionHeader = styled.div`
 export const StyledBlogCardsContainer = styled.div`
   display: flex;
   width: ${({ theme }) => theme.sizes[1]}%;
-
-  & .blogCard:not(:last-child) {
-    margin-right: ${({ theme }) => theme.space[5]}px;
-  }
+  column-gap: ${({ theme }) => theme.space[5]}px;
 `;
 
 export const StyledArrowsContainer = styled.div`
@@ -47,4 +50,7 @@ export const StyledArrow = styled.button`
   border-radius: ${({ theme }) => theme.borders.borderRadius[3]}px;
   border: none;
   cursor: pointer;
+  @media screen and (max-width: ${({ theme }) => theme.sizes[17]}px) {
+    width: 60px;
+  }
 `;

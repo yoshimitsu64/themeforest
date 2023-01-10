@@ -1,6 +1,6 @@
 import { Call16Filled, Location16Filled, Mail16Filled } from '@fluentui/react-icons';
-import Typography from 'components/business/typography';
-import { useMediaQueryNew } from 'hooks/useMediaQueryNew';
+import Typography from 'components/typography';
+import { useMediaQuery } from 'hooks/useMediaQuery';
 
 import {
   StyledContacts,
@@ -10,7 +10,7 @@ import {
 } from './styled';
 
 function Contacts(): JSX.Element {
-  const { isMobile } = useMediaQueryNew();
+  const { isMobile } = useMediaQuery();
 
   const Container = isMobile ? StyledContactsMobile : StyledContacts;
 
