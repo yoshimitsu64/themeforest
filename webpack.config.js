@@ -4,7 +4,7 @@ const Dotenv = require('dotenv-webpack');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
-  entry: path.resolve(__dirname, './src/index.tsx'),
+  entry: path.resolve(__dirname, 'src'),
   resolve: {
     alias: {
       globalStyles: path.resolve(__dirname, './src/globalStyles'),
@@ -18,6 +18,7 @@ module.exports = {
       config: path.resolve(__dirname, './src/config'),
       validation: path.resolve(__dirname, './src/validation'),
       animation: path.resolve(__dirname, './src/animation'),
+      mocks: path.resolve(__dirname, './src/mocks'),
     },
     extensions: ['.tsx', '.ts', '.js', '.json', '.d.ts'],
   },

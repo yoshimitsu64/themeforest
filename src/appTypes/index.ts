@@ -37,9 +37,16 @@ export interface ITestimonialsCards {
   review: string;
 }
 
-export interface IBlogCards {
-  date: string;
-  name: string;
-  text: string;
+export interface IBlog {
   imageURL: string;
+  date: string;
+  author: string;
+  title: string;
+  text: string;
+  views: number;
+  tags: Array<string>;
+  id: string;
+  partOfText: string;
 }
+
+export type PopularBlogProps = Pick<IBlog, 'imageURL' | 'date' | 'title' | 'id'>;

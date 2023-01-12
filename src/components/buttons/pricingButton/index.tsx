@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import { StyledButton } from './styled';
 
@@ -15,4 +15,4 @@ function PricingButton({ text, onClick }: IProps): JSX.Element {
   );
 }
 
-export default PricingButton;
+export default memo(PricingButton);

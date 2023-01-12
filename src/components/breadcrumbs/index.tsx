@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import { StyledBreadcrumbs, StyledLink } from './styled';
 
 interface IProps {
@@ -15,4 +17,4 @@ function Breadcrumbs({ page, color = 'grey', url }: IProps): JSX.Element {
   );
 }
 
-export default Breadcrumbs;
+export default memo(Breadcrumbs);

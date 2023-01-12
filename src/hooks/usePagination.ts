@@ -1,9 +1,13 @@
 import { useEffect, useState } from 'react';
 
-export const usePagination = <T>(
-  data: Array<T>,
-  itemsCount: number
-): readonly [() => void, () => void, boolean, boolean, Array<T>] => {
+interface IRes<T> {
+  handleNextClick: () => void;
+  handlePreviousClick: () => void;
+  isAvailableNextPage: boolean;
+  isAvailablePrevPage: boolean;
+  currentCards: Array<T>;
+}
+export const usePagination = <T>(data: Array<T>, itemsCount: number): IRes<T> => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const [isAvailableNextPage, setIsAvailableNextPage] = useState<boolean>(true);
@@ -34,11 +38,11 @@ export const usePagination = <T>(
     }
   }, [currentPage]);
 
-  return [
+  return {
     handleNextClick,
     handlePreviousClick,
     isAvailableNextPage,
     isAvailablePrevPage,
     currentCards,
-  ] as const;
+  } as const;
 };

@@ -4,6 +4,7 @@ export const StyledBlogCard = styled.div`
   display: flex;
   flex-direction: column;
   max-width: ${({ theme }) => theme.sizes[6]}px;
+  cursor: pointer;
 `;
 
 export const StyledBlogImage = styled.img`

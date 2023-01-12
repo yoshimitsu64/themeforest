@@ -13,5 +13,8 @@ export interface IProps {
   mr?: number;
   m?: number;
   width?: number;
+  maxHeight?: number;
+  overflow?: CSSProperties['overflow'];
+  textOverflow?: CSSProperties['textOverflow'];
   textAlign?: CSSProperties['textAlign'];
 }

@@ -3,10 +3,7 @@
     "target": "ES5",
     "module": "ESNext",
     "moduleResolution": "node",
-    "lib": [
-      "DOM",
-      "ESNext"
-    ],
+    "lib": ["DOM", "ESNext"],
     "jsx": "react-jsx",
     "noEmit": false,
     "isolatedModules": true,
@@ -17,46 +14,20 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "paths": {
-      "globalStyles/*": [
-        "./globalStyles/*"
-      ],
-      "pages/*": [
-        "./pages/*"
-      ],
-      "components/*": [
-        "./components/*"
-      ],
-      "constants/*": [
-        "./constants/*"
-      ],
-      "assets/*": [
-        "./assets/*"
-      ],
-      "hooks/*": [
-        "./hooks/*"
-      ],
-      "appTypes/*": [
-        "./appTypes/*"
-      ],
-      "helpers/*": [
-        "./helpers/*"
-      ],
-      "config/*": [
-        "./config/*"
-      ],
-      "validation/*": [
-        "./validation/*"
-      ],
-      "animation/*": [
-        "./animation/*"
-      ]
+      "globalStyles/*": ["./globalStyles/*"],
+      "pages/*": ["./pages/*"],
+      "components/*": ["./components/*"],
+      "constants/*": ["./constants/*"],
+      "assets/*": ["./assets/*"],
+      "hooks/*": ["./hooks/*"],
+      "appTypes/*": ["./appTypes/*"],
+      "helpers/*": ["./helpers/*"],
+      "config/*": ["./config/*"],
+      "validation/*": ["./validation/*"],
+      "animation/*": ["./animation/*"],
+      "mocks/*": ["./mocks/*"]
     }
   },
-  "include": [
-    "src",
-    "react-app-env.d.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src", "react-app-env.d.ts"],
+  "exclude": ["node_modules"]
 }

@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import { StyledLargeButton } from './styled';
 
 interface IProps {
@@ -13,4 +15,4 @@ export function LargeButtonFill({ onClick, children }: IProps): JSX.Element {
   );
 }
 
-export default LargeButtonFill;
+export default memo(LargeButtonFill);

@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import { StyledButton } from './styled';
 
 interface IProps {
@@ -14,4 +16,4 @@ function RectangleButtonFilled({ text = 'text', width = '100', onClick }: IProps
   );
 }
 
-export default RectangleButtonFilled;
+export default memo(RectangleButtonFilled);

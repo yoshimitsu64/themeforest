@@ -1,4 +1,4 @@
-import React, { useRef, useState, memo } from 'react';
+import React, { useRef, useState, memo, useCallback } from 'react';
 import Typography from 'components/typography';
 import { Checkmark16Filled } from '@fluentui/react-icons';
 
@@ -25,13 +25,13 @@ function PricingCard({ title, price, possibilities }: IProps): JSX.Element {
 
   const [subscribeVariant, setSubscribeVariant] = useState<string>('Mo');
 
-  const handleClose = (): void => {
+  const handleClose = useCallback((): void => {
     ref.current?.closeModal(true);
-  };
+  }, []);
 
-  const handleSubscribeClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleSubscribeClick = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     setSubscribeVariant((e.target as HTMLElement).innerHTML);
-  };
+  }, []);
 
   return (
     <StyledPricingCard className="pricingCard">

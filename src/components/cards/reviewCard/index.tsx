@@ -1,6 +1,7 @@
-import Typography from 'components/typography';
-import { useMediaQuery } from 'hooks/useMediaQuery';
 import { memo } from 'react';
+
+import Typography from 'components/typography';
+import { useMediaQuery } from 'hooks';
 
 import { IProps } from './types';
 import {
