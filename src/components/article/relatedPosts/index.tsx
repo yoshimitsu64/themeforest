@@ -1,4 +1,4 @@
-import { blogInfo } from 'mocks';
+import { blogInfo } from 'mocks/index';
 
 import PopularBlogCard from 'components/cards/popularBlogCard';
 import Typography from 'components/typography';

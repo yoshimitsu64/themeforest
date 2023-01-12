@@ -12,7 +12,7 @@ import {
 
 import { blogNetworks } from 'constants/socialNetworks';
 
-import RelatedPosts from 'components/relatedPosts';
+import RelatedPosts from 'components/article/relatedPosts';
 import Typography from 'components/typography';
 import Tag from 'components/tag';
 
