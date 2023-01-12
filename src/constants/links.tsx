@@ -1,3 +1,4 @@
+import Blogs from 'pages/blogs';
 import { lazy } from 'react';
 
 const Home = lazy(() => import('pages/home'));
@@ -7,6 +8,7 @@ const OurTeam = lazy(() => import('pages/ourTeam'));
 const IntroductionSection = lazy(() => import('pages/faqs'));
 const Solutions = lazy(() => import('pages/solutions'));
 const AboutUs = lazy(() => import('pages/aboutUs'));
+const Blog = lazy(() => import('pages/blog'));
 
 export const links = [
   {
@@ -51,6 +53,17 @@ export const links = [
     component: <AboutUs />,
     id: 7,
   },
+  {
+    path: '/blogs/:id',
+    component: <Blog />,
+    id: 8,
+  },
+  {
+    title: 'Blogs',
+    path: '/blogs',
+    component: <Blogs />,
+    id: 9,
+  },
 ];
 
 export const quickLinks = [
@@ -68,7 +81,7 @@ export const quickLinks = [
   },
   {
     title: 'Blog',
-    path: '/blog',
+    path: '/blogMocks.ts',
     component: <Home />,
     id: 3,
   },

@@ -1,4 +1,5 @@
-import { useMediaQuery } from 'hooks/useMediaQuery';
+import { useMediaQuery } from 'hooks';
+
 import { IProps } from './types';
 import { StyledTextBlock, StyledContainer, StyledContainerMobile } from './styled';
 

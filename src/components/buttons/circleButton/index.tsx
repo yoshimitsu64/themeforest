@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import { StyledCircleButton, StyledInternalCircle, StyledWhiteBackground } from './styled';
 
 interface IProps {
@@ -15,4 +17,4 @@ function CircleButton({ children, onClick }: IProps): JSX.Element {
   );
 }
 
-export default CircleButton;
+export default memo(CircleButton);

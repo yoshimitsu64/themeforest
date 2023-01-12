@@ -5,8 +5,8 @@ import { links } from 'constants/links';
 
 import ErrorBoundary from 'components/errorBoundary';
 import Layout from 'components/layout';
-import Header from 'components/ui/sections/header';
-import Footer from 'components/ui/sections/footer';
+import Header from 'components/header';
+import Footer from 'components/footer';
 
 function App(): JSX.Element {
   return (

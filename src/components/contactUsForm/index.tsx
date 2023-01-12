@@ -7,7 +7,7 @@ import { contactFormFields, formFieldsName } from 'constants/contactFormFields';
 import { emailContactConfig } from 'config/emailJS';
 import { contactFormSchema } from 'validation/emailValidation';
 
-import TextField from 'components/textField';
+import TextField from 'components/fields/textField';
 import LargeButtonFill from 'components/buttons/largeButtonFill';
 
 import { StyledContactUsForm, StyledTitle } from './styled';
